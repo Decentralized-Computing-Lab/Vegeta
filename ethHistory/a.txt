@@ -1,0 +1,1702 @@
+nohup: ignoring input
+{"level":"info","time":"2024-01-18 15:52:27.567268","message":"the state of the blockNumber 18997154"}
+{"level":"info","time":"2024-01-18 15:52:27.644864","message":"the state of the blockNumber 18997154"}
+{"level":"info","time":"2024-01-18 15:52:27.644892","message":"the state of the blockNumber 18997154"}
+{"level":"info","time":"2024-01-18 15:52:27.646570","message":"etherscan url: https://etherscan.io/block/18997155"}
+{"level":"info","time":"2024-01-18 15:52:27.646583","message":"the block.transactions is 140"}
+{"level":"info","time":"2024-01-18 15:52:28.069121","message":"etherscan url: https://etherscan.io/block/18997156"}
+{"level":"info","time":"2024-01-18 15:52:28.069149","message":"the block.transactions is 110"}
+{"level":"info","time":"2024-01-18 15:52:28.540623","message":"etherscan url: https://etherscan.io/block/18997157"}
+{"level":"info","time":"2024-01-18 15:52:28.540651","message":"the block.transactions is 158"}
+{"level":"info","time":"2024-01-18 15:52:28.780743","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:52:29.387234","message":"etherscan url: https://etherscan.io/block/18997158"}
+{"level":"info","time":"2024-01-18 15:52:29.387263","message":"the block.transactions is 130"}
+{"level":"info","time":"2024-01-18 15:52:30.148287","message":"etherscan url: https://etherscan.io/block/18997159"}
+{"level":"info","time":"2024-01-18 15:52:30.148317","message":"the block.transactions is 296"}
+{"level":"info","time":"2024-01-18 15:52:31.994314","message":"etherscan url: https://etherscan.io/block/18997160"}
+{"level":"info","time":"2024-01-18 15:52:31.994346","message":"the block.transactions is 140"}
+{"level":"info","time":"2024-01-18 15:52:33.132552","message":"etherscan url: https://etherscan.io/block/18997161"}
+{"level":"info","time":"2024-01-18 15:52:33.132580","message":"the block.transactions is 194"}
+{"level":"info","time":"2024-01-18 15:52:34.586413","message":"etherscan url: https://etherscan.io/block/18997162"}
+{"level":"info","time":"2024-01-18 15:52:34.586443","message":"the block.transactions is 284"}
+{"level":"info","time":"2024-01-18 15:52:37.560175","message":"etherscan url: https://etherscan.io/block/18997163"}
+{"level":"info","time":"2024-01-18 15:52:37.560205","message":"the block.transactions is 104"}
+{"level":"info","time":"2024-01-18 15:52:38.621632","message":"etherscan url: https://etherscan.io/block/18997164"}
+{"level":"info","time":"2024-01-18 15:52:38.621662","message":"the block.transactions is 236"}
+{"level":"info","time":"2024-01-18 15:52:41.446512","message":"etherscan url: https://etherscan.io/block/18997165"}
+{"level":"info","time":"2024-01-18 15:52:41.446542","message":"the block.transactions is 150"}
+{"level":"info","time":"2024-01-18 15:52:46.489575","message":"etherscan url: https://etherscan.io/block/18997166"}
+{"level":"info","time":"2024-01-18 15:52:46.489602","message":"the block.transactions is 131"}
+{"level":"info","time":"2024-01-18 15:52:52.139428","message":"etherscan url: https://etherscan.io/block/18997167"}
+{"level":"info","time":"2024-01-18 15:52:52.139458","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 15:53:00.115093","message":"etherscan url: https://etherscan.io/block/18997168"}
+{"level":"info","time":"2024-01-18 15:53:00.115122","message":"the block.transactions is 7"}
+{"level":"info","time":"2024-01-18 15:53:00.498224","message":"etherscan url: https://etherscan.io/block/18997169"}
+{"level":"info","time":"2024-01-18 15:53:00.498252","message":"the block.transactions is 250"}
+{"level":"info","time":"2024-01-18 15:53:08.121124","message":"etherscan url: https://etherscan.io/block/18997170"}
+{"level":"info","time":"2024-01-18 15:53:08.121155","message":"the block.transactions is 498"}
+{"level":"info","time":"2024-01-18 15:53:24.551480","message":"etherscan url: https://etherscan.io/block/18997171"}
+{"level":"info","time":"2024-01-18 15:53:24.551504","message":"the block.transactions is 111"}
+{"level":"info","time":"2024-01-18 15:53:29.184474","message":"etherscan url: https://etherscan.io/block/18997172"}
+{"level":"info","time":"2024-01-18 15:53:29.184514","message":"the block.transactions is 210"}
+{"level":"info","time":"2024-01-18 15:53:39.590291","message":"etherscan url: https://etherscan.io/block/18997173"}
+{"level":"info","time":"2024-01-18 15:53:39.590322","message":"the block.transactions is 206"}
+{"level":"info","time":"2024-01-18 15:53:47.741355","message":"etherscan url: https://etherscan.io/block/18997174"}
+{"level":"info","time":"2024-01-18 15:53:47.741386","message":"the block.transactions is 322"}
+{"level":"info","time":"2024-01-18 15:53:58.066884","message":"etherscan url: https://etherscan.io/block/18997175"}
+{"level":"info","time":"2024-01-18 15:53:58.066911","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 15:54:03.073992","message":"etherscan url: https://etherscan.io/block/18997176"}
+{"level":"info","time":"2024-01-18 15:54:03.074021","message":"the block.transactions is 168"}
+{"level":"info","time":"2024-01-18 15:54:10.283766","message":"etherscan url: https://etherscan.io/block/18997177"}
+{"level":"info","time":"2024-01-18 15:54:10.283793","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 15:54:16.280413","message":"etherscan url: https://etherscan.io/block/18997178"}
+{"level":"info","time":"2024-01-18 15:54:16.280435","message":"the block.transactions is 220"}
+{"level":"info","time":"2024-01-18 15:54:24.132213","message":"etherscan url: https://etherscan.io/block/18997179"}
+{"level":"info","time":"2024-01-18 15:54:24.132236","message":"the block.transactions is 108"}
+{"level":"info","time":"2024-01-18 15:54:29.708455","message":"etherscan url: https://etherscan.io/block/18997180"}
+{"level":"info","time":"2024-01-18 15:54:29.708477","message":"the block.transactions is 244"}
+{"level":"info","time":"2024-01-18 15:54:39.682575","message":"etherscan url: https://etherscan.io/block/18997181"}
+{"level":"info","time":"2024-01-18 15:54:39.682623","message":"the block.transactions is 216"}
+{"level":"info","time":"2024-01-18 15:54:47.740661","message":"etherscan url: https://etherscan.io/block/18997182"}
+{"level":"info","time":"2024-01-18 15:54:47.740682","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 15:54:55.244974","message":"etherscan url: https://etherscan.io/block/18997183"}
+{"level":"info","time":"2024-01-18 15:54:55.244999","message":"the block.transactions is 117"}
+{"level":"info","time":"2024-01-18 15:55:03.137586","message":"etherscan url: https://etherscan.io/block/18997184"}
+{"level":"info","time":"2024-01-18 15:55:03.137623","message":"the block.transactions is 197"}
+{"level":"info","time":"2024-01-18 15:55:13.163000","message":"etherscan url: https://etherscan.io/block/18997185"}
+{"level":"info","time":"2024-01-18 15:55:13.163024","message":"the block.transactions is 188"}
+{"level":"info","time":"2024-01-18 15:55:21.760129","message":"etherscan url: https://etherscan.io/block/18997186"}
+{"level":"info","time":"2024-01-18 15:55:21.760154","message":"the block.transactions is 461"}
+{"level":"info","time":"2024-01-18 15:55:42.832864","message":"etherscan url: https://etherscan.io/block/18997187"}
+{"level":"info","time":"2024-01-18 15:55:42.832891","message":"the block.transactions is 239"}
+{"level":"info","time":"2024-01-18 15:55:52.709764","message":"etherscan url: https://etherscan.io/block/18997188"}
+{"level":"info","time":"2024-01-18 15:55:52.709784","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 15:55:59.578082","message":"etherscan url: https://etherscan.io/block/18997189"}
+{"level":"info","time":"2024-01-18 15:55:59.578116","message":"the block.transactions is 279"}
+{"level":"info","time":"2024-01-18 15:56:09.535246","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.535297","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.538005","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.538646","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.539616","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.539623","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.539741","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.539789","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540593","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540668","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540718","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540742","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540773","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540842","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540872","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.540883","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.541360","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.541442","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.541447","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.542231","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.542244","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.545276","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.545309","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.545314","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.545405","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.545416","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.546055","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.548638","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.548651","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.548738","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.549388","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552027","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552045","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552095","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552142","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552885","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552891","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.552927","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.553494","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.556658","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.556667","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.557511","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558166","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558215","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558797","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558828","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558834","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558873","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.558896","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.559615","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.559622","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.559675","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.562385","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.565023","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.565049","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.567995","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.568013","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.568517","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.568523","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.568551","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.569270","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.572204","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.574835","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.574859","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.575541","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.578306","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.578315","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.580841","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.580897","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.583759","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.583823","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:09.583834","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:56:19.452486","message":"etherscan url: https://etherscan.io/block/18997190"}
+{"level":"info","time":"2024-01-18 15:56:19.452503","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 15:56:27.994821","message":"etherscan url: https://etherscan.io/block/18997191"}
+{"level":"info","time":"2024-01-18 15:56:27.994843","message":"the block.transactions is 186"}
+{"level":"info","time":"2024-01-18 15:56:37.507852","message":"etherscan url: https://etherscan.io/block/18997192"}
+{"level":"info","time":"2024-01-18 15:56:37.507877","message":"the block.transactions is 419"}
+{"level":"info","time":"2024-01-18 15:56:57.174738","message":"etherscan url: https://etherscan.io/block/18997193"}
+{"level":"info","time":"2024-01-18 15:56:57.174759","message":"the block.transactions is 115"}
+{"level":"info","time":"2024-01-18 15:56:58.393007","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 15:57:02.929618","message":"etherscan url: https://etherscan.io/block/18997194"}
+{"level":"info","time":"2024-01-18 15:57:02.929643","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 15:57:09.984171","message":"etherscan url: https://etherscan.io/block/18997195"}
+{"level":"info","time":"2024-01-18 15:57:09.984201","message":"the block.transactions is 142"}
+{"level":"info","time":"2024-01-18 15:57:16.948765","message":"etherscan url: https://etherscan.io/block/18997196"}
+{"level":"info","time":"2024-01-18 15:57:16.948788","message":"the block.transactions is 180"}
+{"level":"info","time":"2024-01-18 15:57:26.245095","message":"etherscan url: https://etherscan.io/block/18997197"}
+{"level":"info","time":"2024-01-18 15:57:26.245122","message":"the block.transactions is 126"}
+{"level":"info","time":"2024-01-18 15:57:33.246293","message":"etherscan url: https://etherscan.io/block/18997198"}
+{"level":"info","time":"2024-01-18 15:57:33.246315","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 15:57:43.389586","message":"etherscan url: https://etherscan.io/block/18997199"}
+{"level":"info","time":"2024-01-18 15:57:43.389611","message":"the block.transactions is 197"}
+{"level":"info","time":"2024-01-18 15:57:54.431223","message":"etherscan url: https://etherscan.io/block/18997200"}
+{"level":"info","time":"2024-01-18 15:57:54.431246","message":"the block.transactions is 10"}
+{"level":"info","time":"2024-01-18 15:57:55.006036","message":"etherscan url: https://etherscan.io/block/18997201"}
+{"level":"info","time":"2024-01-18 15:57:55.006064","message":"the block.transactions is 348"}
+{"level":"info","time":"2024-01-18 15:58:16.707319","message":"etherscan url: https://etherscan.io/block/18997202"}
+{"level":"info","time":"2024-01-18 15:58:16.707342","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 15:58:27.704714","message":"etherscan url: https://etherscan.io/block/18997203"}
+{"level":"info","time":"2024-01-18 15:58:27.704739","message":"the block.transactions is 119"}
+{"level":"info","time":"2024-01-18 15:58:35.073202","message":"etherscan url: https://etherscan.io/block/18997204"}
+{"level":"info","time":"2024-01-18 15:58:35.073219","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 15:58:44.442328","message":"etherscan url: https://etherscan.io/block/18997205"}
+{"level":"info","time":"2024-01-18 15:58:44.442350","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 15:58:53.377166","message":"etherscan url: https://etherscan.io/block/18997206"}
+{"level":"info","time":"2024-01-18 15:58:53.377190","message":"the block.transactions is 290"}
+{"level":"info","time":"2024-01-18 15:59:10.602055","message":"etherscan url: https://etherscan.io/block/18997207"}
+{"level":"info","time":"2024-01-18 15:59:10.602080","message":"the block.transactions is 158"}
+{"level":"info","time":"2024-01-18 15:59:20.090320","message":"etherscan url: https://etherscan.io/block/18997208"}
+{"level":"info","time":"2024-01-18 15:59:20.090353","message":"the block.transactions is 379"}
+{"level":"info","time":"2024-01-18 15:59:42.072016","message":"etherscan url: https://etherscan.io/block/18997209"}
+{"level":"info","time":"2024-01-18 15:59:42.072040","message":"the block.transactions is 148"}
+{"level":"info","time":"2024-01-18 15:59:51.531128","message":"etherscan url: https://etherscan.io/block/18997210"}
+{"level":"info","time":"2024-01-18 15:59:51.531153","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 16:00:00.596177","message":"etherscan url: https://etherscan.io/block/18997211"}
+{"level":"info","time":"2024-01-18 16:00:00.596203","message":"the block.transactions is 362"}
+{"level":"info","time":"2024-01-18 16:00:24.174024","message":"etherscan url: https://etherscan.io/block/18997212"}
+{"level":"info","time":"2024-01-18 16:00:24.174047","message":"the block.transactions is 122"}
+{"level":"info","time":"2024-01-18 16:00:32.315448","message":"etherscan url: https://etherscan.io/block/18997213"}
+{"level":"info","time":"2024-01-18 16:00:32.315473","message":"the block.transactions is 347"}
+{"level":"info","time":"2024-01-18 16:00:54.219939","message":"etherscan url: https://etherscan.io/block/18997214"}
+{"level":"info","time":"2024-01-18 16:00:54.219963","message":"the block.transactions is 113"}
+{"level":"info","time":"2024-01-18 16:01:01.627312","message":"etherscan url: https://etherscan.io/block/18997215"}
+{"level":"info","time":"2024-01-18 16:01:01.627337","message":"the block.transactions is 296"}
+{"level":"info","time":"2024-01-18 16:01:21.338467","message":"etherscan url: https://etherscan.io/block/18997216"}
+{"level":"info","time":"2024-01-18 16:01:21.338492","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 16:01:23.688403","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:01:23.716217","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:01:34.520949","message":"etherscan url: https://etherscan.io/block/18997217"}
+{"level":"info","time":"2024-01-18 16:01:34.520973","message":"the block.transactions is 193"}
+{"level":"info","time":"2024-01-18 16:01:47.047794","message":"etherscan url: https://etherscan.io/block/18997218"}
+{"level":"info","time":"2024-01-18 16:01:47.047828","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 16:01:57.275396","message":"etherscan url: https://etherscan.io/block/18997219"}
+{"level":"info","time":"2024-01-18 16:01:57.275426","message":"the block.transactions is 207"}
+{"level":"info","time":"2024-01-18 16:02:12.503270","message":"etherscan url: https://etherscan.io/block/18997220"}
+{"level":"info","time":"2024-01-18 16:02:12.503298","message":"the block.transactions is 143"}
+{"level":"info","time":"2024-01-18 16:02:24.176348","message":"etherscan url: https://etherscan.io/block/18997221"}
+{"level":"info","time":"2024-01-18 16:02:24.176366","message":"the block.transactions is 92"}
+{"level":"info","time":"2024-01-18 16:02:30.500569","message":"etherscan url: https://etherscan.io/block/18997222"}
+{"level":"info","time":"2024-01-18 16:02:30.500590","message":"the block.transactions is 233"}
+{"level":"info","time":"2024-01-18 16:02:48.392055","message":"etherscan url: https://etherscan.io/block/18997223"}
+{"level":"info","time":"2024-01-18 16:02:48.392079","message":"the block.transactions is 122"}
+{"level":"info","time":"2024-01-18 16:02:57.346113","message":"etherscan url: https://etherscan.io/block/18997224"}
+{"level":"info","time":"2024-01-18 16:02:57.346148","message":"the block.transactions is 148"}
+{"level":"info","time":"2024-01-18 16:03:08.466944","message":"etherscan url: https://etherscan.io/block/18997225"}
+{"level":"info","time":"2024-01-18 16:03:08.466969","message":"the block.transactions is 102"}
+{"level":"info","time":"2024-01-18 16:03:15.905164","message":"etherscan url: https://etherscan.io/block/18997226"}
+{"level":"info","time":"2024-01-18 16:03:15.905187","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 16:03:31.402359","message":"etherscan url: https://etherscan.io/block/18997227"}
+{"level":"info","time":"2024-01-18 16:03:31.402381","message":"the block.transactions is 135"}
+{"level":"info","time":"2024-01-18 16:03:41.743809","message":"etherscan url: https://etherscan.io/block/18997228"}
+{"level":"info","time":"2024-01-18 16:03:41.743834","message":"the block.transactions is 209"}
+{"level":"info","time":"2024-01-18 16:04:02.040736","message":"etherscan url: https://etherscan.io/block/18997229"}
+{"level":"info","time":"2024-01-18 16:04:02.040757","message":"the block.transactions is 122"}
+{"level":"info","time":"2024-01-18 16:04:12.960320","message":"etherscan url: https://etherscan.io/block/18997230"}
+{"level":"info","time":"2024-01-18 16:04:12.960346","message":"the block.transactions is 214"}
+{"level":"info","time":"2024-01-18 16:04:15.279445","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:04:31.669810","message":"etherscan url: https://etherscan.io/block/18997231"}
+{"level":"info","time":"2024-01-18 16:04:31.669830","message":"the block.transactions is 209"}
+{"level":"info","time":"2024-01-18 16:04:49.091335","message":"etherscan url: https://etherscan.io/block/18997232"}
+{"level":"info","time":"2024-01-18 16:04:49.091358","message":"the block.transactions is 227"}
+{"level":"info","time":"2024-01-18 16:05:07.512693","message":"etherscan url: https://etherscan.io/block/18997233"}
+{"level":"info","time":"2024-01-18 16:05:07.512716","message":"the block.transactions is 228"}
+{"level":"info","time":"2024-01-18 16:05:26.993307","message":"etherscan url: https://etherscan.io/block/18997234"}
+{"level":"info","time":"2024-01-18 16:05:26.993331","message":"the block.transactions is 293"}
+{"level":"info","time":"2024-01-18 16:05:54.827222","message":"etherscan url: https://etherscan.io/block/18997235"}
+{"level":"info","time":"2024-01-18 16:05:54.827238","message":"the block.transactions is 197"}
+{"level":"info","time":"2024-01-18 16:06:13.373649","message":"etherscan url: https://etherscan.io/block/18997236"}
+{"level":"info","time":"2024-01-18 16:06:13.373683","message":"the block.transactions is 232"}
+{"level":"info","time":"2024-01-18 16:06:33.440591","message":"etherscan url: https://etherscan.io/block/18997237"}
+{"level":"info","time":"2024-01-18 16:06:33.440614","message":"the block.transactions is 185"}
+{"level":"info","time":"2024-01-18 16:06:49.732379","message":"etherscan url: https://etherscan.io/block/18997238"}
+{"level":"info","time":"2024-01-18 16:06:49.732408","message":"the block.transactions is 219"}
+{"level":"info","time":"2024-01-18 16:07:08.125825","message":"etherscan url: https://etherscan.io/block/18997239"}
+{"level":"info","time":"2024-01-18 16:07:08.125845","message":"the block.transactions is 379"}
+{"level":"info","time":"2024-01-18 16:07:41.948226","message":"etherscan url: https://etherscan.io/block/18997240"}
+{"level":"info","time":"2024-01-18 16:07:41.948250","message":"the block.transactions is 143"}
+{"level":"info","time":"2024-01-18 16:07:55.478730","message":"etherscan url: https://etherscan.io/block/18997241"}
+{"level":"info","time":"2024-01-18 16:07:55.478749","message":"the block.transactions is 214"}
+{"level":"info","time":"2024-01-18 16:08:14.305149","message":"etherscan url: https://etherscan.io/block/18997242"}
+{"level":"info","time":"2024-01-18 16:08:14.305171","message":"the block.transactions is 215"}
+{"level":"info","time":"2024-01-18 16:08:35.031440","message":"etherscan url: https://etherscan.io/block/18997243"}
+{"level":"info","time":"2024-01-18 16:08:35.031463","message":"the block.transactions is 141"}
+{"level":"info","time":"2024-01-18 16:08:48.188752","message":"etherscan url: https://etherscan.io/block/18997244"}
+{"level":"info","time":"2024-01-18 16:08:48.188776","message":"the block.transactions is 231"}
+{"level":"info","time":"2024-01-18 16:09:10.225480","message":"etherscan url: https://etherscan.io/block/18997245"}
+{"level":"info","time":"2024-01-18 16:09:10.225509","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 16:09:22.913146","message":"etherscan url: https://etherscan.io/block/18997246"}
+{"level":"info","time":"2024-01-18 16:09:22.913171","message":"the block.transactions is 189"}
+{"level":"info","time":"2024-01-18 16:09:41.221689","message":"etherscan url: https://etherscan.io/block/18997247"}
+{"level":"info","time":"2024-01-18 16:09:41.221711","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 16:09:53.593623","message":"etherscan url: https://etherscan.io/block/18997248"}
+{"level":"info","time":"2024-01-18 16:09:53.593644","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 16:10:13.205601","message":"etherscan url: https://etherscan.io/block/18997249"}
+{"level":"info","time":"2024-01-18 16:10:13.205627","message":"the block.transactions is 198"}
+{"level":"info","time":"2024-01-18 16:10:32.880955","message":"etherscan url: https://etherscan.io/block/18997250"}
+{"level":"info","time":"2024-01-18 16:10:32.880978","message":"the block.transactions is 127"}
+{"level":"info","time":"2024-01-18 16:10:34.152928","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:10:45.957035","message":"etherscan url: https://etherscan.io/block/18997251"}
+{"level":"info","time":"2024-01-18 16:10:45.957056","message":"the block.transactions is 223"}
+{"level":"info","time":"2024-01-18 16:11:09.423475","message":"etherscan url: https://etherscan.io/block/18997252"}
+{"level":"info","time":"2024-01-18 16:11:09.423498","message":"the block.transactions is 200"}
+{"level":"info","time":"2024-01-18 16:11:29.491807","message":"etherscan url: https://etherscan.io/block/18997253"}
+{"level":"info","time":"2024-01-18 16:11:29.491832","message":"the block.transactions is 180"}
+{"level":"info","time":"2024-01-18 16:11:47.918411","message":"etherscan url: https://etherscan.io/block/18997254"}
+{"level":"info","time":"2024-01-18 16:11:47.918444","message":"the block.transactions is 185"}
+{"level":"info","time":"2024-01-18 16:12:07.124803","message":"etherscan url: https://etherscan.io/block/18997255"}
+{"level":"info","time":"2024-01-18 16:12:07.124818","message":"the block.transactions is 132"}
+{"level":"info","time":"2024-01-18 16:12:21.003284","message":"etherscan url: https://etherscan.io/block/18997256"}
+{"level":"info","time":"2024-01-18 16:12:21.003305","message":"the block.transactions is 174"}
+{"level":"info","time":"2024-01-18 16:12:40.317031","message":"etherscan url: https://etherscan.io/block/18997257"}
+{"level":"info","time":"2024-01-18 16:12:40.317053","message":"the block.transactions is 161"}
+{"level":"info","time":"2024-01-18 16:12:59.120779","message":"etherscan url: https://etherscan.io/block/18997258"}
+{"level":"info","time":"2024-01-18 16:12:59.120816","message":"the block.transactions is 95"}
+{"level":"info","time":"2024-01-18 16:12:59.675745","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:13:09.891490","message":"etherscan url: https://etherscan.io/block/18997259"}
+{"level":"info","time":"2024-01-18 16:13:09.891516","message":"the block.transactions is 243"}
+{"level":"info","time":"2024-01-18 16:13:37.684924","message":"etherscan url: https://etherscan.io/block/18997260"}
+{"level":"info","time":"2024-01-18 16:13:37.684947","message":"the block.transactions is 99"}
+{"level":"info","time":"2024-01-18 16:13:48.322426","message":"etherscan url: https://etherscan.io/block/18997261"}
+{"level":"info","time":"2024-01-18 16:13:48.322449","message":"the block.transactions is 199"}
+{"level":"info","time":"2024-01-18 16:14:11.645329","message":"etherscan url: https://etherscan.io/block/18997262"}
+{"level":"info","time":"2024-01-18 16:14:11.645352","message":"the block.transactions is 206"}
+{"level":"info","time":"2024-01-18 16:14:35.550235","message":"etherscan url: https://etherscan.io/block/18997263"}
+{"level":"info","time":"2024-01-18 16:14:35.550257","message":"the block.transactions is 124"}
+{"level":"info","time":"2024-01-18 16:14:49.232236","message":"etherscan url: https://etherscan.io/block/18997264"}
+{"level":"info","time":"2024-01-18 16:14:49.232260","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 16:15:09.000079","message":"etherscan url: https://etherscan.io/block/18997265"}
+{"level":"info","time":"2024-01-18 16:15:09.000102","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 16:15:26.360303","message":"etherscan url: https://etherscan.io/block/18997266"}
+{"level":"info","time":"2024-01-18 16:15:26.360328","message":"the block.transactions is 142"}
+{"level":"info","time":"2024-01-18 16:15:42.353940","message":"etherscan url: https://etherscan.io/block/18997267"}
+{"level":"info","time":"2024-01-18 16:15:42.353961","message":"the block.transactions is 269"}
+{"level":"info","time":"2024-01-18 16:16:13.724672","message":"etherscan url: https://etherscan.io/block/18997268"}
+{"level":"info","time":"2024-01-18 16:16:13.724693","message":"the block.transactions is 140"}
+{"level":"info","time":"2024-01-18 16:16:29.492134","message":"etherscan url: https://etherscan.io/block/18997269"}
+{"level":"info","time":"2024-01-18 16:16:29.492166","message":"the block.transactions is 201"}
+{"level":"info","time":"2024-01-18 16:16:53.241949","message":"etherscan url: https://etherscan.io/block/18997270"}
+{"level":"info","time":"2024-01-18 16:16:53.241973","message":"the block.transactions is 104"}
+{"level":"info","time":"2024-01-18 16:17:05.023944","message":"etherscan url: https://etherscan.io/block/18997271"}
+{"level":"info","time":"2024-01-18 16:17:05.023966","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 16:17:23.963166","message":"etherscan url: https://etherscan.io/block/18997272"}
+{"level":"info","time":"2024-01-18 16:17:23.963188","message":"the block.transactions is 244"}
+{"level":"info","time":"2024-01-18 16:17:52.557880","message":"etherscan url: https://etherscan.io/block/18997273"}
+{"level":"info","time":"2024-01-18 16:17:52.557904","message":"the block.transactions is 190"}
+{"level":"info","time":"2024-01-18 16:18:13.725815","message":"etherscan url: https://etherscan.io/block/18997274"}
+{"level":"info","time":"2024-01-18 16:18:13.725837","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 16:18:40.055990","message":"etherscan url: https://etherscan.io/block/18997275"}
+{"level":"info","time":"2024-01-18 16:18:40.056015","message":"the block.transactions is 197"}
+{"level":"info","time":"2024-01-18 16:19:03.636030","message":"etherscan url: https://etherscan.io/block/18997276"}
+{"level":"info","time":"2024-01-18 16:19:03.636052","message":"the block.transactions is 207"}
+{"level":"info","time":"2024-01-18 16:19:28.109921","message":"etherscan url: https://etherscan.io/block/18997277"}
+{"level":"info","time":"2024-01-18 16:19:28.109944","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 16:19:51.139091","message":"etherscan url: https://etherscan.io/block/18997278"}
+{"level":"info","time":"2024-01-18 16:19:51.139115","message":"the block.transactions is 123"}
+{"level":"info","time":"2024-01-18 16:20:06.978437","message":"etherscan url: https://etherscan.io/block/18997279"}
+{"level":"info","time":"2024-01-18 16:20:06.978458","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 16:20:08.054773","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:20:08.055374","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:20:26.790935","message":"etherscan url: https://etherscan.io/block/18997280"}
+{"level":"info","time":"2024-01-18 16:20:26.790957","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 16:20:45.679279","message":"etherscan url: https://etherscan.io/block/18997281"}
+{"level":"info","time":"2024-01-18 16:20:45.679310","message":"the block.transactions is 199"}
+{"level":"info","time":"2024-01-18 16:21:10.425982","message":"etherscan url: https://etherscan.io/block/18997282"}
+{"level":"info","time":"2024-01-18 16:21:10.425999","message":"the block.transactions is 237"}
+{"level":"info","time":"2024-01-18 16:21:40.394824","message":"etherscan url: https://etherscan.io/block/18997283"}
+{"level":"info","time":"2024-01-18 16:21:40.394848","message":"the block.transactions is 201"}
+{"level":"info","time":"2024-01-18 16:22:06.402669","message":"etherscan url: https://etherscan.io/block/18997284"}
+{"level":"info","time":"2024-01-18 16:22:06.402690","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 16:22:27.237645","message":"etherscan url: https://etherscan.io/block/18997285"}
+{"level":"info","time":"2024-01-18 16:22:27.237671","message":"the block.transactions is 127"}
+{"level":"info","time":"2024-01-18 16:22:43.568942","message":"etherscan url: https://etherscan.io/block/18997286"}
+{"level":"info","time":"2024-01-18 16:22:43.568966","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 16:23:04.500742","message":"etherscan url: https://etherscan.io/block/18997287"}
+{"level":"info","time":"2024-01-18 16:23:04.500766","message":"the block.transactions is 270"}
+{"level":"info","time":"2024-01-18 16:23:39.103120","message":"etherscan url: https://etherscan.io/block/18997288"}
+{"level":"info","time":"2024-01-18 16:23:39.103146","message":"the block.transactions is 158"}
+{"level":"info","time":"2024-01-18 16:23:59.013955","message":"etherscan url: https://etherscan.io/block/18997289"}
+{"level":"info","time":"2024-01-18 16:23:59.013978","message":"the block.transactions is 177"}
+{"level":"info","time":"2024-01-18 16:24:23.442610","message":"etherscan url: https://etherscan.io/block/18997290"}
+{"level":"info","time":"2024-01-18 16:24:23.442636","message":"the block.transactions is 191"}
+{"level":"info","time":"2024-01-18 16:24:48.744796","message":"etherscan url: https://etherscan.io/block/18997291"}
+{"level":"info","time":"2024-01-18 16:24:48.744819","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 16:25:06.784183","message":"etherscan url: https://etherscan.io/block/18997292"}
+{"level":"info","time":"2024-01-18 16:25:06.784209","message":"the block.transactions is 213"}
+{"level":"info","time":"2024-01-18 16:25:34.557499","message":"etherscan url: https://etherscan.io/block/18997293"}
+{"level":"info","time":"2024-01-18 16:25:34.557522","message":"the block.transactions is 95"}
+{"level":"info","time":"2024-01-18 16:25:34.913582","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:25:34.946842","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:25:46.628758","message":"etherscan url: https://etherscan.io/block/18997294"}
+{"level":"info","time":"2024-01-18 16:25:46.628777","message":"the block.transactions is 260"}
+{"level":"info","time":"2024-01-18 16:26:22.653560","message":"etherscan url: https://etherscan.io/block/18997295"}
+{"level":"info","time":"2024-01-18 16:26:22.653585","message":"the block.transactions is 107"}
+{"level":"info","time":"2024-01-18 16:26:37.947185","message":"etherscan url: https://etherscan.io/block/18997296"}
+{"level":"info","time":"2024-01-18 16:26:37.947207","message":"the block.transactions is 178"}
+{"level":"info","time":"2024-01-18 16:27:02.779940","message":"etherscan url: https://etherscan.io/block/18997297"}
+{"level":"info","time":"2024-01-18 16:27:02.779962","message":"the block.transactions is 161"}
+{"level":"info","time":"2024-01-18 16:27:24.753491","message":"etherscan url: https://etherscan.io/block/18997298"}
+{"level":"info","time":"2024-01-18 16:27:24.753510","message":"the block.transactions is 119"}
+{"level":"info","time":"2024-01-18 16:27:41.471889","message":"etherscan url: https://etherscan.io/block/18997299"}
+{"level":"info","time":"2024-01-18 16:27:41.471913","message":"the block.transactions is 185"}
+{"level":"info","time":"2024-01-18 16:27:42.632311","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:27:42.648264","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:28:07.590742","message":"etherscan url: https://etherscan.io/block/18997300"}
+{"level":"info","time":"2024-01-18 16:28:07.590768","message":"the block.transactions is 111"}
+{"level":"info","time":"2024-01-18 16:28:22.587721","message":"etherscan url: https://etherscan.io/block/18997301"}
+{"level":"info","time":"2024-01-18 16:28:22.587744","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 16:28:44.044025","message":"etherscan url: https://etherscan.io/block/18997302"}
+{"level":"info","time":"2024-01-18 16:28:44.044047","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 16:29:05.637238","message":"etherscan url: https://etherscan.io/block/18997303"}
+{"level":"info","time":"2024-01-18 16:29:05.637260","message":"the block.transactions is 131"}
+{"level":"info","time":"2024-01-18 16:29:24.234457","message":"etherscan url: https://etherscan.io/block/18997304"}
+{"level":"info","time":"2024-01-18 16:29:24.234479","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 16:29:45.180006","message":"etherscan url: https://etherscan.io/block/18997305"}
+{"level":"info","time":"2024-01-18 16:29:45.180032","message":"the block.transactions is 247"}
+{"level":"info","time":"2024-01-18 16:30:21.511747","message":"etherscan url: https://etherscan.io/block/18997306"}
+{"level":"info","time":"2024-01-18 16:30:21.511771","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 16:30:46.080941","message":"etherscan url: https://etherscan.io/block/18997307"}
+{"level":"info","time":"2024-01-18 16:30:46.080963","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 16:31:05.281635","message":"etherscan url: https://etherscan.io/block/18997308"}
+{"level":"info","time":"2024-01-18 16:31:05.281659","message":"the block.transactions is 107"}
+{"level":"info","time":"2024-01-18 16:31:21.192195","message":"etherscan url: https://etherscan.io/block/18997309"}
+{"level":"info","time":"2024-01-18 16:31:21.192234","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 16:31:48.017302","message":"etherscan url: https://etherscan.io/block/18997310"}
+{"level":"info","time":"2024-01-18 16:31:48.017328","message":"the block.transactions is 110"}
+{"level":"info","time":"2024-01-18 16:32:04.025854","message":"etherscan url: https://etherscan.io/block/18997311"}
+{"level":"info","time":"2024-01-18 16:32:04.025876","message":"the block.transactions is 193"}
+{"level":"info","time":"2024-01-18 16:32:32.367736","message":"etherscan url: https://etherscan.io/block/18997312"}
+{"level":"info","time":"2024-01-18 16:32:32.367762","message":"the block.transactions is 196"}
+{"level":"info","time":"2024-01-18 16:33:00.906847","message":"etherscan url: https://etherscan.io/block/18997313"}
+{"level":"info","time":"2024-01-18 16:33:00.906869","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 16:33:21.464717","message":"etherscan url: https://etherscan.io/block/18997314"}
+{"level":"info","time":"2024-01-18 16:33:21.464738","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 16:33:46.845839","message":"etherscan url: https://etherscan.io/block/18997315"}
+{"level":"info","time":"2024-01-18 16:33:46.845861","message":"the block.transactions is 103"}
+{"level":"info","time":"2024-01-18 16:34:02.260655","message":"etherscan url: https://etherscan.io/block/18997316"}
+{"level":"info","time":"2024-01-18 16:34:02.260679","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 16:34:25.291189","message":"etherscan url: https://etherscan.io/block/18997317"}
+{"level":"info","time":"2024-01-18 16:34:25.291209","message":"the block.transactions is 96"}
+{"level":"info","time":"2024-01-18 16:34:39.799360","message":"etherscan url: https://etherscan.io/block/18997318"}
+{"level":"info","time":"2024-01-18 16:34:39.799384","message":"the block.transactions is 293"}
+{"level":"info","time":"2024-01-18 16:35:26.334144","message":"etherscan url: https://etherscan.io/block/18997319"}
+{"level":"info","time":"2024-01-18 16:35:26.334169","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 16:35:49.096111","message":"etherscan url: https://etherscan.io/block/18997320"}
+{"level":"info","time":"2024-01-18 16:35:49.096132","message":"the block.transactions is 125"}
+{"level":"info","time":"2024-01-18 16:36:08.048468","message":"etherscan url: https://etherscan.io/block/18997321"}
+{"level":"info","time":"2024-01-18 16:36:08.048492","message":"the block.transactions is 155"}
+{"level":"info","time":"2024-01-18 16:36:31.776507","message":"etherscan url: https://etherscan.io/block/18997322"}
+{"level":"info","time":"2024-01-18 16:36:31.776527","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 16:36:54.625069","message":"etherscan url: https://etherscan.io/block/18997323"}
+{"level":"info","time":"2024-01-18 16:36:54.625094","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 16:37:16.091090","message":"etherscan url: https://etherscan.io/block/18997324"}
+{"level":"info","time":"2024-01-18 16:37:16.091113","message":"the block.transactions is 136"}
+{"level":"info","time":"2024-01-18 16:37:37.086780","message":"etherscan url: https://etherscan.io/block/18997325"}
+{"level":"info","time":"2024-01-18 16:37:37.086804","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 16:38:01.040878","message":"etherscan url: https://etherscan.io/block/18997326"}
+{"level":"info","time":"2024-01-18 16:38:01.040897","message":"the block.transactions is 207"}
+{"level":"info","time":"2024-01-18 16:38:32.351627","message":"etherscan url: https://etherscan.io/block/18997327"}
+{"level":"info","time":"2024-01-18 16:38:32.351649","message":"the block.transactions is 124"}
+{"level":"info","time":"2024-01-18 16:38:51.545038","message":"etherscan url: https://etherscan.io/block/18997328"}
+{"level":"info","time":"2024-01-18 16:38:51.545073","message":"the block.transactions is 169"}
+{"level":"info","time":"2024-01-18 16:39:17.871732","message":"etherscan url: https://etherscan.io/block/18997329"}
+{"level":"info","time":"2024-01-18 16:39:17.871757","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 16:39:39.508330","message":"etherscan url: https://etherscan.io/block/18997330"}
+{"level":"info","time":"2024-01-18 16:39:39.508360","message":"the block.transactions is 133"}
+{"level":"info","time":"2024-01-18 16:40:00.535696","message":"etherscan url: https://etherscan.io/block/18997331"}
+{"level":"info","time":"2024-01-18 16:40:00.535717","message":"the block.transactions is 132"}
+{"level":"info","time":"2024-01-18 16:40:21.778148","message":"etherscan url: https://etherscan.io/block/18997332"}
+{"level":"info","time":"2024-01-18 16:40:21.778170","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 16:40:22.543375","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:40:45.301750","message":"etherscan url: https://etherscan.io/block/18997333"}
+{"level":"info","time":"2024-01-18 16:40:45.301771","message":"the block.transactions is 186"}
+{"level":"info","time":"2024-01-18 16:41:15.054942","message":"etherscan url: https://etherscan.io/block/18997334"}
+{"level":"info","time":"2024-01-18 16:41:15.054963","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 16:41:40.565070","message":"etherscan url: https://etherscan.io/block/18997335"}
+{"level":"info","time":"2024-01-18 16:41:40.565093","message":"the block.transactions is 96"}
+{"level":"info","time":"2024-01-18 16:41:55.486293","message":"etherscan url: https://etherscan.io/block/18997336"}
+{"level":"info","time":"2024-01-18 16:41:55.486316","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 16:42:16.388807","message":"etherscan url: https://etherscan.io/block/18997337"}
+{"level":"info","time":"2024-01-18 16:42:16.388831","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 16:42:42.781483","message":"etherscan url: https://etherscan.io/block/18997338"}
+{"level":"info","time":"2024-01-18 16:42:42.781506","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 16:43:06.613309","message":"etherscan url: https://etherscan.io/block/18997339"}
+{"level":"info","time":"2024-01-18 16:43:06.613333","message":"the block.transactions is 319"}
+{"level":"info","time":"2024-01-18 16:43:59.644711","message":"etherscan url: https://etherscan.io/block/18997340"}
+{"level":"info","time":"2024-01-18 16:43:59.644734","message":"the block.transactions is 115"}
+{"level":"info","time":"2024-01-18 16:44:18.151487","message":"etherscan url: https://etherscan.io/block/18997341"}
+{"level":"info","time":"2024-01-18 16:44:18.151513","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 16:44:50.364834","message":"etherscan url: https://etherscan.io/block/18997342"}
+{"level":"info","time":"2024-01-18 16:44:50.364850","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 16:45:10.349044","message":"etherscan url: https://etherscan.io/block/18997343"}
+{"level":"info","time":"2024-01-18 16:45:10.349068","message":"the block.transactions is 164"}
+{"level":"info","time":"2024-01-18 16:45:37.049588","message":"etherscan url: https://etherscan.io/block/18997344"}
+{"level":"info","time":"2024-01-18 16:45:37.049612","message":"the block.transactions is 128"}
+{"level":"info","time":"2024-01-18 16:45:57.998966","message":"etherscan url: https://etherscan.io/block/18997345"}
+{"level":"info","time":"2024-01-18 16:45:57.998990","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 16:45:58.732211","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 16:46:21.303470","message":"etherscan url: https://etherscan.io/block/18997346"}
+{"level":"info","time":"2024-01-18 16:46:21.303494","message":"the block.transactions is 228"}
+{"level":"info","time":"2024-01-18 16:46:59.681381","message":"etherscan url: https://etherscan.io/block/18997347"}
+{"level":"info","time":"2024-01-18 16:46:59.681415","message":"the block.transactions is 380"}
+{"level":"info","time":"2024-01-18 16:48:02.679633","message":"etherscan url: https://etherscan.io/block/18997348"}
+{"level":"info","time":"2024-01-18 16:48:02.679673","message":"the block.transactions is 202"}
+{"level":"info","time":"2024-01-18 16:48:36.350409","message":"etherscan url: https://etherscan.io/block/18997349"}
+{"level":"info","time":"2024-01-18 16:48:36.350433","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 16:48:58.795831","message":"etherscan url: https://etherscan.io/block/18997350"}
+{"level":"info","time":"2024-01-18 16:48:58.795856","message":"the block.transactions is 118"}
+{"level":"info","time":"2024-01-18 16:49:18.067159","message":"etherscan url: https://etherscan.io/block/18997351"}
+{"level":"info","time":"2024-01-18 16:49:18.067182","message":"the block.transactions is 181"}
+{"level":"info","time":"2024-01-18 16:49:48.989278","message":"etherscan url: https://etherscan.io/block/18997352"}
+{"level":"info","time":"2024-01-18 16:49:48.989300","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 16:50:14.824256","message":"etherscan url: https://etherscan.io/block/18997353"}
+{"level":"info","time":"2024-01-18 16:50:14.824282","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 16:50:40.192315","message":"etherscan url: https://etherscan.io/block/18997354"}
+{"level":"info","time":"2024-01-18 16:50:40.192335","message":"the block.transactions is 143"}
+{"level":"info","time":"2024-01-18 16:51:04.709893","message":"etherscan url: https://etherscan.io/block/18997355"}
+{"level":"info","time":"2024-01-18 16:51:04.709908","message":"the block.transactions is 210"}
+{"level":"info","time":"2024-01-18 16:51:40.754464","message":"etherscan url: https://etherscan.io/block/18997356"}
+{"level":"info","time":"2024-01-18 16:51:40.754483","message":"the block.transactions is 146"}
+{"level":"info","time":"2024-01-18 16:52:05.381685","message":"etherscan url: https://etherscan.io/block/18997357"}
+{"level":"info","time":"2024-01-18 16:52:05.381706","message":"the block.transactions is 145"}
+{"level":"info","time":"2024-01-18 16:52:30.854494","message":"etherscan url: https://etherscan.io/block/18997358"}
+{"level":"info","time":"2024-01-18 16:52:30.854518","message":"the block.transactions is 141"}
+{"level":"info","time":"2024-01-18 16:52:55.782924","message":"etherscan url: https://etherscan.io/block/18997359"}
+{"level":"info","time":"2024-01-18 16:52:55.782947","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 16:53:16.435791","message":"etherscan url: https://etherscan.io/block/18997360"}
+{"level":"info","time":"2024-01-18 16:53:16.435836","message":"the block.transactions is 178"}
+{"level":"info","time":"2024-01-18 16:53:47.702099","message":"etherscan url: https://etherscan.io/block/18997361"}
+{"level":"info","time":"2024-01-18 16:53:47.702120","message":"the block.transactions is 108"}
+{"level":"info","time":"2024-01-18 16:54:06.713884","message":"etherscan url: https://etherscan.io/block/18997362"}
+{"level":"info","time":"2024-01-18 16:54:06.713907","message":"the block.transactions is 181"}
+{"level":"info","time":"2024-01-18 16:54:38.888845","message":"etherscan url: https://etherscan.io/block/18997363"}
+{"level":"info","time":"2024-01-18 16:54:38.888868","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 16:55:07.194109","message":"etherscan url: https://etherscan.io/block/18997364"}
+{"level":"info","time":"2024-01-18 16:55:07.194133","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 16:55:34.200885","message":"etherscan url: https://etherscan.io/block/18997365"}
+{"level":"info","time":"2024-01-18 16:55:34.200908","message":"the block.transactions is 299"}
+{"level":"info","time":"2024-01-18 16:56:28.463872","message":"etherscan url: https://etherscan.io/block/18997366"}
+{"level":"info","time":"2024-01-18 16:56:28.463896","message":"the block.transactions is 169"}
+{"level":"info","time":"2024-01-18 16:56:58.817497","message":"etherscan url: https://etherscan.io/block/18997367"}
+{"level":"info","time":"2024-01-18 16:56:58.817527","message":"the block.transactions is 133"}
+{"level":"info","time":"2024-01-18 16:57:21.579940","message":"etherscan url: https://etherscan.io/block/18997368"}
+{"level":"info","time":"2024-01-18 16:57:21.579962","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 16:57:44.556216","message":"etherscan url: https://etherscan.io/block/18997369"}
+{"level":"info","time":"2024-01-18 16:57:44.556238","message":"the block.transactions is 177"}
+{"level":"info","time":"2024-01-18 16:58:17.070238","message":"etherscan url: https://etherscan.io/block/18997370"}
+{"level":"info","time":"2024-01-18 16:58:17.070261","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 16:58:44.163086","message":"etherscan url: https://etherscan.io/block/18997371"}
+{"level":"info","time":"2024-01-18 16:58:44.163107","message":"the block.transactions is 119"}
+{"level":"info","time":"2024-01-18 16:59:06.482033","message":"etherscan url: https://etherscan.io/block/18997372"}
+{"level":"info","time":"2024-01-18 16:59:06.482057","message":"the block.transactions is 220"}
+{"level":"info","time":"2024-01-18 16:59:46.779341","message":"etherscan url: https://etherscan.io/block/18997373"}
+{"level":"info","time":"2024-01-18 16:59:46.779366","message":"the block.transactions is 113"}
+{"level":"info","time":"2024-01-18 17:00:07.581111","message":"etherscan url: https://etherscan.io/block/18997374"}
+{"level":"info","time":"2024-01-18 17:00:07.581142","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 17:00:08.723332","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:00:39.540351","message":"etherscan url: https://etherscan.io/block/18997375"}
+{"level":"info","time":"2024-01-18 17:00:39.540377","message":"the block.transactions is 145"}
+{"level":"info","time":"2024-01-18 17:01:07.675316","message":"etherscan url: https://etherscan.io/block/18997376"}
+{"level":"info","time":"2024-01-18 17:01:07.675339","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 17:01:32.955546","message":"etherscan url: https://etherscan.io/block/18997377"}
+{"level":"info","time":"2024-01-18 17:01:32.955573","message":"the block.transactions is 311"}
+{"level":"info","time":"2024-01-18 17:02:31.786388","message":"etherscan url: https://etherscan.io/block/18997378"}
+{"level":"info","time":"2024-01-18 17:02:31.786408","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 17:03:05.152439","message":"etherscan url: https://etherscan.io/block/18997379"}
+{"level":"info","time":"2024-01-18 17:03:05.152462","message":"the block.transactions is 116"}
+{"level":"info","time":"2024-01-18 17:03:26.548802","message":"etherscan url: https://etherscan.io/block/18997380"}
+{"level":"info","time":"2024-01-18 17:03:26.548826","message":"the block.transactions is 123"}
+{"level":"info","time":"2024-01-18 17:03:49.431701","message":"etherscan url: https://etherscan.io/block/18997381"}
+{"level":"info","time":"2024-01-18 17:03:49.431723","message":"the block.transactions is 287"}
+{"level":"info","time":"2024-01-18 17:04:46.276608","message":"etherscan url: https://etherscan.io/block/18997382"}
+{"level":"info","time":"2024-01-18 17:04:46.276631","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 17:05:14.996998","message":"etherscan url: https://etherscan.io/block/18997383"}
+{"level":"info","time":"2024-01-18 17:05:14.997043","message":"the block.transactions is 204"}
+{"level":"info","time":"2024-01-18 17:05:15.810950","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:05:53.902704","message":"etherscan url: https://etherscan.io/block/18997384"}
+{"level":"info","time":"2024-01-18 17:05:53.902728","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 17:06:26.494679","message":"etherscan url: https://etherscan.io/block/18997385"}
+{"level":"info","time":"2024-01-18 17:06:26.494709","message":"the block.transactions is 187"}
+{"level":"info","time":"2024-01-18 17:07:02.708531","message":"etherscan url: https://etherscan.io/block/18997386"}
+{"level":"info","time":"2024-01-18 17:07:02.708556","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 17:07:33.616396","message":"etherscan url: https://etherscan.io/block/18997387"}
+{"level":"info","time":"2024-01-18 17:07:33.616418","message":"the block.transactions is 132"}
+{"level":"info","time":"2024-01-18 17:07:58.787109","message":"etherscan url: https://etherscan.io/block/18997388"}
+{"level":"info","time":"2024-01-18 17:07:58.787134","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 17:08:29.149191","message":"etherscan url: https://etherscan.io/block/18997389"}
+{"level":"info","time":"2024-01-18 17:08:29.149212","message":"the block.transactions is 223"}
+{"level":"info","time":"2024-01-18 17:09:12.404792","message":"etherscan url: https://etherscan.io/block/18997390"}
+{"level":"info","time":"2024-01-18 17:09:12.404818","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 17:09:41.415926","message":"etherscan url: https://etherscan.io/block/18997391"}
+{"level":"info","time":"2024-01-18 17:09:41.415948","message":"the block.transactions is 141"}
+{"level":"info","time":"2024-01-18 17:10:08.676554","message":"etherscan url: https://etherscan.io/block/18997392"}
+{"level":"info","time":"2024-01-18 17:10:08.676577","message":"the block.transactions is 127"}
+{"level":"info","time":"2024-01-18 17:10:33.675216","message":"etherscan url: https://etherscan.io/block/18997393"}
+{"level":"info","time":"2024-01-18 17:10:33.675239","message":"the block.transactions is 221"}
+{"level":"info","time":"2024-01-18 17:11:18.091175","message":"etherscan url: https://etherscan.io/block/18997394"}
+{"level":"info","time":"2024-01-18 17:11:18.091192","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 17:11:43.804613","message":"etherscan url: https://etherscan.io/block/18997395"}
+{"level":"info","time":"2024-01-18 17:11:43.804635","message":"the block.transactions is 195"}
+{"level":"info","time":"2024-01-18 17:12:23.737248","message":"etherscan url: https://etherscan.io/block/18997396"}
+{"level":"info","time":"2024-01-18 17:12:23.737271","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 17:12:59.131969","message":"etherscan url: https://etherscan.io/block/18997397"}
+{"level":"info","time":"2024-01-18 17:12:59.131992","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 17:13:31.552460","message":"etherscan url: https://etherscan.io/block/18997398"}
+{"level":"info","time":"2024-01-18 17:13:31.552483","message":"the block.transactions is 206"}
+{"level":"info","time":"2024-01-18 17:13:32.320495","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:14:13.908281","message":"etherscan url: https://etherscan.io/block/18997399"}
+{"level":"info","time":"2024-01-18 17:14:13.908302","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 17:14:40.198847","message":"etherscan url: https://etherscan.io/block/18997400"}
+{"level":"info","time":"2024-01-18 17:14:40.198871","message":"the block.transactions is 174"}
+{"level":"info","time":"2024-01-18 17:15:17.012677","message":"etherscan url: https://etherscan.io/block/18997401"}
+{"level":"info","time":"2024-01-18 17:15:17.012701","message":"the block.transactions is 177"}
+{"level":"info","time":"2024-01-18 17:15:53.869373","message":"etherscan url: https://etherscan.io/block/18997402"}
+{"level":"info","time":"2024-01-18 17:15:53.869397","message":"the block.transactions is 99"}
+{"level":"info","time":"2024-01-18 17:16:14.078084","message":"etherscan url: https://etherscan.io/block/18997403"}
+{"level":"info","time":"2024-01-18 17:16:14.078105","message":"the block.transactions is 264"}
+{"level":"info","time":"2024-01-18 17:17:10.965113","message":"etherscan url: https://etherscan.io/block/18997404"}
+{"level":"info","time":"2024-01-18 17:17:10.965142","message":"the block.transactions is 122"}
+{"level":"info","time":"2024-01-18 17:17:36.666319","message":"etherscan url: https://etherscan.io/block/18997405"}
+{"level":"info","time":"2024-01-18 17:17:36.666340","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 17:17:37.440423","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:18:08.799491","message":"etherscan url: https://etherscan.io/block/18997406"}
+{"level":"info","time":"2024-01-18 17:18:08.799522","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 17:18:09.647469","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:18:41.675668","message":"etherscan url: https://etherscan.io/block/18997407"}
+{"level":"info","time":"2024-01-18 17:18:41.675692","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 17:19:21.408966","message":"etherscan url: https://etherscan.io/block/18997408"}
+{"level":"info","time":"2024-01-18 17:19:21.408992","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 17:19:57.702918","message":"etherscan url: https://etherscan.io/block/18997409"}
+{"level":"info","time":"2024-01-18 17:19:57.702941","message":"the block.transactions is 145"}
+{"level":"info","time":"2024-01-18 17:20:29.117340","message":"etherscan url: https://etherscan.io/block/18997410"}
+{"level":"info","time":"2024-01-18 17:20:29.117372","message":"the block.transactions is 117"}
+{"level":"info","time":"2024-01-18 17:20:54.582130","message":"etherscan url: https://etherscan.io/block/18997411"}
+{"level":"info","time":"2024-01-18 17:20:54.582160","message":"the block.transactions is 160"}
+{"level":"info","time":"2024-01-18 17:21:29.766256","message":"etherscan url: https://etherscan.io/block/18997412"}
+{"level":"info","time":"2024-01-18 17:21:29.766287","message":"the block.transactions is 178"}
+{"level":"info","time":"2024-01-18 17:22:08.270430","message":"etherscan url: https://etherscan.io/block/18997413"}
+{"level":"info","time":"2024-01-18 17:22:08.270447","message":"the block.transactions is 160"}
+{"level":"info","time":"2024-01-18 17:22:42.894661","message":"etherscan url: https://etherscan.io/block/18997414"}
+{"level":"info","time":"2024-01-18 17:22:42.894685","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 17:23:19.916772","message":"etherscan url: https://etherscan.io/block/18997415"}
+{"level":"info","time":"2024-01-18 17:23:19.916798","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 17:23:58.038538","message":"etherscan url: https://etherscan.io/block/18997416"}
+{"level":"info","time":"2024-01-18 17:23:58.038561","message":"the block.transactions is 197"}
+{"level":"info","time":"2024-01-18 17:24:42.800257","message":"etherscan url: https://etherscan.io/block/18997417"}
+{"level":"info","time":"2024-01-18 17:24:42.800281","message":"the block.transactions is 148"}
+{"level":"info","time":"2024-01-18 17:25:15.109237","message":"etherscan url: https://etherscan.io/block/18997418"}
+{"level":"info","time":"2024-01-18 17:25:15.109255","message":"the block.transactions is 219"}
+{"level":"info","time":"2024-01-18 17:26:05.037564","message":"etherscan url: https://etherscan.io/block/18997419"}
+{"level":"info","time":"2024-01-18 17:26:05.037588","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 17:26:44.009512","message":"etherscan url: https://etherscan.io/block/18997420"}
+{"level":"info","time":"2024-01-18 17:26:44.009534","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 17:27:23.427541","message":"etherscan url: https://etherscan.io/block/18997421"}
+{"level":"info","time":"2024-01-18 17:27:23.427567","message":"the block.transactions is 297"}
+{"level":"info","time":"2024-01-18 17:28:30.318762","message":"etherscan url: https://etherscan.io/block/18997422"}
+{"level":"info","time":"2024-01-18 17:28:30.318796","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 17:29:01.834178","message":"etherscan url: https://etherscan.io/block/18997423"}
+{"level":"info","time":"2024-01-18 17:29:01.834200","message":"the block.transactions is 207"}
+{"level":"info","time":"2024-01-18 17:29:47.657793","message":"etherscan url: https://etherscan.io/block/18997424"}
+{"level":"info","time":"2024-01-18 17:29:47.657815","message":"the block.transactions is 120"}
+{"level":"info","time":"2024-01-18 17:30:15.503049","message":"etherscan url: https://etherscan.io/block/18997425"}
+{"level":"info","time":"2024-01-18 17:30:15.503071","message":"the block.transactions is 148"}
+{"level":"info","time":"2024-01-18 17:30:19.385873","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.385897","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.386514","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.386546","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.386559","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.386571","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.387067","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.387505","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.387513","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.387546","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.387553","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.389869","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.389974","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.389987","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.389992","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.389999","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.390005","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.390571","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.390584","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.391670","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.391691","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.392532","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.392556","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.392563","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.395062","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.395630","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.398744","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.398772","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.398779","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.398784","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.398796","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.398818","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.399272","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.399286","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.399308","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.399333","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.399391","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.399848","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400360","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400367","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400910","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400921","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400928","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400934","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400951","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.400974","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.401766","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.401823","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.401862","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.401885","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.401896","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.402623","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.402659","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.402665","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.402677","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.403327","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.403358","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.403374","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.403395","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.404017","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.404045","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.404662","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.405147","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.405154","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.405160","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.405166","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.405185","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.405675","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406206","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406235","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406246","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406255","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406272","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406874","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.406882","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.407491","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.408057","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.408064","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.408074","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.408699","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.408712","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.409463","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.409513","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.409642","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.409649","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.409672","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.409679","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.410399","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.410413","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.410419","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.411019","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.411034","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.411701","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.412299","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.412307","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.412325","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.412347","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.412966","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.412998","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.413533","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.413540","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.413568","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.413579","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.414274","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.414286","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.414297","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.414936","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.414945","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.415539","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.415551","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.415562","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.415582","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.415591","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.416183","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.416864","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.416876","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.416887","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.417969","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.417996","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.418019","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.418025","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.418851","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.418865","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.418889","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.419530","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.420087","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.420107","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:19.420584","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:30:52.153446","message":"etherscan url: https://etherscan.io/block/18997426"}
+{"level":"info","time":"2024-01-18 17:30:52.153469","message":"the block.transactions is 141"}
+{"level":"info","time":"2024-01-18 17:30:52.812268","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:31:24.258924","message":"etherscan url: https://etherscan.io/block/18997427"}
+{"level":"info","time":"2024-01-18 17:31:24.258947","message":"the block.transactions is 114"}
+{"level":"info","time":"2024-01-18 17:31:24.884335","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:31:51.144291","message":"etherscan url: https://etherscan.io/block/18997428"}
+{"level":"info","time":"2024-01-18 17:31:51.144315","message":"the block.transactions is 119"}
+{"level":"info","time":"2024-01-18 17:31:51.942149","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:32:19.047107","message":"etherscan url: https://etherscan.io/block/18997429"}
+{"level":"info","time":"2024-01-18 17:32:19.047132","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 17:33:09.777518","message":"etherscan url: https://etherscan.io/block/18997430"}
+{"level":"info","time":"2024-01-18 17:33:09.777542","message":"the block.transactions is 163"}
+{"level":"info","time":"2024-01-18 17:33:47.756449","message":"etherscan url: https://etherscan.io/block/18997431"}
+{"level":"info","time":"2024-01-18 17:33:47.756472","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 17:34:30.863450","message":"etherscan url: https://etherscan.io/block/18997432"}
+{"level":"info","time":"2024-01-18 17:34:30.863468","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 17:35:02.899796","message":"etherscan url: https://etherscan.io/block/18997433"}
+{"level":"info","time":"2024-01-18 17:35:02.899817","message":"the block.transactions is 307"}
+{"level":"info","time":"2024-01-18 17:36:20.629865","message":"etherscan url: https://etherscan.io/block/18997434"}
+{"level":"info","time":"2024-01-18 17:36:20.629889","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 17:36:21.274157","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:36:21.275268","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:36:53.534806","message":"etherscan url: https://etherscan.io/block/18997435"}
+{"level":"info","time":"2024-01-18 17:36:53.534828","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 17:37:25.476805","message":"etherscan url: https://etherscan.io/block/18997436"}
+{"level":"info","time":"2024-01-18 17:37:25.476827","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 17:38:02.886285","message":"etherscan url: https://etherscan.io/block/18997437"}
+{"level":"info","time":"2024-01-18 17:38:02.886307","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 17:38:45.309696","message":"etherscan url: https://etherscan.io/block/18997438"}
+{"level":"info","time":"2024-01-18 17:38:45.309720","message":"the block.transactions is 104"}
+{"level":"info","time":"2024-01-18 17:39:10.006355","message":"etherscan url: https://etherscan.io/block/18997439"}
+{"level":"info","time":"2024-01-18 17:39:10.006377","message":"the block.transactions is 247"}
+{"level":"info","time":"2024-01-18 17:40:13.589047","message":"etherscan url: https://etherscan.io/block/18997440"}
+{"level":"info","time":"2024-01-18 17:40:13.589076","message":"the block.transactions is 126"}
+{"level":"info","time":"2024-01-18 17:40:43.881000","message":"etherscan url: https://etherscan.io/block/18997441"}
+{"level":"info","time":"2024-01-18 17:40:43.881025","message":"the block.transactions is 240"}
+{"level":"info","time":"2024-01-18 17:41:40.195985","message":"etherscan url: https://etherscan.io/block/18997442"}
+{"level":"info","time":"2024-01-18 17:41:40.196005","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 17:42:12.994384","message":"etherscan url: https://etherscan.io/block/18997443"}
+{"level":"info","time":"2024-01-18 17:42:12.994405","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 17:42:50.932436","message":"etherscan url: https://etherscan.io/block/18997444"}
+{"level":"info","time":"2024-01-18 17:42:50.932480","message":"the block.transactions is 136"}
+{"level":"info","time":"2024-01-18 17:43:23.287544","message":"etherscan url: https://etherscan.io/block/18997445"}
+{"level":"info","time":"2024-01-18 17:43:23.287568","message":"the block.transactions is 144"}
+{"level":"info","time":"2024-01-18 17:43:58.102755","message":"etherscan url: https://etherscan.io/block/18997446"}
+{"level":"info","time":"2024-01-18 17:43:58.102780","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 17:44:39.801490","message":"etherscan url: https://etherscan.io/block/18997447"}
+{"level":"info","time":"2024-01-18 17:44:39.801512","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 17:45:13.339146","message":"etherscan url: https://etherscan.io/block/18997448"}
+{"level":"info","time":"2024-01-18 17:45:13.339169","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 17:45:56.707958","message":"etherscan url: https://etherscan.io/block/18997449"}
+{"level":"info","time":"2024-01-18 17:45:56.707974","message":"the block.transactions is 136"}
+{"level":"info","time":"2024-01-18 17:45:57.130521","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:45:57.130556","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:45:57.131425","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 17:46:29.655569","message":"etherscan url: https://etherscan.io/block/18997450"}
+{"level":"info","time":"2024-01-18 17:46:29.655590","message":"the block.transactions is 209"}
+{"level":"info","time":"2024-01-18 17:47:21.886300","message":"etherscan url: https://etherscan.io/block/18997451"}
+{"level":"info","time":"2024-01-18 17:47:21.886324","message":"the block.transactions is 161"}
+{"level":"info","time":"2024-01-18 17:48:01.009992","message":"etherscan url: https://etherscan.io/block/18997452"}
+{"level":"info","time":"2024-01-18 17:48:01.010013","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 17:48:37.250940","message":"etherscan url: https://etherscan.io/block/18997453"}
+{"level":"info","time":"2024-01-18 17:48:37.250964","message":"the block.transactions is 162"}
+{"level":"info","time":"2024-01-18 17:49:17.900265","message":"etherscan url: https://etherscan.io/block/18997454"}
+{"level":"info","time":"2024-01-18 17:49:17.900289","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 17:50:03.811368","message":"etherscan url: https://etherscan.io/block/18997455"}
+{"level":"info","time":"2024-01-18 17:50:03.811383","message":"the block.transactions is 107"}
+{"level":"info","time":"2024-01-18 17:50:30.399017","message":"etherscan url: https://etherscan.io/block/18997456"}
+{"level":"info","time":"2024-01-18 17:50:30.399039","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 17:51:14.666067","message":"etherscan url: https://etherscan.io/block/18997457"}
+{"level":"info","time":"2024-01-18 17:51:14.666091","message":"the block.transactions is 101"}
+{"level":"info","time":"2024-01-18 17:51:40.334199","message":"etherscan url: https://etherscan.io/block/18997458"}
+{"level":"info","time":"2024-01-18 17:51:40.334221","message":"the block.transactions is 205"}
+{"level":"info","time":"2024-01-18 17:52:35.346001","message":"etherscan url: https://etherscan.io/block/18997459"}
+{"level":"info","time":"2024-01-18 17:52:35.346026","message":"the block.transactions is 209"}
+{"level":"info","time":"2024-01-18 17:53:28.492982","message":"etherscan url: https://etherscan.io/block/18997460"}
+{"level":"info","time":"2024-01-18 17:53:28.493005","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 17:54:06.812735","message":"etherscan url: https://etherscan.io/block/18997461"}
+{"level":"info","time":"2024-01-18 17:54:06.812757","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 17:54:43.807366","message":"etherscan url: https://etherscan.io/block/18997462"}
+{"level":"info","time":"2024-01-18 17:54:43.807390","message":"the block.transactions is 142"}
+{"level":"info","time":"2024-01-18 17:55:20.322051","message":"etherscan url: https://etherscan.io/block/18997463"}
+{"level":"info","time":"2024-01-18 17:55:20.322073","message":"the block.transactions is 132"}
+{"level":"info","time":"2024-01-18 17:55:54.584284","message":"etherscan url: https://etherscan.io/block/18997464"}
+{"level":"info","time":"2024-01-18 17:55:54.584306","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 17:56:52.705124","message":"etherscan url: https://etherscan.io/block/18997465"}
+{"level":"info","time":"2024-01-18 17:56:52.705148","message":"the block.transactions is 120"}
+{"level":"info","time":"2024-01-18 17:57:24.295985","message":"etherscan url: https://etherscan.io/block/18997466"}
+{"level":"info","time":"2024-01-18 17:57:24.296006","message":"the block.transactions is 135"}
+{"level":"info","time":"2024-01-18 17:57:58.137002","message":"etherscan url: https://etherscan.io/block/18997467"}
+{"level":"info","time":"2024-01-18 17:57:58.137024","message":"the block.transactions is 133"}
+{"level":"info","time":"2024-01-18 17:58:33.409436","message":"etherscan url: https://etherscan.io/block/18997468"}
+{"level":"info","time":"2024-01-18 17:58:33.409469","message":"the block.transactions is 119"}
+{"level":"info","time":"2024-01-18 17:59:04.406928","message":"etherscan url: https://etherscan.io/block/18997469"}
+{"level":"info","time":"2024-01-18 17:59:04.406950","message":"the block.transactions is 194"}
+{"level":"info","time":"2024-01-18 17:59:55.640076","message":"etherscan url: https://etherscan.io/block/18997470"}
+{"level":"info","time":"2024-01-18 17:59:55.640095","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 17:59:56.972393","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:00:43.280673","message":"etherscan url: https://etherscan.io/block/18997471"}
+{"level":"info","time":"2024-01-18 18:00:43.280697","message":"the block.transactions is 160"}
+{"level":"info","time":"2024-01-18 18:01:26.256417","message":"etherscan url: https://etherscan.io/block/18997472"}
+{"level":"info","time":"2024-01-18 18:01:26.256442","message":"the block.transactions is 108"}
+{"level":"info","time":"2024-01-18 18:01:55.191084","message":"etherscan url: https://etherscan.io/block/18997473"}
+{"level":"info","time":"2024-01-18 18:01:55.191106","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 18:02:45.418622","message":"etherscan url: https://etherscan.io/block/18997474"}
+{"level":"info","time":"2024-01-18 18:02:45.418646","message":"the block.transactions is 140"}
+{"level":"info","time":"2024-01-18 18:03:21.992612","message":"etherscan url: https://etherscan.io/block/18997475"}
+{"level":"info","time":"2024-01-18 18:03:21.992637","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 18:04:01.832293","message":"etherscan url: https://etherscan.io/block/18997476"}
+{"level":"info","time":"2024-01-18 18:04:01.832321","message":"the block.transactions is 193"}
+{"level":"info","time":"2024-01-18 18:04:53.711949","message":"etherscan url: https://etherscan.io/block/18997477"}
+{"level":"info","time":"2024-01-18 18:04:53.711974","message":"the block.transactions is 166"}
+{"level":"info","time":"2024-01-18 18:05:37.593103","message":"etherscan url: https://etherscan.io/block/18997478"}
+{"level":"info","time":"2024-01-18 18:05:37.593125","message":"the block.transactions is 117"}
+{"level":"info","time":"2024-01-18 18:06:09.006704","message":"etherscan url: https://etherscan.io/block/18997479"}
+{"level":"info","time":"2024-01-18 18:06:09.006726","message":"the block.transactions is 109"}
+{"level":"info","time":"2024-01-18 18:06:38.820164","message":"etherscan url: https://etherscan.io/block/18997480"}
+{"level":"info","time":"2024-01-18 18:06:38.820189","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 18:07:20.080827","message":"etherscan url: https://etherscan.io/block/18997481"}
+{"level":"info","time":"2024-01-18 18:07:20.080851","message":"the block.transactions is 186"}
+{"level":"info","time":"2024-01-18 18:07:20.895168","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:07:20.918416","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:08:12.199935","message":"etherscan url: https://etherscan.io/block/18997482"}
+{"level":"info","time":"2024-01-18 18:08:12.199958","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 18:08:44.201752","message":"etherscan url: https://etherscan.io/block/18997483"}
+{"level":"info","time":"2024-01-18 18:08:44.201777","message":"the block.transactions is 187"}
+{"level":"info","time":"2024-01-18 18:09:35.205803","message":"etherscan url: https://etherscan.io/block/18997484"}
+{"level":"info","time":"2024-01-18 18:09:35.205825","message":"the block.transactions is 125"}
+{"level":"info","time":"2024-01-18 18:10:09.133589","message":"etherscan url: https://etherscan.io/block/18997485"}
+{"level":"info","time":"2024-01-18 18:10:09.133621","message":"the block.transactions is 191"}
+{"level":"info","time":"2024-01-18 18:11:00.581547","message":"etherscan url: https://etherscan.io/block/18997486"}
+{"level":"info","time":"2024-01-18 18:11:00.581568","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 18:11:47.920594","message":"etherscan url: https://etherscan.io/block/18997487"}
+{"level":"info","time":"2024-01-18 18:11:47.920612","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 18:12:20.955329","message":"etherscan url: https://etherscan.io/block/18997488"}
+{"level":"info","time":"2024-01-18 18:12:20.955352","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 18:12:22.223805","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:12:58.583852","message":"etherscan url: https://etherscan.io/block/18997489"}
+{"level":"info","time":"2024-01-18 18:12:58.583878","message":"the block.transactions is 111"}
+{"level":"info","time":"2024-01-18 18:13:30.164474","message":"etherscan url: https://etherscan.io/block/18997490"}
+{"level":"info","time":"2024-01-18 18:13:30.164498","message":"the block.transactions is 249"}
+{"level":"info","time":"2024-01-18 18:14:40.799561","message":"etherscan url: https://etherscan.io/block/18997491"}
+{"level":"info","time":"2024-01-18 18:14:40.799587","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 18:14:41.448687","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:15:22.356277","message":"etherscan url: https://etherscan.io/block/18997492"}
+{"level":"info","time":"2024-01-18 18:15:22.356303","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 18:16:13.289071","message":"etherscan url: https://etherscan.io/block/18997493"}
+{"level":"info","time":"2024-01-18 18:16:13.289097","message":"the block.transactions is 146"}
+{"level":"info","time":"2024-01-18 18:16:56.891827","message":"etherscan url: https://etherscan.io/block/18997494"}
+{"level":"info","time":"2024-01-18 18:16:56.891851","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 18:17:46.435070","message":"etherscan url: https://etherscan.io/block/18997495"}
+{"level":"info","time":"2024-01-18 18:17:46.435093","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 18:18:30.606436","message":"etherscan url: https://etherscan.io/block/18997496"}
+{"level":"info","time":"2024-01-18 18:18:30.606458","message":"the block.transactions is 176"}
+{"level":"info","time":"2024-01-18 18:19:20.395090","message":"etherscan url: https://etherscan.io/block/18997497"}
+{"level":"info","time":"2024-01-18 18:19:20.395116","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 18:20:02.777144","message":"etherscan url: https://etherscan.io/block/18997498"}
+{"level":"info","time":"2024-01-18 18:20:02.777169","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 18:20:46.528690","message":"etherscan url: https://etherscan.io/block/18997499"}
+{"level":"info","time":"2024-01-18 18:20:46.528714","message":"the block.transactions is 166"}
+{"level":"info","time":"2024-01-18 18:21:34.847228","message":"etherscan url: https://etherscan.io/block/18997500"}
+{"level":"info","time":"2024-01-18 18:21:34.847254","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 18:22:16.767905","message":"etherscan url: https://etherscan.io/block/18997501"}
+{"level":"info","time":"2024-01-18 18:22:16.767929","message":"the block.transactions is 231"}
+{"level":"info","time":"2024-01-18 18:23:27.580119","message":"etherscan url: https://etherscan.io/block/18997502"}
+{"level":"info","time":"2024-01-18 18:23:27.580137","message":"the block.transactions is 101"}
+{"level":"info","time":"2024-01-18 18:23:56.279845","message":"etherscan url: https://etherscan.io/block/18997503"}
+{"level":"info","time":"2024-01-18 18:23:56.279869","message":"the block.transactions is 131"}
+{"level":"info","time":"2024-01-18 18:24:34.866949","message":"etherscan url: https://etherscan.io/block/18997504"}
+{"level":"info","time":"2024-01-18 18:24:34.866975","message":"the block.transactions is 237"}
+{"level":"info","time":"2024-01-18 18:25:44.643867","message":"etherscan url: https://etherscan.io/block/18997505"}
+{"level":"info","time":"2024-01-18 18:25:44.643891","message":"the block.transactions is 135"}
+{"level":"info","time":"2024-01-18 18:26:24.484391","message":"etherscan url: https://etherscan.io/block/18997506"}
+{"level":"info","time":"2024-01-18 18:26:24.484415","message":"the block.transactions is 230"}
+{"level":"info","time":"2024-01-18 18:27:32.542297","message":"etherscan url: https://etherscan.io/block/18997507"}
+{"level":"info","time":"2024-01-18 18:27:32.542320","message":"the block.transactions is 102"}
+{"level":"info","time":"2024-01-18 18:28:01.896882","message":"etherscan url: https://etherscan.io/block/18997508"}
+{"level":"info","time":"2024-01-18 18:28:01.896907","message":"the block.transactions is 203"}
+{"level":"info","time":"2024-01-18 18:29:00.706417","message":"etherscan url: https://etherscan.io/block/18997509"}
+{"level":"info","time":"2024-01-18 18:29:00.706441","message":"the block.transactions is 120"}
+{"level":"info","time":"2024-01-18 18:29:35.170451","message":"etherscan url: https://etherscan.io/block/18997510"}
+{"level":"info","time":"2024-01-18 18:29:35.170476","message":"the block.transactions is 247"}
+{"level":"info","time":"2024-01-18 18:29:36.276254","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.276297","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.277076","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.277823","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.278773","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.279841","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.279924","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.280636","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.281949","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:29:36.284611","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:30:47.728888","message":"etherscan url: https://etherscan.io/block/18997511"}
+{"level":"info","time":"2024-01-18 18:30:47.728913","message":"the block.transactions is 241"}
+{"level":"info","time":"2024-01-18 18:31:58.531077","message":"etherscan url: https://etherscan.io/block/18997512"}
+{"level":"info","time":"2024-01-18 18:31:58.531100","message":"the block.transactions is 100"}
+{"level":"info","time":"2024-01-18 18:32:27.956372","message":"etherscan url: https://etherscan.io/block/18997513"}
+{"level":"info","time":"2024-01-18 18:32:27.956394","message":"the block.transactions is 239"}
+{"level":"info","time":"2024-01-18 18:33:38.804195","message":"etherscan url: https://etherscan.io/block/18997514"}
+{"level":"info","time":"2024-01-18 18:33:38.804222","message":"the block.transactions is 96"}
+{"level":"info","time":"2024-01-18 18:33:39.136019","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:33:39.136404","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:34:06.830227","message":"etherscan url: https://etherscan.io/block/18997515"}
+{"level":"info","time":"2024-01-18 18:34:06.830257","message":"the block.transactions is 224"}
+{"level":"info","time":"2024-01-18 18:35:14.812562","message":"etherscan url: https://etherscan.io/block/18997516"}
+{"level":"info","time":"2024-01-18 18:35:14.812584","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 18:35:58.197207","message":"etherscan url: https://etherscan.io/block/18997517"}
+{"level":"info","time":"2024-01-18 18:35:58.197234","message":"the block.transactions is 218"}
+{"level":"info","time":"2024-01-18 18:37:02.697358","message":"etherscan url: https://etherscan.io/block/18997518"}
+{"level":"info","time":"2024-01-18 18:37:02.697386","message":"the block.transactions is 128"}
+{"level":"info","time":"2024-01-18 18:37:40.144717","message":"etherscan url: https://etherscan.io/block/18997519"}
+{"level":"info","time":"2024-01-18 18:37:40.144740","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 18:38:23.544079","message":"etherscan url: https://etherscan.io/block/18997520"}
+{"level":"info","time":"2024-01-18 18:38:23.544096","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 18:39:10.717046","message":"etherscan url: https://etherscan.io/block/18997521"}
+{"level":"info","time":"2024-01-18 18:39:10.717071","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 18:39:49.879788","message":"etherscan url: https://etherscan.io/block/18997522"}
+{"level":"info","time":"2024-01-18 18:39:49.879812","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 18:40:38.131488","message":"etherscan url: https://etherscan.io/block/18997523"}
+{"level":"info","time":"2024-01-18 18:40:38.131511","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 18:41:36.190041","message":"etherscan url: https://etherscan.io/block/18997524"}
+{"level":"info","time":"2024-01-18 18:41:36.190078","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 18:42:23.624251","message":"etherscan url: https://etherscan.io/block/18997525"}
+{"level":"info","time":"2024-01-18 18:42:23.624275","message":"the block.transactions is 221"}
+{"level":"info","time":"2024-01-18 18:43:39.870781","message":"etherscan url: https://etherscan.io/block/18997526"}
+{"level":"info","time":"2024-01-18 18:43:39.870811","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 18:43:40.456936","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:44:27.620255","message":"etherscan url: https://etherscan.io/block/18997527"}
+{"level":"info","time":"2024-01-18 18:44:27.620279","message":"the block.transactions is 101"}
+{"level":"info","time":"2024-01-18 18:44:28.016892","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 18:44:57.981419","message":"etherscan url: https://etherscan.io/block/18997528"}
+{"level":"info","time":"2024-01-18 18:44:57.981442","message":"the block.transactions is 155"}
+{"level":"info","time":"2024-01-18 18:45:46.634108","message":"etherscan url: https://etherscan.io/block/18997529"}
+{"level":"info","time":"2024-01-18 18:45:46.634133","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 18:46:31.191665","message":"etherscan url: https://etherscan.io/block/18997530"}
+{"level":"info","time":"2024-01-18 18:46:31.191691","message":"the block.transactions is 146"}
+{"level":"info","time":"2024-01-18 18:47:15.420381","message":"etherscan url: https://etherscan.io/block/18997531"}
+{"level":"info","time":"2024-01-18 18:47:15.420406","message":"the block.transactions is 265"}
+{"level":"info","time":"2024-01-18 18:48:40.747046","message":"etherscan url: https://etherscan.io/block/18997532"}
+{"level":"info","time":"2024-01-18 18:48:40.747071","message":"the block.transactions is 164"}
+{"level":"info","time":"2024-01-18 18:49:30.878495","message":"etherscan url: https://etherscan.io/block/18997533"}
+{"level":"info","time":"2024-01-18 18:49:30.878528","message":"the block.transactions is 262"}
+{"level":"info","time":"2024-01-18 18:50:52.049968","message":"etherscan url: https://etherscan.io/block/18997534"}
+{"level":"info","time":"2024-01-18 18:50:52.049991","message":"the block.transactions is 228"}
+{"level":"info","time":"2024-01-18 18:52:05.973825","message":"etherscan url: https://etherscan.io/block/18997535"}
+{"level":"info","time":"2024-01-18 18:52:05.973850","message":"the block.transactions is 177"}
+{"level":"info","time":"2024-01-18 18:53:01.415301","message":"etherscan url: https://etherscan.io/block/18997536"}
+{"level":"info","time":"2024-01-18 18:53:01.415320","message":"the block.transactions is 201"}
+{"level":"info","time":"2024-01-18 18:54:08.915509","message":"etherscan url: https://etherscan.io/block/18997537"}
+{"level":"info","time":"2024-01-18 18:54:08.915535","message":"the block.transactions is 207"}
+{"level":"info","time":"2024-01-18 18:55:18.194750","message":"etherscan url: https://etherscan.io/block/18997538"}
+{"level":"info","time":"2024-01-18 18:55:18.194776","message":"the block.transactions is 174"}
+{"level":"info","time":"2024-01-18 18:56:14.145396","message":"etherscan url: https://etherscan.io/block/18997539"}
+{"level":"info","time":"2024-01-18 18:56:14.145419","message":"the block.transactions is 199"}
+{"level":"info","time":"2024-01-18 18:57:20.275993","message":"etherscan url: https://etherscan.io/block/18997540"}
+{"level":"info","time":"2024-01-18 18:57:20.276017","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 18:58:10.567695","message":"etherscan url: https://etherscan.io/block/18997541"}
+{"level":"info","time":"2024-01-18 18:58:10.567720","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 18:59:21.084348","message":"etherscan url: https://etherscan.io/block/18997542"}
+{"level":"info","time":"2024-01-18 18:59:21.084372","message":"the block.transactions is 202"}
+{"level":"info","time":"2024-01-18 19:00:26.236287","message":"etherscan url: https://etherscan.io/block/18997543"}
+{"level":"info","time":"2024-01-18 19:00:26.236312","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 19:01:21.419011","message":"etherscan url: https://etherscan.io/block/18997544"}
+{"level":"info","time":"2024-01-18 19:01:21.419035","message":"the block.transactions is 201"}
+{"level":"info","time":"2024-01-18 19:02:27.539218","message":"etherscan url: https://etherscan.io/block/18997545"}
+{"level":"info","time":"2024-01-18 19:02:27.539241","message":"the block.transactions is 113"}
+{"level":"info","time":"2024-01-18 19:03:04.864528","message":"etherscan url: https://etherscan.io/block/18997546"}
+{"level":"info","time":"2024-01-18 19:03:04.864554","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 19:04:06.092484","message":"etherscan url: https://etherscan.io/block/18997547"}
+{"level":"info","time":"2024-01-18 19:04:06.092510","message":"the block.transactions is 184"}
+{"level":"info","time":"2024-01-18 19:05:06.871183","message":"etherscan url: https://etherscan.io/block/18997548"}
+{"level":"info","time":"2024-01-18 19:05:06.871206","message":"the block.transactions is 169"}
+{"level":"info","time":"2024-01-18 19:06:03.257517","message":"etherscan url: https://etherscan.io/block/18997549"}
+{"level":"info","time":"2024-01-18 19:06:03.257542","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 19:06:54.218926","message":"etherscan url: https://etherscan.io/block/18997550"}
+{"level":"info","time":"2024-01-18 19:06:54.218951","message":"the block.transactions is 118"}
+{"level":"info","time":"2024-01-18 19:06:54.778903","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 19:07:32.324449","message":"etherscan url: https://etherscan.io/block/18997551"}
+{"level":"info","time":"2024-01-18 19:07:32.324474","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 19:08:32.272178","message":"etherscan url: https://etherscan.io/block/18997552"}
+{"level":"info","time":"2024-01-18 19:08:32.272200","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 19:08:32.922449","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 19:09:19.766954","message":"etherscan url: https://etherscan.io/block/18997553"}
+{"level":"info","time":"2024-01-18 19:09:19.766979","message":"the block.transactions is 218"}
+{"level":"info","time":"2024-01-18 19:10:37.766117","message":"etherscan url: https://etherscan.io/block/18997554"}
+{"level":"info","time":"2024-01-18 19:10:37.766143","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 19:11:25.645064","message":"etherscan url: https://etherscan.io/block/18997555"}
+{"level":"info","time":"2024-01-18 19:11:25.645079","message":"the block.transactions is 168"}
+{"level":"info","time":"2024-01-18 19:12:22.280731","message":"etherscan url: https://etherscan.io/block/18997556"}
+{"level":"info","time":"2024-01-18 19:12:22.280756","message":"the block.transactions is 108"}
+{"level":"info","time":"2024-01-18 19:12:59.332396","message":"etherscan url: https://etherscan.io/block/18997557"}
+{"level":"info","time":"2024-01-18 19:12:59.332424","message":"the block.transactions is 178"}
+{"level":"info","time":"2024-01-18 19:13:59.005339","message":"etherscan url: https://etherscan.io/block/18997558"}
+{"level":"info","time":"2024-01-18 19:13:59.005364","message":"the block.transactions is 232"}
+{"level":"info","time":"2024-01-18 19:15:17.202711","message":"etherscan url: https://etherscan.io/block/18997559"}
+{"level":"info","time":"2024-01-18 19:15:17.202730","message":"the block.transactions is 257"}
+{"level":"info","time":"2024-01-18 19:16:42.638003","message":"etherscan url: https://etherscan.io/block/18997560"}
+{"level":"info","time":"2024-01-18 19:16:42.638026","message":"the block.transactions is 169"}
+{"level":"info","time":"2024-01-18 19:17:38.996875","message":"etherscan url: https://etherscan.io/block/18997561"}
+{"level":"info","time":"2024-01-18 19:17:38.996899","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 19:18:37.154472","message":"etherscan url: https://etherscan.io/block/18997562"}
+{"level":"info","time":"2024-01-18 19:18:37.154496","message":"the block.transactions is 131"}
+{"level":"info","time":"2024-01-18 19:19:20.316164","message":"etherscan url: https://etherscan.io/block/18997563"}
+{"level":"info","time":"2024-01-18 19:19:20.316189","message":"the block.transactions is 225"}
+{"level":"info","time":"2024-01-18 19:20:45.356652","message":"etherscan url: https://etherscan.io/block/18997564"}
+{"level":"info","time":"2024-01-18 19:20:45.356676","message":"the block.transactions is 185"}
+{"level":"info","time":"2024-01-18 19:21:50.864049","message":"etherscan url: https://etherscan.io/block/18997565"}
+{"level":"info","time":"2024-01-18 19:21:50.864073","message":"the block.transactions is 120"}
+{"level":"info","time":"2024-01-18 19:21:51.279098","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 19:22:33.743363","message":"etherscan url: https://etherscan.io/block/18997566"}
+{"level":"info","time":"2024-01-18 19:22:33.743390","message":"the block.transactions is 167"}
+{"level":"info","time":"2024-01-18 19:23:33.606742","message":"etherscan url: https://etherscan.io/block/18997567"}
+{"level":"info","time":"2024-01-18 19:23:33.606765","message":"the block.transactions is 177"}
+{"level":"info","time":"2024-01-18 19:24:35.037213","message":"etherscan url: https://etherscan.io/block/18997568"}
+{"level":"info","time":"2024-01-18 19:24:35.037240","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 19:25:34.238430","message":"etherscan url: https://etherscan.io/block/18997569"}
+{"level":"info","time":"2024-01-18 19:25:34.238455","message":"the block.transactions is 172"}
+{"level":"info","time":"2024-01-18 19:26:35.358443","message":"etherscan url: https://etherscan.io/block/18997570"}
+{"level":"info","time":"2024-01-18 19:26:35.358468","message":"the block.transactions is 118"}
+{"level":"info","time":"2024-01-18 19:27:16.527897","message":"etherscan url: https://etherscan.io/block/18997571"}
+{"level":"info","time":"2024-01-18 19:27:16.527925","message":"the block.transactions is 187"}
+{"level":"info","time":"2024-01-18 19:28:21.755065","message":"etherscan url: https://etherscan.io/block/18997572"}
+{"level":"info","time":"2024-01-18 19:28:21.755084","message":"the block.transactions is 111"}
+{"level":"info","time":"2024-01-18 19:29:00.235053","message":"etherscan url: https://etherscan.io/block/18997573"}
+{"level":"info","time":"2024-01-18 19:29:00.235076","message":"the block.transactions is 181"}
+{"level":"info","time":"2024-01-18 19:30:04.742918","message":"etherscan url: https://etherscan.io/block/18997574"}
+{"level":"info","time":"2024-01-18 19:30:04.742942","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 19:30:52.840751","message":"etherscan url: https://etherscan.io/block/18997575"}
+{"level":"info","time":"2024-01-18 19:30:52.840777","message":"the block.transactions is 105"}
+{"level":"info","time":"2024-01-18 19:31:30.241380","message":"etherscan url: https://etherscan.io/block/18997576"}
+{"level":"info","time":"2024-01-18 19:31:30.241405","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 19:32:47.528786","message":"etherscan url: https://etherscan.io/block/18997577"}
+{"level":"info","time":"2024-01-18 19:32:47.528810","message":"the block.transactions is 100"}
+{"level":"info","time":"2024-01-18 19:33:22.606500","message":"etherscan url: https://etherscan.io/block/18997578"}
+{"level":"info","time":"2024-01-18 19:33:22.606524","message":"the block.transactions is 158"}
+{"level":"info","time":"2024-01-18 19:34:20.535532","message":"etherscan url: https://etherscan.io/block/18997579"}
+{"level":"info","time":"2024-01-18 19:34:20.535558","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 19:35:37.439682","message":"etherscan url: https://etherscan.io/block/18997580"}
+{"level":"info","time":"2024-01-18 19:35:37.439711","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 19:36:38.170360","message":"etherscan url: https://etherscan.io/block/18997581"}
+{"level":"info","time":"2024-01-18 19:36:38.170387","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 19:37:33.172764","message":"etherscan url: https://etherscan.io/block/18997582"}
+{"level":"info","time":"2024-01-18 19:37:33.172788","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 19:38:22.388512","message":"etherscan url: https://etherscan.io/block/18997583"}
+{"level":"info","time":"2024-01-18 19:38:22.388535","message":"the block.transactions is 190"}
+{"level":"info","time":"2024-01-18 19:39:30.181439","message":"etherscan url: https://etherscan.io/block/18997584"}
+{"level":"info","time":"2024-01-18 19:39:30.181462","message":"the block.transactions is 198"}
+{"level":"info","time":"2024-01-18 19:40:41.216598","message":"etherscan url: https://etherscan.io/block/18997585"}
+{"level":"info","time":"2024-01-18 19:40:41.216631","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 19:40:41.845255","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 19:40:41.845644","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 19:41:30.391374","message":"etherscan url: https://etherscan.io/block/18997586"}
+{"level":"info","time":"2024-01-18 19:41:30.391400","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 19:42:33.071087","message":"etherscan url: https://etherscan.io/block/18997587"}
+{"level":"info","time":"2024-01-18 19:42:33.071114","message":"the block.transactions is 241"}
+{"level":"info","time":"2024-01-18 19:44:01.554349","message":"etherscan url: https://etherscan.io/block/18997588"}
+{"level":"info","time":"2024-01-18 19:44:01.554381","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 19:44:44.328017","message":"etherscan url: https://etherscan.io/block/18997589"}
+{"level":"info","time":"2024-01-18 19:44:44.328042","message":"the block.transactions is 222"}
+{"level":"info","time":"2024-01-18 19:46:03.137222","message":"etherscan url: https://etherscan.io/block/18997590"}
+{"level":"info","time":"2024-01-18 19:46:03.137245","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 19:46:56.775320","message":"etherscan url: https://etherscan.io/block/18997591"}
+{"level":"info","time":"2024-01-18 19:46:56.775344","message":"the block.transactions is 189"}
+{"level":"info","time":"2024-01-18 19:48:04.965715","message":"etherscan url: https://etherscan.io/block/18997592"}
+{"level":"info","time":"2024-01-18 19:48:04.965741","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 19:48:53.804574","message":"etherscan url: https://etherscan.io/block/18997593"}
+{"level":"info","time":"2024-01-18 19:48:53.804599","message":"the block.transactions is 169"}
+{"level":"info","time":"2024-01-18 19:49:54.404403","message":"etherscan url: https://etherscan.io/block/18997594"}
+{"level":"info","time":"2024-01-18 19:49:54.404419","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 19:50:51.142540","message":"etherscan url: https://etherscan.io/block/18997595"}
+{"level":"info","time":"2024-01-18 19:50:51.142564","message":"the block.transactions is 264"}
+{"level":"info","time":"2024-01-18 19:52:28.411706","message":"etherscan url: https://etherscan.io/block/18997596"}
+{"level":"info","time":"2024-01-18 19:52:28.411732","message":"the block.transactions is 180"}
+{"level":"info","time":"2024-01-18 19:53:31.387848","message":"etherscan url: https://etherscan.io/block/18997597"}
+{"level":"info","time":"2024-01-18 19:53:31.387871","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 19:53:31.845423","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 19:54:27.731591","message":"etherscan url: https://etherscan.io/block/18997598"}
+{"level":"info","time":"2024-01-18 19:54:27.731619","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 19:55:20.785821","message":"etherscan url: https://etherscan.io/block/18997599"}
+{"level":"info","time":"2024-01-18 19:55:20.785846","message":"the block.transactions is 225"}
+{"level":"info","time":"2024-01-18 19:56:43.130501","message":"etherscan url: https://etherscan.io/block/18997600"}
+{"level":"info","time":"2024-01-18 19:56:43.130525","message":"the block.transactions is 163"}
+{"level":"info","time":"2024-01-18 19:57:41.644113","message":"etherscan url: https://etherscan.io/block/18997601"}
+{"level":"info","time":"2024-01-18 19:57:41.644139","message":"the block.transactions is 196"}
+{"level":"info","time":"2024-01-18 19:58:53.168393","message":"etherscan url: https://etherscan.io/block/18997602"}
+{"level":"info","time":"2024-01-18 19:58:53.168417","message":"the block.transactions is 115"}
+{"level":"info","time":"2024-01-18 19:59:35.550228","message":"etherscan url: https://etherscan.io/block/18997603"}
+{"level":"info","time":"2024-01-18 19:59:35.550252","message":"the block.transactions is 188"}
+{"level":"info","time":"2024-01-18 20:00:45.721439","message":"etherscan url: https://etherscan.io/block/18997604"}
+{"level":"info","time":"2024-01-18 20:00:45.721462","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 20:01:45.521612","message":"etherscan url: https://etherscan.io/block/18997605"}
+{"level":"info","time":"2024-01-18 20:01:45.521638","message":"the block.transactions is 185"}
+{"level":"info","time":"2024-01-18 20:02:54.906656","message":"etherscan url: https://etherscan.io/block/18997606"}
+{"level":"info","time":"2024-01-18 20:02:54.906679","message":"the block.transactions is 195"}
+{"level":"info","time":"2024-01-18 20:04:08.438986","message":"etherscan url: https://etherscan.io/block/18997607"}
+{"level":"info","time":"2024-01-18 20:04:08.439011","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 20:05:17.752862","message":"etherscan url: https://etherscan.io/block/18997608"}
+{"level":"info","time":"2024-01-18 20:05:17.752889","message":"the block.transactions is 184"}
+{"level":"info","time":"2024-01-18 20:06:26.721025","message":"etherscan url: https://etherscan.io/block/18997609"}
+{"level":"info","time":"2024-01-18 20:06:26.721042","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 20:07:24.807715","message":"etherscan url: https://etherscan.io/block/18997610"}
+{"level":"info","time":"2024-01-18 20:07:24.807741","message":"the block.transactions is 181"}
+{"level":"info","time":"2024-01-18 20:08:33.112822","message":"etherscan url: https://etherscan.io/block/18997611"}
+{"level":"info","time":"2024-01-18 20:08:33.112846","message":"the block.transactions is 176"}
+{"level":"info","time":"2024-01-18 20:09:38.496139","message":"etherscan url: https://etherscan.io/block/18997612"}
+{"level":"info","time":"2024-01-18 20:09:38.496163","message":"the block.transactions is 150"}
+{"level":"info","time":"2024-01-18 20:10:34.193211","message":"etherscan url: https://etherscan.io/block/18997613"}
+{"level":"info","time":"2024-01-18 20:10:34.193237","message":"the block.transactions is 190"}
+{"level":"info","time":"2024-01-18 20:11:45.561991","message":"etherscan url: https://etherscan.io/block/18997614"}
+{"level":"info","time":"2024-01-18 20:11:45.562015","message":"the block.transactions is 120"}
+{"level":"info","time":"2024-01-18 20:12:31.048518","message":"etherscan url: https://etherscan.io/block/18997615"}
+{"level":"info","time":"2024-01-18 20:12:31.048544","message":"the block.transactions is 247"}
+{"level":"info","time":"2024-01-18 20:14:06.233982","message":"etherscan url: https://etherscan.io/block/18997616"}
+{"level":"info","time":"2024-01-18 20:14:06.234006","message":"the block.transactions is 155"}
+{"level":"info","time":"2024-01-18 20:15:04.300207","message":"etherscan url: https://etherscan.io/block/18997617"}
+{"level":"info","time":"2024-01-18 20:15:04.300232","message":"the block.transactions is 188"}
+{"level":"info","time":"2024-01-18 20:16:14.935926","message":"etherscan url: https://etherscan.io/block/18997618"}
+{"level":"info","time":"2024-01-18 20:16:14.935950","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 20:17:14.756481","message":"etherscan url: https://etherscan.io/block/18997619"}
+{"level":"info","time":"2024-01-18 20:17:14.756505","message":"the block.transactions is 205"}
+{"level":"info","time":"2024-01-18 20:18:33.290176","message":"etherscan url: https://etherscan.io/block/18997620"}
+{"level":"info","time":"2024-01-18 20:18:33.290200","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 20:19:33.791138","message":"etherscan url: https://etherscan.io/block/18997621"}
+{"level":"info","time":"2024-01-18 20:19:33.791162","message":"the block.transactions is 198"}
+{"level":"info","time":"2024-01-18 20:20:48.081857","message":"etherscan url: https://etherscan.io/block/18997622"}
+{"level":"info","time":"2024-01-18 20:20:48.081881","message":"the block.transactions is 124"}
+{"level":"info","time":"2024-01-18 20:20:48.449148","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 20:21:34.572167","message":"etherscan url: https://etherscan.io/block/18997623"}
+{"level":"info","time":"2024-01-18 20:21:34.572193","message":"the block.transactions is 269"}
+{"level":"info","time":"2024-01-18 20:23:18.283175","message":"etherscan url: https://etherscan.io/block/18997624"}
+{"level":"info","time":"2024-01-18 20:23:18.283198","message":"the block.transactions is 158"}
+{"level":"info","time":"2024-01-18 20:23:18.956643","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 20:24:19.396449","message":"etherscan url: https://etherscan.io/block/18997625"}
+{"level":"info","time":"2024-01-18 20:24:19.396473","message":"the block.transactions is 233"}
+{"level":"info","time":"2024-01-18 20:25:48.528550","message":"etherscan url: https://etherscan.io/block/18997626"}
+{"level":"info","time":"2024-01-18 20:25:48.528574","message":"the block.transactions is 162"}
+{"level":"info","time":"2024-01-18 20:26:49.626731","message":"etherscan url: https://etherscan.io/block/18997627"}
+{"level":"info","time":"2024-01-18 20:26:49.626756","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 20:27:45.615864","message":"etherscan url: https://etherscan.io/block/18997628"}
+{"level":"info","time":"2024-01-18 20:27:45.615890","message":"the block.transactions is 180"}
+{"level":"info","time":"2024-01-18 20:28:57.895948","message":"etherscan url: https://etherscan.io/block/18997629"}
+{"level":"info","time":"2024-01-18 20:28:57.895973","message":"the block.transactions is 207"}
+{"level":"info","time":"2024-01-18 20:30:20.130480","message":"etherscan url: https://etherscan.io/block/18997630"}
+{"level":"info","time":"2024-01-18 20:30:20.130504","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 20:31:22.225577","message":"etherscan url: https://etherscan.io/block/18997631"}
+{"level":"info","time":"2024-01-18 20:31:22.225601","message":"the block.transactions is 162"}
+{"level":"info","time":"2024-01-18 20:31:22.968253","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 20:32:27.730163","message":"etherscan url: https://etherscan.io/block/18997632"}
+{"level":"info","time":"2024-01-18 20:32:27.730185","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 20:33:37.503429","message":"etherscan url: https://etherscan.io/block/18997633"}
+{"level":"info","time":"2024-01-18 20:33:37.503457","message":"the block.transactions is 199"}
+{"level":"info","time":"2024-01-18 20:34:57.095281","message":"etherscan url: https://etherscan.io/block/18997634"}
+{"level":"info","time":"2024-01-18 20:34:57.095304","message":"the block.transactions is 197"}
+{"level":"info","time":"2024-01-18 20:36:16.241161","message":"etherscan url: https://etherscan.io/block/18997635"}
+{"level":"info","time":"2024-01-18 20:36:16.241181","message":"the block.transactions is 146"}
+{"level":"info","time":"2024-01-18 20:37:13.381794","message":"etherscan url: https://etherscan.io/block/18997636"}
+{"level":"info","time":"2024-01-18 20:37:13.381828","message":"the block.transactions is 294"}
+{"level":"info","time":"2024-01-18 20:39:11.799674","message":"etherscan url: https://etherscan.io/block/18997637"}
+{"level":"info","time":"2024-01-18 20:39:11.799697","message":"the block.transactions is 214"}
+{"level":"info","time":"2024-01-18 20:40:37.104888","message":"etherscan url: https://etherscan.io/block/18997638"}
+{"level":"info","time":"2024-01-18 20:40:37.104912","message":"the block.transactions is 203"}
+{"level":"info","time":"2024-01-18 20:41:56.759825","message":"etherscan url: https://etherscan.io/block/18997639"}
+{"level":"info","time":"2024-01-18 20:41:56.759845","message":"the block.transactions is 144"}
+{"level":"info","time":"2024-01-18 20:42:53.170056","message":"etherscan url: https://etherscan.io/block/18997640"}
+{"level":"info","time":"2024-01-18 20:42:53.170081","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 20:43:54.857630","message":"etherscan url: https://etherscan.io/block/18997641"}
+{"level":"info","time":"2024-01-18 20:43:54.857652","message":"the block.transactions is 269"}
+{"level":"info","time":"2024-01-18 20:45:46.840329","message":"etherscan url: https://etherscan.io/block/18997642"}
+{"level":"info","time":"2024-01-18 20:45:46.840354","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 20:46:47.908807","message":"etherscan url: https://etherscan.io/block/18997643"}
+{"level":"info","time":"2024-01-18 20:46:47.908832","message":"the block.transactions is 272"}
+{"level":"info","time":"2024-01-18 20:48:42.365344","message":"etherscan url: https://etherscan.io/block/18997644"}
+{"level":"info","time":"2024-01-18 20:48:42.365368","message":"the block.transactions is 148"}
+{"level":"info","time":"2024-01-18 20:49:43.361155","message":"etherscan url: https://etherscan.io/block/18997645"}
+{"level":"info","time":"2024-01-18 20:49:43.361180","message":"the block.transactions is 162"}
+{"level":"info","time":"2024-01-18 20:50:49.303689","message":"etherscan url: https://etherscan.io/block/18997646"}
+{"level":"info","time":"2024-01-18 20:50:49.303712","message":"the block.transactions is 297"}
+{"level":"info","time":"2024-01-18 20:52:53.976469","message":"etherscan url: https://etherscan.io/block/18997647"}
+{"level":"info","time":"2024-01-18 20:52:53.976494","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 20:53:55.288395","message":"etherscan url: https://etherscan.io/block/18997648"}
+{"level":"info","time":"2024-01-18 20:53:55.288418","message":"the block.transactions is 160"}
+{"level":"info","time":"2024-01-18 20:55:00.960222","message":"etherscan url: https://etherscan.io/block/18997649"}
+{"level":"info","time":"2024-01-18 20:55:00.960247","message":"the block.transactions is 205"}
+{"level":"info","time":"2024-01-18 20:56:28.031787","message":"etherscan url: https://etherscan.io/block/18997650"}
+{"level":"info","time":"2024-01-18 20:56:28.031811","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 20:57:33.461620","message":"etherscan url: https://etherscan.io/block/18997651"}
+{"level":"info","time":"2024-01-18 20:57:33.461645","message":"the block.transactions is 210"}
+{"level":"info","time":"2024-01-18 20:59:01.549484","message":"etherscan url: https://etherscan.io/block/18997652"}
+{"level":"info","time":"2024-01-18 20:59:01.549509","message":"the block.transactions is 161"}
+{"level":"info","time":"2024-01-18 21:00:07.646510","message":"etherscan url: https://etherscan.io/block/18997653"}
+{"level":"info","time":"2024-01-18 21:00:07.646529","message":"the block.transactions is 132"}
+{"level":"info","time":"2024-01-18 21:01:02.727313","message":"etherscan url: https://etherscan.io/block/18997654"}
+{"level":"info","time":"2024-01-18 21:01:02.727338","message":"the block.transactions is 233"}
+{"level":"info","time":"2024-01-18 21:02:40.579765","message":"etherscan url: https://etherscan.io/block/18997655"}
+{"level":"info","time":"2024-01-18 21:02:40.579781","message":"the block.transactions is 127"}
+{"level":"info","time":"2024-01-18 21:02:41.049654","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:41.051184","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:41.051251","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:41.184391","message":"etherscan url: https://etherscan.io/block/18997656"}
+{"level":"info","time":"2024-01-18 21:02:41.184413","message":"the block.transactions is 204"}
+{"level":"info","time":"2024-01-18 21:02:42.133964","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:42.134140","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:42.134874","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:42.134996","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:42.135632","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:42.665072","message":"etherscan url: https://etherscan.io/block/18997657"}
+{"level":"info","time":"2024-01-18 21:02:42.665100","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 21:02:43.736572","message":"etherscan url: https://etherscan.io/block/18997658"}
+{"level":"info","time":"2024-01-18 21:02:43.736592","message":"the block.transactions is 208"}
+{"level":"info","time":"2024-01-18 21:02:44.440022","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:02:45.353329","message":"etherscan url: https://etherscan.io/block/18997659"}
+{"level":"info","time":"2024-01-18 21:02:45.353349","message":"the block.transactions is 198"}
+{"level":"info","time":"2024-01-18 21:02:46.886987","message":"etherscan url: https://etherscan.io/block/18997660"}
+{"level":"info","time":"2024-01-18 21:02:46.887006","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 21:02:48.588257","message":"etherscan url: https://etherscan.io/block/18997661"}
+{"level":"info","time":"2024-01-18 21:02:48.588280","message":"the block.transactions is 195"}
+{"level":"info","time":"2024-01-18 21:02:50.686248","message":"etherscan url: https://etherscan.io/block/18997662"}
+{"level":"info","time":"2024-01-18 21:02:50.686269","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 21:02:53.844216","message":"etherscan url: https://etherscan.io/block/18997663"}
+{"level":"info","time":"2024-01-18 21:02:53.844240","message":"the block.transactions is 105"}
+{"level":"info","time":"2024-01-18 21:02:55.127424","message":"etherscan url: https://etherscan.io/block/18997664"}
+{"level":"info","time":"2024-01-18 21:02:55.127441","message":"the block.transactions is 88"}
+{"level":"info","time":"2024-01-18 21:02:56.034333","message":"etherscan url: https://etherscan.io/block/18997665"}
+{"level":"info","time":"2024-01-18 21:02:56.034354","message":"the block.transactions is 240"}
+{"level":"info","time":"2024-01-18 21:02:59.659431","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:03:02.533780","message":"etherscan url: https://etherscan.io/block/18997666"}
+{"level":"info","time":"2024-01-18 21:03:02.533813","message":"the block.transactions is 354"}
+{"level":"info","time":"2024-01-18 21:03:08.526177","message":"etherscan url: https://etherscan.io/block/18997667"}
+{"level":"info","time":"2024-01-18 21:03:08.526198","message":"the block.transactions is 276"}
+{"level":"info","time":"2024-01-18 21:03:13.760381","message":"etherscan url: https://etherscan.io/block/18997668"}
+{"level":"info","time":"2024-01-18 21:03:13.760403","message":"the block.transactions is 156"}
+{"level":"info","time":"2024-01-18 21:03:16.533171","message":"etherscan url: https://etherscan.io/block/18997669"}
+{"level":"info","time":"2024-01-18 21:03:16.533188","message":"the block.transactions is 309"}
+{"level":"info","time":"2024-01-18 21:03:17.631158","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:03:23.321217","message":"etherscan url: https://etherscan.io/block/18997670"}
+{"level":"info","time":"2024-01-18 21:03:23.321239","message":"the block.transactions is 164"}
+{"level":"info","time":"2024-01-18 21:03:27.459917","message":"etherscan url: https://etherscan.io/block/18997671"}
+{"level":"info","time":"2024-01-18 21:03:27.459937","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 21:03:30.334341","message":"etherscan url: https://etherscan.io/block/18997672"}
+{"level":"info","time":"2024-01-18 21:03:30.334363","message":"the block.transactions is 186"}
+{"level":"info","time":"2024-01-18 21:03:34.878175","message":"etherscan url: https://etherscan.io/block/18997673"}
+{"level":"info","time":"2024-01-18 21:03:34.878195","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 21:03:38.442128","message":"etherscan url: https://etherscan.io/block/18997674"}
+{"level":"info","time":"2024-01-18 21:03:38.442151","message":"the block.transactions is 241"}
+{"level":"info","time":"2024-01-18 21:03:44.175246","message":"etherscan url: https://etherscan.io/block/18997675"}
+{"level":"info","time":"2024-01-18 21:03:44.175275","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 21:03:48.377826","message":"etherscan url: https://etherscan.io/block/18997676"}
+{"level":"info","time":"2024-01-18 21:03:48.377846","message":"the block.transactions is 177"}
+{"level":"info","time":"2024-01-18 21:03:53.405170","message":"etherscan url: https://etherscan.io/block/18997677"}
+{"level":"info","time":"2024-01-18 21:03:53.405190","message":"the block.transactions is 168"}
+{"level":"info","time":"2024-01-18 21:03:58.572471","message":"etherscan url: https://etherscan.io/block/18997678"}
+{"level":"info","time":"2024-01-18 21:03:58.572496","message":"the block.transactions is 103"}
+{"level":"info","time":"2024-01-18 21:04:01.725149","message":"etherscan url: https://etherscan.io/block/18997679"}
+{"level":"info","time":"2024-01-18 21:04:01.725171","message":"the block.transactions is 285"}
+{"level":"info","time":"2024-01-18 21:04:10.845219","message":"etherscan url: https://etherscan.io/block/18997680"}
+{"level":"info","time":"2024-01-18 21:04:10.845239","message":"the block.transactions is 186"}
+{"level":"info","time":"2024-01-18 21:04:16.880124","message":"etherscan url: https://etherscan.io/block/18997681"}
+{"level":"info","time":"2024-01-18 21:04:16.880149","message":"the block.transactions is 271"}
+{"level":"info","time":"2024-01-18 21:04:25.942509","message":"etherscan url: https://etherscan.io/block/18997682"}
+{"level":"info","time":"2024-01-18 21:04:25.942531","message":"the block.transactions is 188"}
+{"level":"info","time":"2024-01-18 21:04:26.843910","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:04:32.787970","message":"etherscan url: https://etherscan.io/block/18997683"}
+{"level":"info","time":"2024-01-18 21:04:32.787993","message":"the block.transactions is 223"}
+{"level":"info","time":"2024-01-18 21:04:41.036228","message":"etherscan url: https://etherscan.io/block/18997684"}
+{"level":"info","time":"2024-01-18 21:04:41.036250","message":"the block.transactions is 236"}
+{"level":"info","time":"2024-01-18 21:04:49.544083","message":"etherscan url: https://etherscan.io/block/18997685"}
+{"level":"info","time":"2024-01-18 21:04:49.544103","message":"the block.transactions is 115"}
+{"level":"info","time":"2024-01-18 21:04:53.667493","message":"etherscan url: https://etherscan.io/block/18997686"}
+{"level":"info","time":"2024-01-18 21:04:53.667515","message":"the block.transactions is 241"}
+{"level":"info","time":"2024-01-18 21:05:04.253875","message":"etherscan url: https://etherscan.io/block/18997687"}
+{"level":"info","time":"2024-01-18 21:05:04.253896","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 21:05:11.765476","message":"etherscan url: https://etherscan.io/block/18997688"}
+{"level":"info","time":"2024-01-18 21:05:11.765499","message":"the block.transactions is 228"}
+{"level":"info","time":"2024-01-18 21:05:21.391934","message":"etherscan url: https://etherscan.io/block/18997689"}
+{"level":"info","time":"2024-01-18 21:05:21.391955","message":"the block.transactions is 245"}
+{"level":"info","time":"2024-01-18 21:05:32.265932","message":"etherscan url: https://etherscan.io/block/18997690"}
+{"level":"info","time":"2024-01-18 21:05:32.265957","message":"the block.transactions is 136"}
+{"level":"info","time":"2024-01-18 21:05:38.715814","message":"etherscan url: https://etherscan.io/block/18997691"}
+{"level":"info","time":"2024-01-18 21:05:38.715838","message":"the block.transactions is 174"}
+{"level":"info","time":"2024-01-18 21:05:46.977470","message":"etherscan url: https://etherscan.io/block/18997692"}
+{"level":"info","time":"2024-01-18 21:05:46.977486","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 21:05:54.534203","message":"etherscan url: https://etherscan.io/block/18997693"}
+{"level":"info","time":"2024-01-18 21:05:54.534224","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 21:06:05.144110","message":"etherscan url: https://etherscan.io/block/18997694"}
+{"level":"info","time":"2024-01-18 21:06:05.144135","message":"the block.transactions is 231"}
+{"level":"info","time":"2024-01-18 21:06:16.785229","message":"etherscan url: https://etherscan.io/block/18997695"}
+{"level":"info","time":"2024-01-18 21:06:16.785250","message":"the block.transactions is 151"}
+{"level":"info","time":"2024-01-18 21:06:17.216184","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:06:17.231273","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:06:24.461317","message":"etherscan url: https://etherscan.io/block/18997696"}
+{"level":"info","time":"2024-01-18 21:06:24.461342","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 21:06:25.126964","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:06:33.590506","message":"etherscan url: https://etherscan.io/block/18997697"}
+{"level":"info","time":"2024-01-18 21:06:33.590529","message":"the block.transactions is 195"}
+{"level":"info","time":"2024-01-18 21:06:44.165459","message":"etherscan url: https://etherscan.io/block/18997698"}
+{"level":"info","time":"2024-01-18 21:06:44.165484","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 21:06:55.894694","message":"etherscan url: https://etherscan.io/block/18997699"}
+{"level":"info","time":"2024-01-18 21:06:55.894715","message":"the block.transactions is 199"}
+{"level":"info","time":"2024-01-18 21:07:06.441796","message":"etherscan url: https://etherscan.io/block/18997700"}
+{"level":"info","time":"2024-01-18 21:07:06.441818","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 21:07:16.421404","message":"etherscan url: https://etherscan.io/block/18997701"}
+{"level":"info","time":"2024-01-18 21:07:16.421426","message":"the block.transactions is 176"}
+{"level":"info","time":"2024-01-18 21:07:26.330776","message":"etherscan url: https://etherscan.io/block/18997702"}
+{"level":"info","time":"2024-01-18 21:07:26.330800","message":"the block.transactions is 112"}
+{"level":"info","time":"2024-01-18 21:07:32.936014","message":"etherscan url: https://etherscan.io/block/18997703"}
+{"level":"info","time":"2024-01-18 21:07:32.936039","message":"the block.transactions is 259"}
+{"level":"info","time":"2024-01-18 21:07:48.258512","message":"etherscan url: https://etherscan.io/block/18997704"}
+{"level":"info","time":"2024-01-18 21:07:48.258535","message":"the block.transactions is 167"}
+{"level":"info","time":"2024-01-18 21:07:58.407653","message":"etherscan url: https://etherscan.io/block/18997705"}
+{"level":"info","time":"2024-01-18 21:07:58.407676","message":"the block.transactions is 271"}
+{"level":"info","time":"2024-01-18 21:08:15.281227","message":"etherscan url: https://etherscan.io/block/18997706"}
+{"level":"info","time":"2024-01-18 21:08:15.281245","message":"the block.transactions is 128"}
+{"level":"info","time":"2024-01-18 21:08:15.777092","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:08:23.305517","message":"etherscan url: https://etherscan.io/block/18997707"}
+{"level":"info","time":"2024-01-18 21:08:23.305539","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 21:08:32.762428","message":"etherscan url: https://etherscan.io/block/18997708"}
+{"level":"info","time":"2024-01-18 21:08:32.762448","message":"the block.transactions is 193"}
+{"level":"info","time":"2024-01-18 21:08:45.053116","message":"etherscan url: https://etherscan.io/block/18997709"}
+{"level":"info","time":"2024-01-18 21:08:45.053138","message":"the block.transactions is 201"}
+{"level":"info","time":"2024-01-18 21:08:57.959962","message":"etherscan url: https://etherscan.io/block/18997710"}
+{"level":"info","time":"2024-01-18 21:08:57.959988","message":"the block.transactions is 232"}
+{"level":"info","time":"2024-01-18 21:09:12.775999","message":"etherscan url: https://etherscan.io/block/18997711"}
+{"level":"info","time":"2024-01-18 21:09:12.776019","message":"the block.transactions is 133"}
+{"level":"info","time":"2024-01-18 21:09:21.257607","message":"etherscan url: https://etherscan.io/block/18997712"}
+{"level":"info","time":"2024-01-18 21:09:21.257629","message":"the block.transactions is 135"}
+{"level":"info","time":"2024-01-18 21:09:30.198625","message":"etherscan url: https://etherscan.io/block/18997713"}
+{"level":"info","time":"2024-01-18 21:09:30.198648","message":"the block.transactions is 214"}
+{"level":"info","time":"2024-01-18 21:09:44.960620","message":"etherscan url: https://etherscan.io/block/18997714"}
+{"level":"info","time":"2024-01-18 21:09:44.960645","message":"the block.transactions is 180"}
+{"level":"info","time":"2024-01-18 21:09:57.293413","message":"etherscan url: https://etherscan.io/block/18997715"}
+{"level":"info","time":"2024-01-18 21:09:57.293435","message":"the block.transactions is 189"}
+{"level":"info","time":"2024-01-18 21:10:10.530992","message":"etherscan url: https://etherscan.io/block/18997716"}
+{"level":"info","time":"2024-01-18 21:10:10.531014","message":"the block.transactions is 173"}
+{"level":"info","time":"2024-01-18 21:10:22.589456","message":"etherscan url: https://etherscan.io/block/18997717"}
+{"level":"info","time":"2024-01-18 21:10:22.589486","message":"the block.transactions is 225"}
+{"level":"info","time":"2024-01-18 21:10:38.971462","message":"etherscan url: https://etherscan.io/block/18997718"}
+{"level":"info","time":"2024-01-18 21:10:38.971484","message":"the block.transactions is 187"}
+{"level":"info","time":"2024-01-18 21:10:39.483407","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:10:52.305653","message":"etherscan url: https://etherscan.io/block/18997719"}
+{"level":"info","time":"2024-01-18 21:10:52.305674","message":"the block.transactions is 242"}
+{"level":"info","time":"2024-01-18 21:11:10.765644","message":"etherscan url: https://etherscan.io/block/18997720"}
+{"level":"info","time":"2024-01-18 21:11:10.765669","message":"the block.transactions is 191"}
+{"level":"info","time":"2024-01-18 21:11:11.217172","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:11:24.593836","message":"etherscan url: https://etherscan.io/block/18997721"}
+{"level":"info","time":"2024-01-18 21:11:24.593857","message":"the block.transactions is 133"}
+{"level":"info","time":"2024-01-18 21:11:34.033883","message":"etherscan url: https://etherscan.io/block/18997722"}
+{"level":"info","time":"2024-01-18 21:11:34.033904","message":"the block.transactions is 215"}
+{"level":"info","time":"2024-01-18 21:11:50.042930","message":"etherscan url: https://etherscan.io/block/18997723"}
+{"level":"info","time":"2024-01-18 21:11:50.042964","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 21:12:01.949767","message":"etherscan url: https://etherscan.io/block/18997724"}
+{"level":"info","time":"2024-01-18 21:12:01.949794","message":"the block.transactions is 264"}
+{"level":"info","time":"2024-01-18 21:12:22.742613","message":"etherscan url: https://etherscan.io/block/18997725"}
+{"level":"info","time":"2024-01-18 21:12:22.742638","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 21:12:34.040083","message":"etherscan url: https://etherscan.io/block/18997726"}
+{"level":"info","time":"2024-01-18 21:12:34.040106","message":"the block.transactions is 155"}
+{"level":"info","time":"2024-01-18 21:12:46.181443","message":"etherscan url: https://etherscan.io/block/18997727"}
+{"level":"info","time":"2024-01-18 21:12:46.181461","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 21:12:46.782130","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:13:00.067590","message":"etherscan url: https://etherscan.io/block/18997728"}
+{"level":"info","time":"2024-01-18 21:13:00.067624","message":"the block.transactions is 234"}
+{"level":"info","time":"2024-01-18 21:13:18.312744","message":"etherscan url: https://etherscan.io/block/18997729"}
+{"level":"info","time":"2024-01-18 21:13:18.312762","message":"the block.transactions is 160"}
+{"level":"info","time":"2024-01-18 21:13:30.962954","message":"etherscan url: https://etherscan.io/block/18997730"}
+{"level":"info","time":"2024-01-18 21:13:30.962976","message":"the block.transactions is 163"}
+{"level":"info","time":"2024-01-18 21:13:44.513335","message":"etherscan url: https://etherscan.io/block/18997731"}
+{"level":"info","time":"2024-01-18 21:13:44.513358","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 21:13:58.746017","message":"etherscan url: https://etherscan.io/block/18997732"}
+{"level":"info","time":"2024-01-18 21:13:58.746040","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 21:14:14.811985","message":"etherscan url: https://etherscan.io/block/18997733"}
+{"level":"info","time":"2024-01-18 21:14:14.812006","message":"the block.transactions is 249"}
+{"level":"info","time":"2024-01-18 21:14:36.092697","message":"etherscan url: https://etherscan.io/block/18997734"}
+{"level":"info","time":"2024-01-18 21:14:36.092720","message":"the block.transactions is 125"}
+{"level":"info","time":"2024-01-18 21:14:46.778874","message":"etherscan url: https://etherscan.io/block/18997735"}
+{"level":"info","time":"2024-01-18 21:14:46.778892","message":"the block.transactions is 285"}
+{"level":"info","time":"2024-01-18 21:15:11.859477","message":"etherscan url: https://etherscan.io/block/18997736"}
+{"level":"info","time":"2024-01-18 21:15:11.859499","message":"the block.transactions is 85"}
+{"level":"info","time":"2024-01-18 21:15:19.186872","message":"etherscan url: https://etherscan.io/block/18997737"}
+{"level":"info","time":"2024-01-18 21:15:19.186894","message":"the block.transactions is 227"}
+{"level":"info","time":"2024-01-18 21:15:39.171735","message":"etherscan url: https://etherscan.io/block/18997738"}
+{"level":"info","time":"2024-01-18 21:15:39.171757","message":"the block.transactions is 257"}
+{"level":"info","time":"2024-01-18 21:16:01.812619","message":"etherscan url: https://etherscan.io/block/18997739"}
+{"level":"info","time":"2024-01-18 21:16:01.812644","message":"the block.transactions is 190"}
+{"level":"info","time":"2024-01-18 21:16:02.200793","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:16:18.442174","message":"etherscan url: https://etherscan.io/block/18997740"}
+{"level":"info","time":"2024-01-18 21:16:18.442197","message":"the block.transactions is 318"}
+{"level":"info","time":"2024-01-18 21:16:48.361705","message":"etherscan url: https://etherscan.io/block/18997741"}
+{"level":"info","time":"2024-01-18 21:16:48.361729","message":"the block.transactions is 146"}
+{"level":"info","time":"2024-01-18 21:17:02.029727","message":"etherscan url: https://etherscan.io/block/18997742"}
+{"level":"info","time":"2024-01-18 21:17:02.029749","message":"the block.transactions is 196"}
+{"level":"info","time":"2024-01-18 21:17:02.515661","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:17:19.880278","message":"etherscan url: https://etherscan.io/block/18997743"}
+{"level":"info","time":"2024-01-18 21:17:19.880298","message":"the block.transactions is 258"}
+{"level":"info","time":"2024-01-18 21:17:44.408349","message":"etherscan url: https://etherscan.io/block/18997744"}
+{"level":"info","time":"2024-01-18 21:17:44.408373","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 21:18:00.037016","message":"etherscan url: https://etherscan.io/block/18997745"}
+{"level":"info","time":"2024-01-18 21:18:00.037040","message":"the block.transactions is 290"}
+{"level":"info","time":"2024-01-18 21:18:00.597979","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:18:00.598459","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:18:28.077904","message":"etherscan url: https://etherscan.io/block/18997746"}
+{"level":"info","time":"2024-01-18 21:18:28.077926","message":"the block.transactions is 160"}
+{"level":"info","time":"2024-01-18 21:18:43.856016","message":"etherscan url: https://etherscan.io/block/18997747"}
+{"level":"info","time":"2024-01-18 21:18:43.856037","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 21:19:00.449154","message":"etherscan url: https://etherscan.io/block/18997748"}
+{"level":"info","time":"2024-01-18 21:19:00.449174","message":"the block.transactions is 226"}
+{"level":"info","time":"2024-01-18 21:19:23.289798","message":"etherscan url: https://etherscan.io/block/18997749"}
+{"level":"info","time":"2024-01-18 21:19:23.289821","message":"the block.transactions is 198"}
+{"level":"info","time":"2024-01-18 21:19:43.286848","message":"etherscan url: https://etherscan.io/block/18997750"}
+{"level":"info","time":"2024-01-18 21:19:43.286869","message":"the block.transactions is 255"}
+{"level":"info","time":"2024-01-18 21:20:10.271780","message":"etherscan url: https://etherscan.io/block/18997751"}
+{"level":"info","time":"2024-01-18 21:20:10.271805","message":"the block.transactions is 234"}
+{"level":"info","time":"2024-01-18 21:20:34.395814","message":"etherscan url: https://etherscan.io/block/18997752"}
+{"level":"info","time":"2024-01-18 21:20:34.395831","message":"the block.transactions is 146"}
+{"level":"info","time":"2024-01-18 21:20:49.673132","message":"etherscan url: https://etherscan.io/block/18997753"}
+{"level":"info","time":"2024-01-18 21:20:49.673154","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 21:21:08.752067","message":"etherscan url: https://etherscan.io/block/18997754"}
+{"level":"info","time":"2024-01-18 21:21:08.752090","message":"the block.transactions is 231"}
+{"level":"info","time":"2024-01-18 21:21:33.472707","message":"etherscan url: https://etherscan.io/block/18997755"}
+{"level":"info","time":"2024-01-18 21:21:33.472722","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 21:21:49.419582","message":"etherscan url: https://etherscan.io/block/18997756"}
+{"level":"info","time":"2024-01-18 21:21:49.419604","message":"the block.transactions is 242"}
+{"level":"info","time":"2024-01-18 21:22:19.092736","message":"etherscan url: https://etherscan.io/block/18997757"}
+{"level":"info","time":"2024-01-18 21:22:19.092759","message":"the block.transactions is 255"}
+{"level":"info","time":"2024-01-18 21:22:46.662545","message":"etherscan url: https://etherscan.io/block/18997758"}
+{"level":"info","time":"2024-01-18 21:22:46.662566","message":"the block.transactions is 153"}
+{"level":"info","time":"2024-01-18 21:23:03.728086","message":"etherscan url: https://etherscan.io/block/18997759"}
+{"level":"info","time":"2024-01-18 21:23:03.728109","message":"the block.transactions is 155"}
+{"level":"info","time":"2024-01-18 21:23:21.623149","message":"etherscan url: https://etherscan.io/block/18997760"}
+{"level":"info","time":"2024-01-18 21:23:21.623173","message":"the block.transactions is 204"}
+{"level":"info","time":"2024-01-18 21:23:44.426571","message":"etherscan url: https://etherscan.io/block/18997761"}
+{"level":"info","time":"2024-01-18 21:23:44.426650","message":"the block.transactions is 166"}
+{"level":"info","time":"2024-01-18 21:24:03.401217","message":"etherscan url: https://etherscan.io/block/18997762"}
+{"level":"info","time":"2024-01-18 21:24:03.401238","message":"the block.transactions is 282"}
+{"level":"info","time":"2024-01-18 21:24:35.421799","message":"etherscan url: https://etherscan.io/block/18997763"}
+{"level":"info","time":"2024-01-18 21:24:35.421824","message":"the block.transactions is 284"}
+{"level":"info","time":"2024-01-18 21:25:07.486456","message":"etherscan url: https://etherscan.io/block/18997764"}
+{"level":"info","time":"2024-01-18 21:25:07.486489","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 21:25:07.784755","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:25:07.798952","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:25:22.095410","message":"etherscan url: https://etherscan.io/block/18997765"}
+{"level":"info","time":"2024-01-18 21:25:22.095432","message":"the block.transactions is 214"}
+{"level":"info","time":"2024-01-18 21:25:46.784070","message":"etherscan url: https://etherscan.io/block/18997766"}
+{"level":"info","time":"2024-01-18 21:25:46.784089","message":"the block.transactions is 134"}
+{"level":"info","time":"2024-01-18 21:26:02.307649","message":"etherscan url: https://etherscan.io/block/18997767"}
+{"level":"info","time":"2024-01-18 21:26:02.307674","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 21:26:22.765097","message":"etherscan url: https://etherscan.io/block/18997768"}
+{"level":"info","time":"2024-01-18 21:26:22.765117","message":"the block.transactions is 157"}
+{"level":"info","time":"2024-01-18 21:26:41.823376","message":"etherscan url: https://etherscan.io/block/18997769"}
+{"level":"info","time":"2024-01-18 21:26:41.823403","message":"the block.transactions is 162"}
+{"level":"info","time":"2024-01-18 21:27:01.256692","message":"etherscan url: https://etherscan.io/block/18997770"}
+{"level":"info","time":"2024-01-18 21:27:01.256710","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 21:27:22.956087","message":"etherscan url: https://etherscan.io/block/18997771"}
+{"level":"info","time":"2024-01-18 21:27:22.956111","message":"the block.transactions is 144"}
+{"level":"info","time":"2024-01-18 21:27:40.342421","message":"etherscan url: https://etherscan.io/block/18997772"}
+{"level":"info","time":"2024-01-18 21:27:40.342443","message":"the block.transactions is 285"}
+{"level":"info","time":"2024-01-18 21:28:15.550095","message":"etherscan url: https://etherscan.io/block/18997773"}
+{"level":"info","time":"2024-01-18 21:28:15.550118","message":"the block.transactions is 121"}
+{"level":"info","time":"2024-01-18 21:28:30.269967","message":"etherscan url: https://etherscan.io/block/18997774"}
+{"level":"info","time":"2024-01-18 21:28:30.269989","message":"the block.transactions is 169"}
+{"level":"info","time":"2024-01-18 21:28:51.246668","message":"etherscan url: https://etherscan.io/block/18997775"}
+{"level":"info","time":"2024-01-18 21:28:51.246694","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 21:29:18.132746","message":"etherscan url: https://etherscan.io/block/18997776"}
+{"level":"info","time":"2024-01-18 21:29:18.132765","message":"the block.transactions is 187"}
+{"level":"info","time":"2024-01-18 21:29:40.936683","message":"etherscan url: https://etherscan.io/block/18997777"}
+{"level":"info","time":"2024-01-18 21:29:40.936707","message":"the block.transactions is 154"}
+{"level":"info","time":"2024-01-18 21:30:00.580428","message":"etherscan url: https://etherscan.io/block/18997778"}
+{"level":"info","time":"2024-01-18 21:30:00.580449","message":"the block.transactions is 229"}
+{"level":"info","time":"2024-01-18 21:30:29.680757","message":"etherscan url: https://etherscan.io/block/18997779"}
+{"level":"info","time":"2024-01-18 21:30:29.680781","message":"the block.transactions is 147"}
+{"level":"info","time":"2024-01-18 21:30:48.251163","message":"etherscan url: https://etherscan.io/block/18997780"}
+{"level":"info","time":"2024-01-18 21:30:48.251186","message":"the block.transactions is 305"}
+{"level":"info","time":"2024-01-18 21:31:27.451370","message":"etherscan url: https://etherscan.io/block/18997781"}
+{"level":"info","time":"2024-01-18 21:31:27.451394","message":"the block.transactions is 237"}
+{"level":"info","time":"2024-01-18 21:31:57.511009","message":"etherscan url: https://etherscan.io/block/18997782"}
+{"level":"info","time":"2024-01-18 21:31:57.511038","message":"the block.transactions is 145"}
+{"level":"info","time":"2024-01-18 21:32:16.260186","message":"etherscan url: https://etherscan.io/block/18997783"}
+{"level":"info","time":"2024-01-18 21:32:16.260212","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 21:32:33.970465","message":"etherscan url: https://etherscan.io/block/18997784"}
+{"level":"info","time":"2024-01-18 21:32:33.970488","message":"the block.transactions is 317"}
+{"level":"info","time":"2024-01-18 21:33:16.638533","message":"etherscan url: https://etherscan.io/block/18997785"}
+{"level":"info","time":"2024-01-18 21:33:16.638557","message":"the block.transactions is 213"}
+{"level":"info","time":"2024-01-18 21:33:44.764817","message":"etherscan url: https://etherscan.io/block/18997786"}
+{"level":"info","time":"2024-01-18 21:33:44.764840","message":"the block.transactions is 142"}
+{"level":"info","time":"2024-01-18 21:34:03.531230","message":"etherscan url: https://etherscan.io/block/18997787"}
+{"level":"info","time":"2024-01-18 21:34:03.531253","message":"the block.transactions is 193"}
+{"level":"info","time":"2024-01-18 21:34:32.218405","message":"etherscan url: https://etherscan.io/block/18997788"}
+{"level":"info","time":"2024-01-18 21:34:32.218426","message":"the block.transactions is 199"}
+{"level":"info","time":"2024-01-18 21:34:59.349690","message":"etherscan url: https://etherscan.io/block/18997789"}
+{"level":"info","time":"2024-01-18 21:34:59.349712","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 21:35:19.069018","message":"etherscan url: https://etherscan.io/block/18997790"}
+{"level":"info","time":"2024-01-18 21:35:19.069042","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 21:35:43.802846","message":"etherscan url: https://etherscan.io/block/18997791"}
+{"level":"info","time":"2024-01-18 21:35:43.802866","message":"the block.transactions is 163"}
+{"level":"info","time":"2024-01-18 21:36:05.784172","message":"etherscan url: https://etherscan.io/block/18997792"}
+{"level":"info","time":"2024-01-18 21:36:05.784193","message":"the block.transactions is 114"}
+{"level":"info","time":"2024-01-18 21:36:21.263976","message":"etherscan url: https://etherscan.io/block/18997793"}
+{"level":"info","time":"2024-01-18 21:36:21.264010","message":"the block.transactions is 294"}
+{"level":"info","time":"2024-01-18 21:37:02.105850","message":"etherscan url: https://etherscan.io/block/18997794"}
+{"level":"info","time":"2024-01-18 21:37:02.105876","message":"the block.transactions is 187"}
+{"level":"info","time":"2024-01-18 21:37:27.336458","message":"etherscan url: https://etherscan.io/block/18997795"}
+{"level":"info","time":"2024-01-18 21:37:27.336482","message":"the block.transactions is 141"}
+{"level":"info","time":"2024-01-18 21:37:46.665786","message":"etherscan url: https://etherscan.io/block/18997796"}
+{"level":"info","time":"2024-01-18 21:37:46.665812","message":"the block.transactions is 102"}
+{"level":"info","time":"2024-01-18 21:38:00.795900","message":"etherscan url: https://etherscan.io/block/18997797"}
+{"level":"info","time":"2024-01-18 21:38:00.795920","message":"the block.transactions is 226"}
+{"level":"info","time":"2024-01-18 21:38:32.893127","message":"etherscan url: https://etherscan.io/block/18997798"}
+{"level":"info","time":"2024-01-18 21:38:32.893149","message":"the block.transactions is 143"}
+{"level":"info","time":"2024-01-18 21:38:53.060460","message":"etherscan url: https://etherscan.io/block/18997799"}
+{"level":"info","time":"2024-01-18 21:38:53.060483","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 21:39:17.774041","message":"etherscan url: https://etherscan.io/block/18997800"}
+{"level":"info","time":"2024-01-18 21:39:17.774063","message":"the block.transactions is 254"}
+{"level":"info","time":"2024-01-18 21:39:54.277132","message":"etherscan url: https://etherscan.io/block/18997801"}
+{"level":"info","time":"2024-01-18 21:39:54.277156","message":"the block.transactions is 117"}
+{"level":"info","time":"2024-01-18 21:40:10.554960","message":"etherscan url: https://etherscan.io/block/18997802"}
+{"level":"info","time":"2024-01-18 21:40:10.554983","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 21:40:34.003900","message":"etherscan url: https://etherscan.io/block/18997803"}
+{"level":"info","time":"2024-01-18 21:40:34.003934","message":"the block.transactions is 189"}
+{"level":"info","time":"2024-01-18 21:41:00.947874","message":"etherscan url: https://etherscan.io/block/18997804"}
+{"level":"info","time":"2024-01-18 21:41:00.947891","message":"the block.transactions is 152"}
+{"level":"info","time":"2024-01-18 21:41:23.006483","message":"etherscan url: https://etherscan.io/block/18997805"}
+{"level":"info","time":"2024-01-18 21:41:23.006508","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 21:41:48.071107","message":"etherscan url: https://etherscan.io/block/18997806"}
+{"level":"info","time":"2024-01-18 21:41:48.071139","message":"the block.transactions is 137"}
+{"level":"info","time":"2024-01-18 21:42:08.209329","message":"etherscan url: https://etherscan.io/block/18997807"}
+{"level":"info","time":"2024-01-18 21:42:08.209356","message":"the block.transactions is 184"}
+{"level":"info","time":"2024-01-18 21:42:35.019943","message":"etherscan url: https://etherscan.io/block/18997808"}
+{"level":"info","time":"2024-01-18 21:42:35.019966","message":"the block.transactions is 272"}
+{"level":"info","time":"2024-01-18 21:43:15.725227","message":"etherscan url: https://etherscan.io/block/18997809"}
+{"level":"info","time":"2024-01-18 21:43:15.725247","message":"the block.transactions is 240"}
+{"level":"info","time":"2024-01-18 21:43:50.352427","message":"etherscan url: https://etherscan.io/block/18997810"}
+{"level":"info","time":"2024-01-18 21:43:50.352452","message":"the block.transactions is 195"}
+{"level":"info","time":"2024-01-18 21:44:19.415058","message":"etherscan url: https://etherscan.io/block/18997811"}
+{"level":"info","time":"2024-01-18 21:44:19.415078","message":"the block.transactions is 159"}
+{"level":"info","time":"2024-01-18 21:44:43.057663","message":"etherscan url: https://etherscan.io/block/18997812"}
+{"level":"info","time":"2024-01-18 21:44:43.057694","message":"the block.transactions is 282"}
+{"level":"info","time":"2024-01-18 21:45:25.583788","message":"etherscan url: https://etherscan.io/block/18997813"}
+{"level":"info","time":"2024-01-18 21:45:25.583815","message":"the block.transactions is 143"}
+{"level":"info","time":"2024-01-18 21:45:47.405670","message":"etherscan url: https://etherscan.io/block/18997814"}
+{"level":"info","time":"2024-01-18 21:45:47.405692","message":"the block.transactions is 189"}
+{"level":"info","time":"2024-01-18 21:46:16.511773","message":"etherscan url: https://etherscan.io/block/18997815"}
+{"level":"info","time":"2024-01-18 21:46:16.511800","message":"the block.transactions is 206"}
+{"level":"info","time":"2024-01-18 21:46:48.548368","message":"etherscan url: https://etherscan.io/block/18997816"}
+{"level":"info","time":"2024-01-18 21:46:48.548391","message":"the block.transactions is 145"}
+{"level":"info","time":"2024-01-18 21:47:10.581147","message":"etherscan url: https://etherscan.io/block/18997817"}
+{"level":"info","time":"2024-01-18 21:47:10.581170","message":"the block.transactions is 155"}
+{"level":"info","time":"2024-01-18 21:47:34.363859","message":"etherscan url: https://etherscan.io/block/18997818"}
+{"level":"info","time":"2024-01-18 21:47:34.363884","message":"the block.transactions is 284"}
+{"level":"info","time":"2024-01-18 21:48:18.747890","message":"etherscan url: https://etherscan.io/block/18997819"}
+{"level":"info","time":"2024-01-18 21:48:18.747926","message":"the block.transactions is 139"}
+{"level":"info","time":"2024-01-18 21:48:40.704795","message":"etherscan url: https://etherscan.io/block/18997820"}
+{"level":"info","time":"2024-01-18 21:48:40.704818","message":"the block.transactions is 205"}
+{"level":"info","time":"2024-01-18 21:49:12.203409","message":"etherscan url: https://etherscan.io/block/18997821"}
+{"level":"info","time":"2024-01-18 21:49:12.203445","message":"the block.transactions is 170"}
+{"level":"info","time":"2024-01-18 21:49:38.758920","message":"etherscan url: https://etherscan.io/block/18997822"}
+{"level":"info","time":"2024-01-18 21:49:38.758943","message":"the block.transactions is 196"}
+{"level":"info","time":"2024-01-18 21:50:09.252087","message":"etherscan url: https://etherscan.io/block/18997823"}
+{"level":"info","time":"2024-01-18 21:50:09.252112","message":"the block.transactions is 310"}
+{"level":"info","time":"2024-01-18 21:50:59.713915","message":"etherscan url: https://etherscan.io/block/18997824"}
+{"level":"info","time":"2024-01-18 21:50:59.713933","message":"the block.transactions is 80"}
+{"level":"info","time":"2024-01-18 21:51:12.300354","message":"etherscan url: https://etherscan.io/block/18997825"}
+{"level":"info","time":"2024-01-18 21:51:12.300377","message":"the block.transactions is 198"}
+{"level":"info","time":"2024-01-18 21:51:43.685294","message":"etherscan url: https://etherscan.io/block/18997826"}
+{"level":"info","time":"2024-01-18 21:51:43.685319","message":"the block.transactions is 148"}
+{"level":"info","time":"2024-01-18 21:52:07.016385","message":"etherscan url: https://etherscan.io/block/18997827"}
+{"level":"info","time":"2024-01-18 21:52:07.016406","message":"the block.transactions is 140"}
+{"level":"info","time":"2024-01-18 21:52:29.709242","message":"etherscan url: https://etherscan.io/block/18997828"}
+{"level":"info","time":"2024-01-18 21:52:29.709266","message":"the block.transactions is 246"}
+{"level":"info","time":"2024-01-18 21:53:09.863039","message":"etherscan url: https://etherscan.io/block/18997829"}
+{"level":"info","time":"2024-01-18 21:53:09.863064","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 21:53:39.791212","message":"etherscan url: https://etherscan.io/block/18997830"}
+{"level":"info","time":"2024-01-18 21:53:39.791237","message":"the block.transactions is 343"}
+{"level":"info","time":"2024-01-18 21:54:36.719402","message":"etherscan url: https://etherscan.io/block/18997831"}
+{"level":"info","time":"2024-01-18 21:54:36.719425","message":"the block.transactions is 171"}
+{"level":"info","time":"2024-01-18 21:55:05.247189","message":"etherscan url: https://etherscan.io/block/18997832"}
+{"level":"info","time":"2024-01-18 21:55:05.247214","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 21:55:35.748259","message":"etherscan url: https://etherscan.io/block/18997833"}
+{"level":"info","time":"2024-01-18 21:55:35.748282","message":"the block.transactions is 217"}
+{"level":"info","time":"2024-01-18 21:56:15.205799","message":"etherscan url: https://etherscan.io/block/18997834"}
+{"level":"info","time":"2024-01-18 21:56:15.205824","message":"the block.transactions is 222"}
+{"level":"info","time":"2024-01-18 21:56:51.941795","message":"etherscan url: https://etherscan.io/block/18997835"}
+{"level":"info","time":"2024-01-18 21:56:51.941820","message":"the block.transactions is 220"}
+{"level":"info","time":"2024-01-18 21:56:52.646739","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 21:57:29.954951","message":"etherscan url: https://etherscan.io/block/18997836"}
+{"level":"info","time":"2024-01-18 21:57:29.954988","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 21:58:00.596499","message":"etherscan url: https://etherscan.io/block/18997837"}
+{"level":"info","time":"2024-01-18 21:58:00.596522","message":"the block.transactions is 258"}
+{"level":"info","time":"2024-01-18 21:58:44.939230","message":"etherscan url: https://etherscan.io/block/18997838"}
+{"level":"info","time":"2024-01-18 21:58:44.939255","message":"the block.transactions is 168"}
+{"level":"info","time":"2024-01-18 21:59:12.742179","message":"etherscan url: https://etherscan.io/block/18997839"}
+{"level":"info","time":"2024-01-18 21:59:12.742216","message":"the block.transactions is 204"}
+{"level":"info","time":"2024-01-18 21:59:47.613705","message":"etherscan url: https://etherscan.io/block/18997840"}
+{"level":"info","time":"2024-01-18 21:59:47.613730","message":"the block.transactions is 293"}
+{"level":"info","time":"2024-01-18 22:00:39.348565","message":"etherscan url: https://etherscan.io/block/18997841"}
+{"level":"info","time":"2024-01-18 22:00:39.348583","message":"the block.transactions is 182"}
+{"level":"info","time":"2024-01-18 22:01:10.012415","message":"etherscan url: https://etherscan.io/block/18997842"}
+{"level":"info","time":"2024-01-18 22:01:10.012438","message":"the block.transactions is 255"}
+{"level":"info","time":"2024-01-18 22:01:53.961276","message":"etherscan url: https://etherscan.io/block/18997843"}
+{"level":"info","time":"2024-01-18 22:01:53.961300","message":"the block.transactions is 175"}
+{"level":"info","time":"2024-01-18 22:02:24.819576","message":"etherscan url: https://etherscan.io/block/18997844"}
+{"level":"info","time":"2024-01-18 22:02:24.819602","message":"the block.transactions is 216"}
+{"level":"info","time":"2024-01-18 22:03:02.730460","message":"etherscan url: https://etherscan.io/block/18997845"}
+{"level":"info","time":"2024-01-18 22:03:02.730486","message":"the block.transactions is 192"}
+{"level":"info","time":"2024-01-18 22:03:36.269500","message":"etherscan url: https://etherscan.io/block/18997846"}
+{"level":"info","time":"2024-01-18 22:03:36.269522","message":"the block.transactions is 103"}
+{"level":"info","time":"2024-01-18 22:03:54.616852","message":"etherscan url: https://etherscan.io/block/18997847"}
+{"level":"info","time":"2024-01-18 22:03:54.616879","message":"the block.transactions is 161"}
+{"level":"info","time":"2024-01-18 22:04:23.805218","message":"etherscan url: https://etherscan.io/block/18997848"}
+{"level":"info","time":"2024-01-18 22:04:23.805249","message":"the block.transactions is 283"}
+{"level":"info","time":"2024-01-18 22:05:14.703963","message":"etherscan url: https://etherscan.io/block/18997849"}
+{"level":"info","time":"2024-01-18 22:05:14.703990","message":"the block.transactions is 183"}
+{"level":"info","time":"2024-01-18 22:05:47.339636","message":"etherscan url: https://etherscan.io/block/18997850"}
+{"level":"info","time":"2024-01-18 22:05:47.339660","message":"the block.transactions is 180"}
+{"level":"info","time":"2024-01-18 22:06:19.536085","message":"etherscan url: https://etherscan.io/block/18997851"}
+{"level":"info","time":"2024-01-18 22:06:19.536110","message":"the block.transactions is 138"}
+{"level":"info","time":"2024-01-18 22:06:44.728740","message":"etherscan url: https://etherscan.io/block/18997852"}
+{"level":"info","time":"2024-01-18 22:06:44.728765","message":"the block.transactions is 179"}
+{"level":"info","time":"2024-01-18 22:07:17.951738","message":"etherscan url: https://etherscan.io/block/18997853"}
+{"level":"info","time":"2024-01-18 22:07:17.951763","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 22:07:47.731784","message":"etherscan url: https://etherscan.io/block/18997854"}
+{"level":"info","time":"2024-01-18 22:07:47.731807","message":"the block.transactions is 165"}
+{"level":"info","time":"2024-01-18 22:08:20.252214","message":"etherscan url: https://etherscan.io/block/18997855"}
+{"level":"info","time":"2024-01-18 22:08:20.252234","message":"the block.transactions is 149"}
+{"level":"info","time":"2024-01-18 22:08:21.050696","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 22:08:21.051579","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 22:08:21.051793","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 22:08:21.052434","message":"Track the amount of time wasted on deleting the account from the trie, +0s"}
+{"level":"info","time":"2024-01-18 22:08:47.420736","message":"etherscan url: https://etherscan.io/block/18997856"}
+{"level":"info","time":"2024-01-18 22:08:47.420753","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 22:09:11.181898","message":"etherscan url: https://etherscan.io/block/18997857"}
+{"level":"info","time":"2024-01-18 22:09:11.181925","message":"the block.transactions is 129"}
+{"level":"info","time":"2024-01-18 22:09:35.476691","message":"etherscan url: https://etherscan.io/block/18997858"}
+{"level":"info","time":"2024-01-18 22:09:35.476723","message":"the block.transactions is 272"}
+{"level":"info","time":"2024-01-18 22:10:25.452358","message":"etherscan url: https://etherscan.io/block/18997859"}
+{"level":"info","time":"2024-01-18 22:10:25.452380","message":"the block.transactions is 221"}
+{"level":"info","time":"2024-01-18 22:11:05.257734","message":"etherscan url: https://etherscan.io/block/18997860"}
+{"level":"info","time":"2024-01-18 22:11:05.257757","message":"the block.transactions is 0"}

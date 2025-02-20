@@ -1,0 +1,1827 @@
+{"level":"info","time":"2024-04-17 09:18:05.197179","message":"the state of the blockNumber 18997154"}
+{"level":"info","time":"2024-04-17 09:18:05.375707","message":"the state of the blockNumber 18997154"}
+{"level":"info","time":"2024-04-17 09:18:05.378705","message":"etherscan url: https://etherscan.io/block/18997155"}
+{"level":"info","time":"2024-04-17 09:18:05.378746","message":"the block.transactions is 140"}
+{"level":"debug","time":"2024-04-17 09:18:06.347957","message":"simulate with dag first batch size:85, total batch size:140"}
+{"level":"debug","time":"2024-04-17 09:18:06.355311","message":"block [18997155] schedule with dag finish"}
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 242 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 228 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 249 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 208 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 284 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 212 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 307 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 187 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 286 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 288 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 306 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 223 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 262 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 269 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 263 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 240 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 320 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 253 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 184 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 264 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 220 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 233 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 261 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 250 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 217 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 177 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 278 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 276 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 230 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 203 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 248 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 312 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 313 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 204 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 173 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 252 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 293 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 176 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 226 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 256 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 180 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 181 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 179 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 175 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 178 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 196 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 244 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 246 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 254 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 185 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 247 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 227 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 277 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 198 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 231 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 201 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 234 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 235 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 271 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 314 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 224 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 291 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 192 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 174 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 289 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 205 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 202 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 189 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 282 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 275 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 182 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 195 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 183 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 319 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 194 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 243 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 287 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 245 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 197 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 225 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 251 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 296 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 199 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 221 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 190 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 188 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 283 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from a panic: runtime error: invalid memory address or nil pointer dereference
+2024/04/17 09:18:06 worker exits from panic: goroutine 321 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 259 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 222 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 186 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 315 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 270 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 265 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 239 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 317 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 229 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 207 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 272 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 210 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 206 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 279 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 274 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 273 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 214 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 211 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 322 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 238 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 213 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 309 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 280 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 219 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 209 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 216 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 236 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 200 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 267 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 241 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 285 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 258 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 311 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 295 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 281 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 237 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 292 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 308 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 215 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 268 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 191 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 290 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 266 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 193 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 294 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 310 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 318 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 260 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 232 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 255 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 316 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+2024/04/17 09:18:06 worker exits from panic: goroutine 218 [running]:
+github.com/panjf2000/ants/v2.(*goWorker).run.func1.1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:58 +0x10c
+panic({0x87b960, 0xc4fff0})
+	/usr/local/go/src/runtime/panic.go:838 +0x207
+github.com/ethereum/go-ethereum/core.(*StateProcessor).ProcessExecute.func1()
+	/home/ubuntu/eth/eth_parallel/core/state_processor.go:538 +0xdf
+github.com/panjf2000/ants/v2.(*goWorker).run.func1()
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:70 +0x97
+created by github.com/panjf2000/ants/v2.(*goWorker).run
+	/home/ubuntu/go/pkg/mod/github.com/panjf2000/ants/v2@v2.4.8/worker.go:48 +0x65
+
+signal: interrupt

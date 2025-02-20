@@ -1,0 +1,6 @@
+panic: resource temporarily unavailable
+
+goroutine 1 [running]:
+main.main()
+	/home/ubuntu/eth/eth_parallel/ethInfo/newEthLeveldb.go:36 +0xf2b
+exit status 2
