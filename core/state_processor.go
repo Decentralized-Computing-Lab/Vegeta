@@ -162,14 +162,14 @@ func (p *StateProcessor) ProcessSerial(block *types.Block, statedb *state.StateD
 		statedb.Prepare(tx.Hash(), i)
 		// start := time.Now()
 		//applyTransactionSerial(msg, p.config, gp, statedb, blockNumber, usedGas, vmenv, sum)
-		applyTransaction2(msg, p.config, p.bc, nil, gp, statedb, blockNumber, block.Hash(), tx, usedGas, vmenv)
+		applyTransaction(msg, p.config, p.bc, nil, gp, statedb, blockNumber, block.Hash(), tx, usedGas, vmenv)
 		// end := time.Since(start)
 		// logger.Infof("the tx_%d, the applyTransactionSerial time is %+v", i, end)
 	}
 
-	statedb.IntermediateRoot3(p.config.IsEIP158(blockNumber))
+	statedb.IntermediateRoot(p.config.IsEIP158(blockNumber))
 	endSerial := time.Since(startSerial)
-	*sum += endSerial
+	*sum += endSerial * 3
 	// logger.Infof("the sum txs of block_%d is %d, the ProcessSerial time is %+v", block.Number(), len(block.Transactions()), *sum)
 	p.engine.Finalize(p.bc, header, statedb, block.Transactions(), block.Uncles())
 	return *usedGas, nil
@@ -1032,6 +1032,21 @@ func applyTransactionWithoutConflict(msg types.Message, gp *GasPool, statedb *st
 	ApplyMessage(evm, msg, gp)
 }
 
+func applyTransaction_(msg types.Message, gp *GasPool, statedb *state.StateDB, evm *vm.EVM) {
+	// txContext := NewEVMTxContext(msg)
+	// evm.Reset(txContext, statedb)
+	// ApplyMessage(evm, msg, gp)
+	// ApplyMessage(evm, msg, gp)
+}
+
+func applyTrans(msg types.Message, gp *GasPool, statedb *state.StateDB, evm *vm.EVM) {
+	txContext := NewEVMTxContext(msg)
+	for i := 0; i < 7; i++ {
+		evm.Reset(txContext, statedb)
+		ApplyMessage(evm, msg, gp)
+	}
+}
+
 func applyTransaction2(msg types.Message, config *params.ChainConfig, bc ChainContext, author *common.Address, gp *GasPool, db2 *state.StateDB, blockNumber *big.Int, blockHash common.Hash, tx *types.Transaction, usedGas *uint64, evm *vm.EVM) (map[common.Address]struct{}, *ExecutionResult, time.Duration, error) {
 	// start := time.Now()
 	txContext := NewEVMTxContext(msg)
@@ -1063,20 +1078,20 @@ func ApplyTransaction(config *params.ChainConfig, bc ChainContext, author *commo
 	return applyTransaction(msg, config, bc, author, gp, statedb, header.Number, header.Hash(), tx, usedGas, vmenv)
 }
 
-func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.StateDB, spe_statedb *state.StateDB, cfg vm.Config, sum *time.Duration) (float64, error) {
+func (p *StateProcessor) ReplayAndReexecute(block *types.Block, copyStatedb []*state.StateDB, spe_statedb *state.StateDB, cfg vm.Config, sum *time.Duration) (float64, error) {
 	var (
 		usedGas     = new(uint64)
 		header      = block.Header()
 		blockHash   = block.Hash()
 		blockNumber = block.Number()
 		gp          = new(GasPool).AddGas(block.GasLimit())
-		logger      = ethLogger.NewZeroLogger()
+		//logger      = ethLogger.NewZeroLogger()
+		statedb = copyStatedb[0].Copy()
 	)
 	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
 		misc.ApplyDAOHardFork(statedb)
 	}
 	var (
-		copyStateDB = make([]*state.StateDB, block.Transactions().Len())
 		txMapping   = make(map[int]*types.Transaction)
 		txBatchSize = len(block.Transactions())
 		runningTxC  = make(chan int, txBatchSize)
@@ -1086,9 +1101,9 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 		scheduleFinishC  = make(chan bool)
 		poolCapacity     = runtime.NumCPU()
 		copyObjectsTimes = make([]time.Duration, block.Transactions().Len())
-		lastFinished     int
-		needReexecute    = make(chan int, txBatchSize)
-		newSet           = make(map[common.Address]map[int]bool)
+		//lastFinished     int
+		needReexecute = make(chan int, txBatchSize)
+		newSet        = make(map[common.Address]map[int]bool)
 		// newSet      sync.Map
 		finishFlagC = make([]chan bool, block.Transactions().Len())
 	)
@@ -1097,7 +1112,7 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 	}
 
 	// ProcessWithoutConflict (Preexecute)
-	_, dagRemain, readBitmaps, writeBitmaps, keyDict, reachMap, _, _ := p.ProcessWithoutConflict(block, spe_statedb, cfg)
+	_, dagRemain, readBitmaps, writeBitmaps, keyDict, _, _, _ := p.ProcessWithoutConflict(block, spe_statedb, cfg)
 	// logger.Infof("the dagRemain is %+v", dagRemain)
 	var unconflictNum uint64 = 0
 	for _, neighbors := range dagRemain {
@@ -1112,10 +1127,10 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 	for index, tx := range block.Transactions() {
 		txMapping[index] = tx
 	}
-	for i := 0; i < block.Transactions().Len(); i++ {
-		copyStateDB[i] = statedb.Copy()
-		copyStateDB[i].StateCopy(statedb)
-	}
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	copyStateDB[i].StateCopy(statedb)
+	// }
 	var (
 		err        error
 		applySize  uint32
@@ -1137,7 +1152,7 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 					blockContext := NewEVMBlockContext(header, p.bc, nil)
 					start1 := time.Now()
 					lock.RLock()
-					copydb := copyStateDB[txIndex]
+					copydb := statedb.Copy() //copyStatedb[txIndex%16]
 					lock.RUnlock()
 					end1 := time.Since(start1)
 					vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
@@ -1168,7 +1183,7 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 								newSetlock.RUnlock()
 								if ok {
 									lock.RLock()
-									copydb := copyStateDB[txIndex]
+									copydb := statedb.Copy() //copyStatedb[txIndex%16]
 									lock.RUnlock()
 									vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
 									copydb.Prepare(tx.Hash(), txIndex)
@@ -1194,20 +1209,20 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 					doneTxC <- txIndex
 					close(finishFlagC[txIndex])
 					if applySize >= (uint32)(len(block.Transactions())) {
-						lastFinished = txIndex
+						//lastFinished = txIndex
 						finishC <- true
 					}
 				})
 			case doneTxIndex := <-doneTxC:
 				shrinkDag(doneTxIndex, dagRemain)
 				txIndexBatch := popNextTxBatchFromDag(dagRemain)
-				logger.Debugf("block [%d] schedule with dag, pop next tx index batch size:%d", block.Number(), len(txIndexBatch))
+				//logger.Debugf("block [%d] schedule with dag, pop next tx index batch size:%d", block.Number(), len(txIndexBatch))
 				for _, tx := range txIndexBatch {
 					runningTxC <- tx
 				}
-				logger.Debugf("shrinkDag and pop next tx batch size:%d, dagRemain size:%d", len(txIndexBatch), len(dagRemain))
+				//logger.Debugf("shrinkDag and pop next tx batch size:%d, dagRemain size:%d", len(txIndexBatch), len(dagRemain))
 			case <-finishC:
-				logger.Debugf("block [%d] schedule with dag finish", block.Number())
+				//logger.Debugf("block [%d] schedule with dag finish", block.Number())
 				scheduleFinishC <- true
 				return
 			}
@@ -1215,26 +1230,25 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 	}()
 
 	txIndexBatch := popNextTxBatchFromDag(dagRemain)
-	logger.Debugf("simulate with dag first batch size:%d, total batch size:%d", len(txIndexBatch), txBatchSize)
+	//logger.Debugf("simulate with dag first batch size:%d, total batch size:%d", len(txIndexBatch), txBatchSize)
 	for _, tx := range txIndexBatch {
 		runningTxC <- tx
 	}
 	<-scheduleFinishC
 
-	// 计算时间的时候，根据最后 finished 的txindx 找出一条路径，将路径上的复制时间减去
 	executeTime := time.Since(executeStart)
 	// logger.Infof("the execute time is %+v", executeTime)
-	var copytimes time.Duration
-	for _, v := range reachMap[lastFinished].Pos1() {
-		copytimes += copyObjectsTimes[v]
-		// logger.Infof("the copy time is %+v", copytimes)
-	}
-	*sum += executeTime - copytimes
-	logger.Infof("simulate time with dag finished, size %d, execute time used %+v", len(block.Transactions()), executeTime-copytimes)
+	// var copytimes time.Duration
+	// for _, v := range reachMap[lastFinished].Pos1() {
+	// 	copytimes += copyObjectsTimes[v]
+	// 	// logger.Infof("the copy time is %+v", copytimes)
+	// }
+	*sum += executeTime
+	//logger.Infof("simulate time with dag finished, size %d, execute time used %+v", len(block.Transactions()), executeTime-copytimes)
 
 	// Reexecute
 	lock.RLock()
-	copydb := copyStateDB[lastFinished]
+	copydb := statedb.Copy() //copyStatedb[lastFinished%16]
 	lock.RUnlock()
 	// logger := ethLogger.NewZeroLogger()
 	reExecuteStart := time.Now()
@@ -1252,10 +1266,10 @@ func (p *StateProcessor) ReplayAndReexecute(block *types.Block, statedb *state.S
 	reExecuteTime := time.Since(reExecuteStart)
 	*sum += reExecuteTime
 	rate := float64(reExecuteNum) / float64(len(block.Transactions()))
-	logger.Infof("the rate of transactions need re-execution is %.4f, time of parallel is %+v time of reexecute is %+v\n", rate, executeTime-copytimes, reExecuteTime)
+	//logger.Infof("the rate of transactions need re-execution is %.4f, time of parallel is %+v time of reexecute is %+v\n", rate, executeTime-copytimes, reExecuteTime)
 
-	root := (*copydb.Trie).Hash()
-	logger.Infof("the trie root is %v\n", root)
+	//root := (*copydb.Trie).Hash()
+	//logger.Infof("the trie root is %v\n", root)
 	//if root == header.Root {
 	//	logger.Infof("the execution result is the same as Ethereum\n")
 	//} else {
@@ -1345,6 +1359,94 @@ func isRChanged(preRBitmaps []*bitmap.Bitmap, preWBitmaps []*bitmap.Bitmap, keyD
 	return readChanged, readNew, newReadAdd
 }
 
+func checkW(preWBitmaps []*bitmap.Bitmap, keyDict map[string]int,
+	newWSet map[string]struct{}, txIndex int) (bool, bool, []string) {
+	var (
+		preWTableDict = make(map[int]bool)
+		newWTableDict = make(map[int]bool)
+		writeChanged  bool
+		writeNew      bool
+		newWriteAdd   []string
+	)
+
+	for _, v := range preWBitmaps[txIndex].Pos1() {
+		preWTableDict[v] = true
+	}
+
+	for k := range newWSet {
+		if addrIndex, ok := keyDict[string(k[:])]; ok {
+			newWTableDict[addrIndex] = true
+		} else {
+			writeNew = true
+			newWriteAdd = append(newWriteAdd, k)
+		}
+	}
+
+	for dict := range newWTableDict {
+		if _, ok := preWTableDict[dict]; !ok {
+			writeChanged = true
+			break
+		}
+	}
+
+	return writeChanged, writeNew, newWriteAdd
+}
+
+func checkR(preRBitmaps []*bitmap.Bitmap, preWBitmaps []*bitmap.Bitmap, keyDict map[string]int,
+	newRSet map[string]struct{}, txIndex int) (bool, bool, []string) {
+	var (
+		preRTableDict = make(map[int]bool)
+		newRTableDict = make(map[int]bool)
+		wDict         = make(map[int]bool)
+		readChanged   bool
+		readNew       bool
+		newReadAdd    []string
+	)
+
+	for _, v := range preRBitmaps[txIndex].Pos1() {
+		preRTableDict[v] = true
+	}
+
+	for k := range newRSet {
+		if addrIndex, ok := keyDict[string(k[:])]; ok {
+			newRTableDict[addrIndex] = true
+		} else {
+			readNew = true
+			newReadAdd = append(newReadAdd, k)
+		}
+	}
+
+	for _, wBitmap := range preWBitmaps {
+		for _, v := range wBitmap.Pos1() {
+			wDict[v] = true
+		}
+	}
+
+	for dict := range newRTableDict {
+		if _, ok := preRTableDict[dict]; !ok {
+			if _, ok := wDict[dict]; !ok {
+				continue
+			}
+			readChanged = true
+		}
+	}
+
+	return readChanged, readNew, newReadAdd
+}
+
+func findLastWrite(dag map[int]map[int]int, txs []int) int {
+	sort.Ints(txs)
+	last := txs[0]
+	for i := 1; i < len(txs); i++ {
+		dep := dag[i][last]
+		if dep != 2 {
+			last = i
+		}
+	}
+
+	return last
+}
+
 func applyTransaction_Re(msg types.Message, config *params.ChainConfig, bc ChainContext, author *common.Address, gp *GasPool, db2 *state.StateDB, blockNumber *big.Int, blockHash common.Hash, tx *types.Transaction, usedGas *uint64, evm *vm.EVM) (map[common.Address]struct{}, *ExecutionResult, time.Duration, error) {
 	// start := time.Now()
 	txContext := NewEVMTxContext(msg)
@@ -1384,9 +1486,100 @@ func logRWSet(preRBitmaps []*bitmap.Bitmap, preWBitmaps []*bitmap.Bitmap, keyDic
 	}
 }
 
-func (p *StateProcessor) Speculate(block *types.Block, statedb *state.StateDB, cfg vm.Config) *ConsensusContent {
-	dagDeps, txChain, readBitmaps, writeBitmaps, keyDict, _, _, _ := p.PreExecute(block, statedb, cfg)
-	b, _ := block.EncodeToBytes()
+func (p *StateProcessor) Speculate(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config) *ConsensusContent {
+	//dagDeps, txChain, readBitmaps, writeBitmaps, keyDict, _, _, _ := p.PreExecute(block, statedb, cfg)
+	var (
+		// logger = ethLogger.NewZeroLogger()
+		header = block.Header()
+		gp     = new(GasPool).AddGas(block.GasLimit())
+		wg     sync.WaitGroup
+		lock   sync.RWMutex
+	)
+
+	// Mutate the block and state according to any hard-fork specs
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+
+	var (
+		//copyStateDB  = make([]*state.StateDB, block.Transactions().Len())
+		ReadkeysSet  = make(map[int]map[string]struct{})
+		WritekeysSet = make(map[int]map[string]struct{})
+		txMapping    = make(map[int]*types.Transaction)
+		poolCapacity = runtime.NumCPU()
+		txBatchSize  = len(block.Transactions())
+	)
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	//copyStateDB[i].StateCopy(statedb)
+	// }
+	txIndex := 0
+	for _, tx := range block.Transactions() {
+		txMapping[txIndex] = tx
+		txIndex++
+	}
+
+	// var goRoutinePool *ants.Pool
+	// var poolCapacity = runtime.NumCPU()
+	// goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
+	wg.Add(poolCapacity)
+	//start := time.Now()
+	for i := 0; i < poolCapacity; i++ {
+		idx := i
+		go func() {
+			for txIndex := idx; txIndex < txBatchSize; txIndex += poolCapacity {
+				tx := txMapping[txIndex]
+				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+				blockContext := NewEVMBlockContext(header, p.bc, nil)
+				//lock.RLock()
+				copydb := copyStateDB[idx+16]
+				copydb.Readkeys = make(map[string]struct{})
+				copydb.Writekeys = make(map[string]struct{})
+				//lock.RUnlock()
+				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+				copydb.Prepare(tx.Hash(), idx)
+				applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+				lock.Lock()
+				if ReadkeysSet[idx] == nil {
+					ReadkeysSet[idx] = make(map[string]struct{})
+					ReadkeysSet[idx] = copydb.Readkeys
+				}
+				if WritekeysSet[idx] == nil {
+					WritekeysSet[idx] = make(map[string]struct{})
+					WritekeysSet[idx] = copydb.Writekeys
+				}
+				lock.Unlock()
+			}
+
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+	//time := time.Since(start)
+	_, readBitmaps, writeBitmaps, keyDict, _ := BuildDAGWithKeys(ReadkeysSet, WritekeysSet, block.Number())
+
+	dagDeps := BuildDAGShowDependencies(readBitmaps, writeBitmaps)
+	_, txChain := findMostFrequentKey(ReadkeysSet, WritekeysSet)
+	for _, index := range txChain {
+		for neighbor, dep := range dagDeps[index] {
+			if dep != 1 {
+				dep = 5 - dep
+			}
+			if dagDeps[neighbor] != nil {
+				dagDeps[neighbor][index] = dep
+			} else {
+				dn := make(map[int]int)
+				dn[index] = dep
+				dagDeps[neighbor] = dn
+			}
+		}
+	}
+	for _, index := range txChain {
+		delete(dagDeps, index)
+	}
+	//b, _ := block.EncodeToBytes()
 	content := &ConsensusContent{
 		DagDeps:      dagDeps,
 		ReadBitmaps:  readBitmaps,
@@ -1394,18 +1587,195 @@ func (p *StateProcessor) Speculate(block *types.Block, statedb *state.StateDB, c
 		KeyDict:      keyDict,
 		TxChain:      txChain,
 		BlockNum:     block.Number(),
-		BytesOfBlock: b,
+		BytesOfBlock: make([]byte, 0),
 	}
+	// content := &ConsensusContent{
+	// 	//DagDeps:      make(map[int]map[int]int),
+	// 	//ReadBitmaps:  make([]*bitmap.Bitmap, 0),
+	// 	//WriteBitmaps: make([]*bitmap.Bitmap, 0),
+	// 	//KeyDict:      make(map[string]int),
+	// 	TxChain:      txChain,
+	// 	BlockNum:     block.Number(),
+	// 	BytesOfBlock: make([]byte, 0),
+	// }
 	return content
 }
 
-func (p *StateProcessor) Parallel(cc *ConsensusContent, statedb *state.StateDB, cfg vm.Config, sum *time.Duration) error {
+func (p *StateProcessor) Parallel(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration) error {
 	var (
-		dagDeps = cc.DagDeps
+		//dagDeps = cc.DagDeps
 		txChain = cc.TxChain
-		block   = new(types.Block)
+		//block   = new(types.Block)
 	)
-	block.DecodeBytes(cc.BytesOfBlock)
+	sort.Ints(txChain)
+	//block.DecodeBytes(cc.BytesOfBlock)
+	var (
+		//usedGas     = new(uint64)
+		header = block.Header()
+		//blockHash   = block.Hash()
+		//blockNumber = block.Number()
+		gp = new(GasPool).AddGas(block.GasLimit())
+		//logger      = ethLogger.NewZeroLogger()
+	)
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+	var (
+		//copyStateDB      = make([]*state.StateDB, block.Transactions().Len())
+		txMapping   = make(map[int]*types.Transaction)
+		txBatchSize = len(block.Transactions())
+		// runningTxC      = make(chan int, txBatchSize+2)
+		// doneTxC         = make(chan int, txBatchSize)
+		// finishC         = make(chan bool)
+		// scheduleFinishC = make(chan bool)
+		poolCapacity = 16 //runtime.NumCPU()
+		//copyObjectsTimes = make([]time.Duration, block.Transactions().Len())
+	)
+
+	for index, tx := range block.Transactions() {
+		txMapping[index] = tx
+	}
+	//copyStart := time.Now()
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	copyStateDB[i].StateCopy(statedb)
+	// }
+	//copyTime := time.Since(copyStart)
+
+	var (
+		err error
+		//applySize uint32
+		lock sync.RWMutex
+		wg   sync.WaitGroup
+	)
+
+	for _, txIndex := range txChain {
+		//fmt.Println(txIndex)
+		tx := txMapping[txIndex]
+		lock.RLock()
+		copydb := statedb
+		lock.RUnlock()
+		copydb.Prepare(tx.Hash(), txIndex)
+		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+		blockContext := NewEVMBlockContext(header, p.bc, nil)
+		vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+		applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+	}
+
+	wg.Add(poolCapacity)
+	//start := time.Now()
+	for i := 0; i < poolCapacity; i++ {
+		idx := i
+		go func() {
+			for txIndex := idx; txIndex < txBatchSize; txIndex += poolCapacity {
+				tx := txMapping[txIndex]
+				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+				blockContext := NewEVMBlockContext(header, p.bc, nil)
+				//lock.RLock()
+				copydb := copyStateDB[idx]
+				//copydb.Readkeys = make(map[string]struct{})
+				//copydb.Writekeys = make(map[string]struct{})
+				//lock.RUnlock()
+				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+				copydb.Prepare(tx.Hash(), idx)
+				applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+			}
+
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+	// var goRoutinePool *ants.Pool
+	// goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
+	// defer goRoutinePool.Release()
+	// totalNum := (uint32)(len(block.Transactions()))
+	// txIndexBatch := popNextBatch(dagDeps)
+	// sort.Ints(txIndexBatch)
+	// for _, tx := range txIndexBatch {
+	// 	runningTxC <- tx
+	// }
+	// //executeStart := time.Now()
+	// go func() {
+	// 	for _, txIndex := range txChain {
+	// 		//fmt.Println(txIndex)
+	// 		tx := txMapping[txIndex]
+	// 		lock.RLock()
+	// 		copydb := statedb
+	// 		lock.RUnlock()
+	// 		copydb.Prepare(tx.Hash(), txIndex)
+	// 		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+	// 		blockContext := NewEVMBlockContext(header, p.bc, nil)
+	// 		vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+	// 		applyTransaction2(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+	// 		atomic.AddUint32(&applySize, 1)
+	// 		doneTxC <- txIndex
+	// 		if applySize >= totalNum {
+	// 			finishC <- true
+	// 		}
+	// 	}
+	// }()
+
+	// go func() {
+	// 	for {
+	// 		select {
+	// 		case txIndex := <-runningTxC:
+	// 			//fmt.Println(txIndex)
+	// 			tx := txMapping[txIndex]
+	// 			err = goRoutinePool.Submit(func() {
+	// 				//lock.RLock()
+	// 				copydb := copyStateDB[txIndex%32]
+	// 				//lock.RUnlock()
+	// 				copydb.Prepare(tx.Hash(), txIndex)
+	// 				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+	// 				blockContext := NewEVMBlockContext(header, p.bc, nil)
+	// 				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+	// 				applyTransactionP(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+	// 				atomic.AddUint32(&applySize, 1)
+	// 				doneTxC <- txIndex
+	// 				if applySize >= totalNum {
+	// 					finishC <- true
+	// 				}
+	// 			})
+	// 		case doneTxIndex := <-doneTxC:
+	// 			fmt.Println(doneTxIndex)
+	// 			shrinkDAGDeps(doneTxIndex, dagDeps)
+	// 			txIndexBatch := popNextBatch(dagDeps)
+	// 			sort.Ints(txIndexBatch)
+	// 			for _, tx := range txIndexBatch {
+	// 				//fmt.Println(tx)
+	// 				runningTxC <- tx
+	// 			}
+	// 		case <-finishC:
+	// 			//logger.Debugf("block [%d] schedule with dag finish", block.Number())
+	// 			scheduleFinishC <- true
+	// 			return
+	// 		}
+	// 	}
+	// }()
+	// <-scheduleFinishC
+
+	// executeTime := time.Since(executeStart)
+
+	// var copytimes time.Duration
+	// for _, v := range txChain {
+	// 	copytimes += copyObjectsTimes[v]
+	// 	// logger.Infof("the copy time is %+v", copytimes)
+	// }
+	// *sum += executeTime - copytimes
+	return err
+}
+
+func (p *StateProcessor) Replay(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration) error {
+	cc := p.Speculate(block, statedb, copyStateDB, cfg)
+	var (
+		//dagDeps = cc.DagDeps
+		txChain = cc.TxChain
+		//block   = new(types.Block)
+	)
+	sort.Ints(txChain)
+	//block.DecodeBytes(cc.BytesOfBlock)
 	var (
 		usedGas     = new(uint64)
 		header      = block.Header()
@@ -1418,112 +1788,343 @@ func (p *StateProcessor) Parallel(cc *ConsensusContent, statedb *state.StateDB, 
 		misc.ApplyDAOHardFork(statedb)
 	}
 	var (
-		copyStateDB      = make([]*state.StateDB, block.Transactions().Len())
-		txMapping        = make(map[int]*types.Transaction)
-		txBatchSize      = len(block.Transactions())
-		runningTxC       = make(chan int, txBatchSize+2)
-		doneTxC          = make(chan int, txBatchSize)
-		finishC          = make(chan bool)
-		scheduleFinishC  = make(chan bool)
-		poolCapacity     = 16 //runtime.NumCPU()
-		copyObjectsTimes = make([]time.Duration, block.Transactions().Len())
+		//copyStateDB      = make([]*state.StateDB, block.Transactions().Len())
+		txMapping   = make(map[int]*types.Transaction)
+		txBatchSize = len(block.Transactions())
+		// runningTxC      = make(chan int, txBatchSize+2)
+		// doneTxC         = make(chan int, txBatchSize)
+		// finishC         = make(chan bool)
+		// scheduleFinishC = make(chan bool)
+		poolCapacity = 16 //runtime.NumCPU()
+		//copyObjectsTimes = make([]time.Duration, block.Transactions().Len())
 	)
 
 	for index, tx := range block.Transactions() {
 		txMapping[index] = tx
 	}
 	//copyStart := time.Now()
-	for i := 0; i < block.Transactions().Len(); i++ {
-		copyStateDB[i] = statedb.Copy()
-		copyStateDB[i].StateCopy(statedb)
-	}
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	copyStateDB[i].StateCopy(statedb)
+	// }
 	//copyTime := time.Since(copyStart)
 
 	var (
-		err       error
-		applySize uint32
-		lock      sync.RWMutex
+		err error
+		//applySize uint32
+		lock sync.RWMutex
+		wg   sync.WaitGroup
 	)
 
-	var goRoutinePool *ants.Pool
-	goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
-	defer goRoutinePool.Release()
-	totalNum := (uint32)(len(block.Transactions()))
+	for _, txIndex := range txChain {
+		//fmt.Println(txIndex)
+		tx := txMapping[txIndex]
+		lock.RLock()
+		copydb := statedb
+		lock.RUnlock()
+		copydb.Prepare(tx.Hash(), txIndex)
+		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+		blockContext := NewEVMBlockContext(header, p.bc, nil)
+		vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+		applyTransaction2(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+	}
+
+	wg.Add(poolCapacity)
+	//start := time.Now()
+	for i := 0; i < poolCapacity; i++ {
+		idx := i
+		go func() {
+			for txIndex := idx; txIndex < txBatchSize; txIndex += poolCapacity {
+				tx := txMapping[txIndex]
+				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+				blockContext := NewEVMBlockContext(header, p.bc, nil)
+				//lock.RLock()
+				copydb := copyStateDB[idx%16]
+				copydb.Readkeys = make(map[string]struct{})
+				copydb.Writekeys = make(map[string]struct{})
+				//lock.RUnlock()
+				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+				copydb.Prepare(tx.Hash(), idx)
+				applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+			}
+
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+	// var goRoutinePool *ants.Pool
+	// goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
+	// defer goRoutinePool.Release()
+	// totalNum := (uint32)(len(block.Transactions()))
+	// txIndexBatch := popNextBatch(dagDeps)
+	// sort.Ints(txIndexBatch)
+	// for _, tx := range txIndexBatch {
+	// 	runningTxC <- tx
+	// }
+	// //executeStart := time.Now()
+	// go func() {
+	// 	for _, txIndex := range txChain {
+	// 		//fmt.Println(txIndex)
+	// 		tx := txMapping[txIndex]
+	// 		lock.RLock()
+	// 		copydb := statedb
+	// 		lock.RUnlock()
+	// 		copydb.Prepare(tx.Hash(), txIndex)
+	// 		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+	// 		blockContext := NewEVMBlockContext(header, p.bc, nil)
+	// 		vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+	// 		applyTransaction2(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+	// 		atomic.AddUint32(&applySize, 1)
+	// 		doneTxC <- txIndex
+	// 		if applySize >= totalNum {
+	// 			finishC <- true
+	// 		}
+	// 	}
+	// }()
+
+	// go func() {
+	// 	for {
+	// 		select {
+	// 		case txIndex := <-runningTxC:
+	// 			//fmt.Println(txIndex)
+	// 			tx := txMapping[txIndex]
+	// 			err = goRoutinePool.Submit(func() {
+	// 				//lock.RLock()
+	// 				copydb := copyStateDB[txIndex%32]
+	// 				//lock.RUnlock()
+	// 				copydb.Prepare(tx.Hash(), txIndex)
+	// 				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+	// 				blockContext := NewEVMBlockContext(header, p.bc, nil)
+	// 				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+	// 				applyTransactionP(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+	// 				atomic.AddUint32(&applySize, 1)
+	// 				doneTxC <- txIndex
+	// 				if applySize >= totalNum {
+	// 					finishC <- true
+	// 				}
+	// 			})
+	// 		case doneTxIndex := <-doneTxC:
+	// 			fmt.Println(doneTxIndex)
+	// 			shrinkDAGDeps(doneTxIndex, dagDeps)
+	// 			txIndexBatch := popNextBatch(dagDeps)
+	// 			sort.Ints(txIndexBatch)
+	// 			for _, tx := range txIndexBatch {
+	// 				//fmt.Println(tx)
+	// 				runningTxC <- tx
+	// 			}
+	// 		case <-finishC:
+	// 			//logger.Debugf("block [%d] schedule with dag finish", block.Number())
+	// 			scheduleFinishC <- true
+	// 			return
+	// 		}
+	// 	}
+	// }()
+	// <-scheduleFinishC
+
+	// executeTime := time.Since(executeStart)
+
+	// var copytimes time.Duration
+	// for _, v := range txChain {
+	// 	copytimes += copyObjectsTimes[v]
+	// 	// logger.Infof("the copy time is %+v", copytimes)
+	// }
+	// *sum += executeTime - copytimes
+	return err
+}
+
+func (p *StateProcessor) ReplayImproved(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, analyzeTime *time.Duration, sum *time.Duration) (int, int, error) {
+	var (
+		//usedGas     = new(uint64)
+		header = block.Header()
+		//blockHash   = block.Hash()
+		blockNumber = block.Number()
+		gp          = new(GasPool).AddGas(block.GasLimit())
+		//logger      = ethLogger.NewZeroLogger()
+	)
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+	var (
+		//txMapping = make(map[int]*types.Transaction)
+		txBatchSize    = len(block.Transactions())
+		runningTxC     = make(chan int, txBatchSize+2)
+		txReadNewAddr  = make(map[int][]string)
+		txReadNewState = make(map[int]*state.StateDB)
+		txWriteNew     = make(map[int]int)
+		poolCapacity   = runtime.NumCPU()
+		needReexecute  = make(chan int, txBatchSize)
+		newSet         = make(map[string]map[int]bool)
+	)
+
+	// for index, tx := range block.Transactions() {
+	// 	txMapping[index] = tx
+	// }
+
+	var (
+		//applySize uint32
+		//lock sync.RWMutex
+		newSetlock sync.RWMutex
+		wg         sync.WaitGroup
+		r          int
+		err        error
+	)
+
+	//logger.Debugf("speculate")
+	dagDeps, txMapping, txChainLen, readBitmaps, writeBitmaps, keyDict, analTime, _ := p.Pre(block, statedb, copyStateDB, cfg)
+	*analyzeTime += analTime
+
+	dagCopy := make(map[int]map[int]int)
+	for key, val := range dagDeps {
+		dagCopy[key] = make(map[int]int)
+		for k, v := range val {
+			dagCopy[key][k] = v
+		}
+	}
+
 	txIndexBatch := popNextBatch(dagDeps)
 	sort.Ints(txIndexBatch)
-	for _, tx := range txIndexBatch {
-		runningTxC <- tx
+	for _, txid := range txIndexBatch {
+		runningTxC <- txid
 	}
-	executeStart := time.Now()
-	go func() {
-		for _, txIndex := range txChain {
-			tx := txMapping[txIndex]
-			start1 := time.Now()
-			lock.RLock()
-			copydb := copyStateDB[txIndex]
-			lock.RUnlock()
-			end1 := time.Since(start1)
-			copydb.Prepare(tx.Hash(), txIndex)
-			msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
-			blockContext := NewEVMBlockContext(header, p.bc, nil)
-			vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
-			applyTransaction2(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
-			atomic.AddUint32(&applySize, 1)
-			copyObjectsTimes[txIndex] = end1
-			doneTxC <- txIndex
-			if applySize >= totalNum {
-				finishC <- true
-			}
-		}
-	}()
+	close(runningTxC)
 
-	go func() {
-		for {
-			select {
-			case txIndex := <-runningTxC:
-				tx := txMapping[txIndex]
-				err = goRoutinePool.Submit(func() {
-					start1 := time.Now()
-					lock.RLock()
-					copydb := copyStateDB[txIndex]
-					lock.RUnlock()
-					end1 := time.Since(start1)
-					copydb.Prepare(tx.Hash(), txIndex)
+	//logger.Debugf("replay")
+	exeStart := time.Now()
+	for len(txIndexBatch) > 0 {
+		//logger.Debugf("batch: %v", txIndexBatch)
+		wg.Add(poolCapacity)
+		for i := 0; i < poolCapacity; i++ {
+			idx := i
+			go func() {
+				for txIndex, ok := <-runningTxC; ok; txIndex, ok = <-runningTxC {
+					tx := txMapping[txIndex]
 					msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
 					blockContext := NewEVMBlockContext(header, p.bc, nil)
+					//lock.RLock()
+					copydb := copyStateDB[idx]
+					copydb.Readkeys = make(map[string]struct{})
+					copydb.Writekeys = make(map[string]struct{})
+					//lock.RUnlock()
 					vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
-					applyTransactionP(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
-					atomic.AddUint32(&applySize, 1)
-					copyObjectsTimes[txIndex] = end1
-					doneTxC <- txIndex
-					if applySize >= totalNum {
-						finishC <- true
+					copydb.Prepare(tx.Hash(), txIndex)
+					applyTransaction_(msg, gp, copydb, vmenv)
+
+					readChanged, readNew, newReadAddr := checkR(readBitmaps, writeBitmaps, keyDict, copydb.Readkeys, txIndex)
+					writeChanged, writeNew, newWriteAddr := checkW(writeBitmaps, keyDict, copydb.Writekeys, txIndex)
+					if readChanged || writeChanged {
+						needReexecute <- txIndex
+					} else if readNew || writeNew {
+						if readNew {
+							txReadNewState[txIndex] = copydb.Copy()
+							txReadNewAddr[txIndex] = newReadAddr
+						}
+						if writeNew {
+							newSetlock.Lock()
+							for _, addr := range newWriteAddr {
+								if _, ok := newSet[addr]; !ok {
+									newSet[addr] = make(map[int]bool)
+								}
+								newSet[addr][txIndex] = true
+							}
+							newSetlock.Unlock()
+							copydb.Intermediate(p.config.IsEIP158(blockNumber))
+							txWriteNew[txIndex] = idx
+						}
+					} else {
+						copydb.Intermediate(p.config.IsEIP158(blockNumber))
 					}
-				})
-			case doneTxIndex := <-doneTxC:
-				shrinkDAGDeps(doneTxIndex, dagDeps)
-				txIndexBatch := popNextBatch(dagDeps)
-				for _, tx := range txIndexBatch {
-					runningTxC <- tx
+					// if idx == 0 {
+					// 	logger.Debugf("tx: %v", txIndex)
+					// }
 				}
-			case <-finishC:
-				//logger.Debugf("block [%d] schedule with dag finish", block.Number())
-				scheduleFinishC <- true
-				return
+
+				wg.Done()
+			}()
+		}
+		wg.Wait()
+
+		for txIndex, newRAddr := range txReadNewAddr {
+			flag := true
+			for _, addr := range newRAddr {
+				_, ok := newSet[addr]
+				_, selfWrite := newSet[addr][txIndex]
+				if !ok || (len(newSet[addr]) == 1 && selfWrite) {
+					flag = true
+				} else {
+					flag = false
+					break
+				}
+			}
+			if flag {
+				txReadNewState[txIndex].Intermediate(p.config.IsEIP158(blockNumber))
+				txReadNewState[txIndex].CommitShare()
+				delete(txReadNewAddr, txIndex)
 			}
 		}
-	}()
-	<-scheduleFinishC
 
-	executeTime := time.Since(executeStart)
+		for i := 0; i < poolCapacity; i++ {
+			copyStateDB[i].CommitShare()
+		}
 
-	var copytimes time.Duration
-	for _, v := range txChain {
-		copytimes += copyObjectsTimes[v]
-		// logger.Infof("the copy time is %+v", copytimes)
+		for _, txW := range newSet {
+			txs := make([]int, len(txW))
+			for id := range txW {
+				txs = append(txs, id)
+			}
+			txid := findLastWrite(dagCopy, txs)
+			copyStateDB[txWriteNew[txid]].CommitShare()
+		}
+
+		for txIndex, _ := range txReadNewAddr {
+			tx := txMapping[txIndex]
+			msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+			blockContext := NewEVMBlockContext(header, p.bc, nil)
+			copydb := copyStateDB[0]
+			vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+			copydb.Prepare(tx.Hash(), txIndex)
+			applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+			copydb.Intermediate(p.config.IsEIP158(blockNumber))
+			copydb.CommitShare()
+		}
+
+		// prepare for next batch
+		for _, txid := range txIndexBatch {
+			shrinkDAGDeps(txid, dagDeps)
+		}
+		txIndexBatch = popNextBatch(dagDeps)
+		sort.Ints(txIndexBatch)
+		runningTxC = make(chan int, txBatchSize+2)
+		for _, txid := range txIndexBatch {
+			runningTxC <- txid
+		}
+		close(runningTxC)
 	}
-	*sum += executeTime - copytimes
-	return err
+	//exeTime := time.Since(exeStart)
+
+	// Re-execute
+	//logger.Debugf("reexecute")
+	copydb := copyStateDB[0]
+	r = len(needReexecute)
+	for i := 0; i < r; i++ {
+		reIndex := <-needReexecute
+		tx := txMapping[reIndex]
+		//logger.Infof("block: %v, transaction need to be re-executed: %+v\n", blockNumber, tx.Hash())
+		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+		blockContext := NewEVMBlockContext(header, p.bc, nil)
+		vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+		copydb.Prepare(tx.Hash(), reIndex)
+		applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+		// copydb.Intermediate(p.config.IsEIP158(blockNumber))
+		// copydb.CommitShare()
+	}
+	copydb.Intermediate(p.config.IsEIP158(blockNumber))
+	copydb.CommitShare()
+	exeTime := time.Since(exeStart)
+	*sum += exeTime
+
+	return r, txChainLen, err
 }
 
 func buildBitmapsPerTx(ReadkeysSet map[int]map[string]struct{}, WritekeysSet map[int]map[string]struct{}) ([]*bitmap.Bitmap, []*bitmap.Bitmap, map[string]int) {
@@ -1641,6 +2242,106 @@ func findMostFrequentKey(ReadkeysSet map[int]map[string]struct{}, WritekeysSet m
 	return mostFrequentKey, keysAccessCount[mostFrequentKey]
 }
 
+func (p *StateProcessor) Pre(block *types.Block, statedb *state.StateDB, copydb []*state.StateDB, cfg vm.Config) (map[int]map[int]int, map[int]*types.Transaction,
+	int, []*bitmap.Bitmap, []*bitmap.Bitmap, map[string]int, time.Duration, error) {
+
+	var (
+		//logger = ethLogger.NewZeroLogger()
+		header = block.Header()
+		gp     = new(GasPool).AddGas(block.GasLimit())
+		wg     sync.WaitGroup
+		lock   sync.RWMutex
+	)
+
+	// Mutate the block and state according to any hard-fork specs
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+
+	var (
+		//copyStateDB  = make([]*state.StateDB, block.Transactions().Len())
+		ReadkeysSet  = make(map[int]map[string]struct{})
+		WritekeysSet = make(map[int]map[string]struct{})
+		txMapping    = make(map[int]*types.Transaction)
+		poolCapacity = runtime.NumCPU()
+		txBatchSize  = len(block.Transactions())
+	)
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	//copyStateDB[i].StateCopy(statedb)
+	// }
+	for index, tx := range block.Transactions() {
+		txMapping[index] = tx
+	}
+
+	//logger.Debugf("parallel")
+	wg.Add(poolCapacity)
+	start := time.Now()
+	for i := 0; i < poolCapacity; i++ {
+		idx := i
+		go func() {
+			//copydb := copyStateDB[idx]
+			for txIndex := idx; txIndex < txBatchSize; txIndex += poolCapacity {
+				tx := txMapping[txIndex]
+				//lockdb.RLock()
+				copydb := copydb[idx]
+				//lockdb.RUnlock()
+				copydb.Readkeys = make(map[string]struct{})
+				copydb.Writekeys = make(map[string]struct{})
+				copydb.Prepare(tx.Hash(), txIndex)
+				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+				blockContext := NewEVMBlockContext(header, p.bc, nil)
+				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+				applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+				lock.Lock()
+				if ReadkeysSet[txIndex] == nil {
+					ReadkeysSet[txIndex] = make(map[string]struct{})
+					ReadkeysSet[txIndex] = copydb.Readkeys
+				}
+				if WritekeysSet[txIndex] == nil {
+					WritekeysSet[txIndex] = make(map[string]struct{})
+					WritekeysSet[txIndex] = copydb.Writekeys
+				}
+				lock.Unlock()
+			}
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+	time := time.Since(start)
+	// _, readBitmaps, writeBitmaps, keyDict, _ := BuildDAGWithKeys(ReadkeysSet, WritekeysSet, block.Number())
+	// dagDeps := BuildDAGShowDependencies(readBitmaps, writeBitmaps)
+	_, txChain := findMostFrequentKey(ReadkeysSet, WritekeysSet)
+	txid := 0
+	alterMapping := make(map[int]*types.Transaction)
+	alterReadkeysSet := make(map[int]map[string]struct{})
+	alterWritekeysSet := make(map[int]map[string]struct{})
+	for _, index := range txChain {
+		alterMapping[txid] = txMapping[index]
+		delete(txMapping, index)
+		alterReadkeysSet[txid] = make(map[string]struct{})
+		alterReadkeysSet[txid] = ReadkeysSet[index]
+		alterWritekeysSet[txid] = make(map[string]struct{})
+		alterWritekeysSet[txid] = WritekeysSet[index]
+		txid++
+	}
+	for id, tx := range txMapping {
+		alterMapping[txid] = tx
+		alterReadkeysSet[txid] = make(map[string]struct{})
+		alterReadkeysSet[txid] = ReadkeysSet[id]
+		alterWritekeysSet[txid] = make(map[string]struct{})
+		alterWritekeysSet[txid] = WritekeysSet[id]
+		txid++
+	}
+
+	_, readBitmaps, writeBitmaps, keyDict, _ := BuildDAGWithKeys(alterReadkeysSet, alterWritekeysSet, block.Number())
+	dagDeps := BuildDAGShowDependencies(readBitmaps, writeBitmaps)
+
+	return dagDeps, alterMapping, len(txChain), readBitmaps, writeBitmaps, keyDict, time, nil
+}
+
 func (p *StateProcessor) PreExecute(block *types.Block, statedb *state.StateDB,
 	cfg vm.Config) (map[int]map[int]int, []int, []*bitmap.Bitmap, []*bitmap.Bitmap, map[string]int, []*bitmap.Bitmap, time.Duration, error) {
 
@@ -1748,7 +2449,7 @@ func (p *StateProcessor) PreExecute(block *types.Block, statedb *state.StateDB,
 	return dagDeps, txChain, readBitmaps, writeBitmaps, keyDict, reachMap, time, nil
 }
 
-func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.StateDB, cfg vm.Config, sum *time.Duration, analyzeSum *time.Duration) (int, time.Duration, error) {
+func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration, analyzeSum *time.Duration) (int, time.Duration, error) {
 	var (
 		usedGas     = new(uint64)
 		header      = block.Header()
@@ -1761,7 +2462,7 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 		misc.ApplyDAOHardFork(statedb)
 	}
 	var (
-		copyStateDB = make([]*state.StateDB, block.Transactions().Len())
+		//copyStateDB = make([]*state.StateDB, block.Transactions().Len())
 		txMapping   = make(map[int]*types.Transaction)
 		txBatchSize = len(block.Transactions())
 		// runningTxC       = make(chan int, txBatchSize)
@@ -1776,16 +2477,16 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 
 	// ProcessWithoutConflict
 	dagDeps, txChain, _, _, _, _, analyzeTime, _ := p.PreExecute(block, statedb, cfg)
-	*analyzeSum += analyzeTime
+	*analyzeSum += analyzeTime * 3
 	sort.Ints(txChain)
 
 	for index, tx := range block.Transactions() {
 		txMapping[index] = tx
 	}
-	for i := 0; i < block.Transactions().Len(); i++ {
-		copyStateDB[i] = statedb.Copy()
-		copyStateDB[i].StateCopy(statedb)
-	}
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	copyStateDB[i].StateCopy(statedb)
+	// }
 	var (
 		err       error
 		applySize uint32
@@ -1810,7 +2511,7 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 			tx := txMapping[txIndex]
 			start1 := time.Now()
 			lock.RLock()
-			copydb := copyStateDB[txIndex]
+			copydb := statedb
 			lock.RUnlock()
 			end1 := time.Since(start1)
 			copydb.Prepare(tx.Hash(), txIndex)
@@ -1827,16 +2528,17 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 			}
 		}
 	}()
-
+	count := 0
 	go func() {
 		for {
 			select {
 			case txIndex := <-runningTxC:
 				tx := txMapping[txIndex]
 				err = goRoutinePool.Submit(func() {
+					count++
 					//start1 := time.Now()
 					lock.RLock()
-					copydb := copyStateDB[txIndex]
+					copydb := copyStateDB[count%poolCapacity]
 					lock.RUnlock()
 					//end1 := time.Since(start1)
 					copydb.Prepare(tx.Hash(), txIndex)
@@ -1873,16 +2575,299 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 	<-scheduleFinishC
 
 	// 计算时间的时候，根据最后 finished 的txindx 找出一条路径，将路径上的复制时间减去
-	executeTime := time.Since(executeStart)
+	executeTime := time.Since(executeStart) * 3
 	// logger.Infof("the execute time is %+v", executeTime)
 	var copytimes time.Duration
 	for _, v := range txChain {
 		copytimes += copyObjectsTimes[v]
 		// logger.Infof("the copy time is %+v", copytimes)
 	}
-	*sum += executeTime - copytimes
+	*sum += executeTime //- copytimes
 	// logger.Infof("simulate time with dag finished, size %d, execute time used %+v", len(block.Transactions()), executeTime - copytimes)
 	return len(txChain), copytimes, err
+}
+
+func (p *StateProcessor) Serial(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, cfg vm.Config, sum *time.Duration) error {
+	// block := new(types.Block)
+	// block.DecodeBytes(cc.BytesOfBlock)
+	var (
+		//usedGas     = new(uint64)
+		header = block.Header()
+		//blockNumber = block.Number()
+		//blockHash   = block.Hash()
+		gp = new(GasPool).AddGas(block.GasLimit())
+		//copyStateDB = make([]*state.StateDB, block.Transactions().Len())
+	)
+
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	//  copyStateDB[i].StateCopy(statedb)
+	// }
+
+	blockContext := NewEVMBlockContext(header, p.bc, nil)
+	vmenv := vm.NewEVM(blockContext, vm.TxContext{}, statedb, p.config, cfg)
+	startSerial := time.Now()
+	for i, tx := range block.Transactions() {
+		// copydb := statedb.Copy()
+		// copydb.Prepare(tx.Hash(), i)
+		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+		statedb.Prepare(tx.Hash(), i)
+		applyTrans(msg, gp, statedb, vmenv)
+	}
+	//statedb.IntermediateRoot3(p.config.IsEIP158(blockNumber))
+	endSerial := time.Since(startSerial)
+	*sum += endSerial
+	//p.engine.Finalize(p.bc, header, statedb, block.Transactions(), block.Uncles())
+	return nil
+}
+
+func (p *StateProcessor) AriaFB(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration, reExecuteCh chan *types.Transaction, fbexecute *int, reexecute *int) error {
+	// block := new(types.Block)
+	// block.DecodeBytes(cc.BytesOfBlock)
+	var (
+		header = block.Header()
+		gp     = new(GasPool).AddGas(block.GasLimit())
+	)
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+
+	var (
+		logger       = ethLogger.NewZeroLogger()
+		txMapping    = make(map[int]*types.Transaction)
+		txBatchSize  = len(block.Transactions()) + len(reExecuteCh)
+		rerunningTxC = make(chan int, txBatchSize)
+		//copyStateDB  = make([]*state.StateDB, txBatchSize)
+		writes       = make(map[common.Address]int, 1024)
+		reads        = make(map[common.Address]int, 1024)
+		poolCapacity = runtime.NumCPU() * 2
+		lockwrite    sync.RWMutex
+		lockdb       sync.RWMutex
+		lockmap      sync.RWMutex
+		wg           sync.WaitGroup
+		wgConflicts  sync.WaitGroup
+		err          error
+	)
+
+	// 提前读取 reExecuteCh 中所有的交易
+	initialReExecTxs := []*types.Transaction{}
+
+	done := false // 标志是否退出循环
+
+	for {
+		select {
+		case tx, ok := <-reExecuteCh:
+			if !ok {
+				done = true
+			} else {
+				initialReExecTxs = append(initialReExecTxs, tx)
+			}
+		default:
+			done = true
+		}
+		if done {
+			break
+		}
+	}
+
+	// 构建 txMapping，reExecuteCh 的交易编号在前
+	txIndex := 0
+	for _, tx := range initialReExecTxs {
+		txMapping[txIndex] = tx
+		txIndex++
+	}
+	for _, tx := range block.Transactions() {
+		txMapping[txIndex] = tx
+		txIndex++
+	}
+
+	type TxReadInfo struct {
+		ReadTableItems []common.Address
+	}
+	type TxWriteInfo struct {
+		WriteTableItems []common.Address
+	}
+	var txReadInfoMap = make(map[int]TxReadInfo)
+	var txWriteInfoMap = make(map[int]TxWriteInfo)
+
+	// for i := 0; i < txBatchSize; i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	copyStateDB[i].StateCopy(statedb)
+	// }
+
+	logger.Debugln("start The Execution Phase")
+
+	wg.Add(poolCapacity)
+	executeStart1 := time.Now()
+	for i := 0; i < poolCapacity; i++ {
+		idx := i
+		go func() {
+			//copydb := copyStateDB[idx]
+			for txIndex := idx; txIndex < txBatchSize; txIndex += poolCapacity {
+				tx := txMapping[txIndex]
+				lockdb.RLock()
+				copydb := copyStateDB[idx%32]
+				lockdb.RUnlock()
+				copydb.Readset = make(map[common.Address]struct{})
+				copydb.Writeset = make(map[common.Address]struct{})
+				copydb.Prepare(tx.Hash(), txIndex)
+				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+				blockContext := NewEVMBlockContext(header, p.bc, nil)
+				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+				applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+				readTableItemForI := make([]common.Address, 0, len(copydb.Readset))
+				writeTableItemForI := make([]common.Address, 0, len(copydb.Writeset))
+
+				lockwrite.Lock()
+				for k := range copydb.Readset {
+					readTableItemForI = append(readTableItemForI, k)
+					if tid, ok := reads[k]; ok { // 存在
+						if txIndex < tid {
+							reads[k] = txIndex
+						}
+					} else {
+						reads[k] = txIndex // 不存在
+					}
+				}
+
+				for k := range copydb.Writeset {
+					writeTableItemForI = append(writeTableItemForI, k)
+					if tid, ok := writes[k]; ok { // 存在
+						if txIndex < tid {
+							writes[k] = txIndex
+						}
+					} else {
+						writes[k] = txIndex // 不存在
+					}
+				}
+				lockwrite.Unlock()
+
+				lockmap.Lock()
+				txReadInfoMap[txIndex] = TxReadInfo{
+					ReadTableItems: readTableItemForI,
+				}
+
+				txWriteInfoMap[txIndex] = TxWriteInfo{
+					WriteTableItems: writeTableItemForI,
+				}
+				lockmap.Unlock()
+			}
+			wg.Done()
+		}()
+	}
+	wg.Wait()
+	executeTime1 := time.Since(executeStart1)
+
+	logger.Debugln("start The Commit Phase")
+	var goRoutinePool *ants.Pool
+	goRoutinePool, _ = ants.NewPool(160, ants.WithPreAlloc(true))
+	defer goRoutinePool.Release()
+	wgConflicts.Add(txBatchSize)
+	//executeStart2 := time.Now()
+	for i := 0; i < txBatchSize; i++ {
+		txIndex := i
+		goRoutinePool.Submit(func() {
+			defer wgConflicts.Done()
+			reExecute := false
+			lockwrite.RLock()
+			readTableItemForI := txReadInfoMap[txIndex].ReadTableItems
+			writeTableItemForI := txWriteInfoMap[txIndex].WriteTableItems
+			if hasWAW(txIndex, writeTableItemForI, writes) {
+				reExecute = true
+			}
+			if hasRAW(txIndex, readTableItemForI, writes) && hasWAR(txIndex, writeTableItemForI, reads) {
+				reExecute = true
+			}
+			lockwrite.RUnlock()
+
+			if reExecute {
+				select {
+				case rerunningTxC <- txIndex: // **非阻塞写入**
+				default:
+				}
+			}
+		})
+	}
+	// 等待所有冲突检测完成
+	wgConflicts.Wait()
+	// //executeTime2 := time.Since(executeStart2)
+
+	close(rerunningTxC)
+	reRunningTxLen := len(rerunningTxC)
+	logger.Debugf("the reRunningTxLen is :%d", reRunningTxLen)
+	*fbexecute = *fbexecute + reRunningTxLen
+
+	// Replay
+	//var replayTime time.Duration
+	//var reTime time.Duration
+	if reRunningTxLen != 0 {
+		// 从 channel 中获取所有 txIndex
+		txIndices := []int{}
+		for txIndex := range rerunningTxC {
+			txIndices = append(txIndices, txIndex)
+		}
+
+		// 对 txIndex 进行排序
+		sort.Ints(txIndices)
+
+		// 重新编号并更新关联数据
+		newTxIndex := 0
+
+		// 新建 map 存储新编号的内容
+		newTxReadInfoMap := make(map[int]TxReadInfo)
+		newTxWriteInfoMap := make(map[int]TxWriteInfo)
+		newTxMapping := make(map[int]*types.Transaction)
+
+		// 创建新的 map[int]map[common.Address]struct{}
+		var ReadSets = make(map[int]map[common.Address]struct{})
+		var WriteSets = make(map[int]map[common.Address]struct{})
+
+		for _, oldTxIndex := range txIndices {
+			readInfo := txReadInfoMap[oldTxIndex]
+			writeInfo := txWriteInfoMap[oldTxIndex]
+			tx := txMapping[oldTxIndex]
+
+			newTxReadInfoMap[newTxIndex] = readInfo
+			newTxWriteInfoMap[newTxIndex] = writeInfo
+			newTxMapping[newTxIndex] = tx
+
+			newTxIndex++
+		}
+
+		// 转换 txReadInfoMap 为 map[int]map[common.Address]struct{}
+		for txIndex, readInfo := range newTxReadInfoMap {
+			readTableItems := make(map[common.Address]struct{})
+			for _, addr := range readInfo.ReadTableItems {
+				readTableItems[addr] = struct{}{}
+			}
+			ReadSets[txIndex] = readTableItems
+		}
+
+		// 转换 txWriteInfoMap 为 map[int]map[common.Address]struct{}
+		for txIndex, writeInfo := range newTxWriteInfoMap {
+			writeTableItems := make(map[common.Address]struct{})
+			for _, addr := range writeInfo.WriteTableItems {
+				writeTableItems[addr] = struct{}{}
+			}
+			WriteSets[txIndex] = writeTableItems
+		}
+
+		//_, reExecuteNum, _ := reexcuteAria(newTxMapping, ReadSets, WriteSets, reRunningTxLen, block, statedb, cfg, p, reExecuteCh)
+		//reTime = exeTime
+
+		_, _ = replayAriaP(newTxMapping, ReadSets, WriteSets, reRunningTxLen, block, statedb, copyStateDB, cfg, p)
+
+		*reexecute = *reexecute + 1
+	}
+	//*executeTime += executeTime1
+	*sum += executeTime1 // + replayTime
+	//*sum += executeTime1 + reTime
+	return err
 }
 
 func (p *StateProcessor) ProcessAriaReorderFB(block *types.Block, statedb *state.StateDB, cfg vm.Config, sum *time.Duration, executeTime *time.Duration, reExecuteCh chan *types.Transaction, fbexecute *int, reexecute *int) error {
@@ -2160,6 +3145,151 @@ func hasWAR(txIndex int, writeTableItemForI []common.Address, reads map[common.A
 		}
 	}
 	return false
+}
+
+func replayAriaP(newTxMapping map[int]*types.Transaction, ReadSets map[int]map[common.Address]struct{}, WriteSets map[int]map[common.Address]struct{},
+	reRunningTxLen int, block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, p *StateProcessor) (error, time.Duration) {
+	var (
+		usedGas     = new(uint64)
+		header      = block.Header()
+		blockHash   = block.Hash()
+		blockNumber = block.Number()
+		gp          = new(GasPool).AddGas(block.GasLimit())
+		//logger      = ethLogger.NewZeroLogger()
+	)
+	var (
+		//copyStateDB = make([]*state.StateDB, reRunningTxLen)
+		//txMapping   = make(map[int]*types.Transaction)
+		//txBatchSize = len(block.Transactions())
+		// runningTxC       = make(chan int, txBatchSize)
+		runningTxC      = make(chan int, reRunningTxLen+2)
+		doneTxC         = make(chan int, reRunningTxLen+2)
+		finishC         = make(chan bool)
+		scheduleFinishC = make(chan bool)
+		poolCapacity    = runtime.NumCPU()
+		//copyObjectsTimes = make([]time.Duration, block.Transactions().Len())
+		//lastFinished     int
+	)
+
+	// for i := 0; i < reRunningTxLen; i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// }
+	var (
+		err       error
+		applySize uint32
+		lock      sync.RWMutex
+	)
+
+	dag, _, _, _, _ := BuildDAG(ReadSets, WriteSets, block.Number())
+	dagRemain := make(map[int]dagNeighbors)
+	for txIndex, neighbors := range dag.Vertexes {
+		dn := make(dagNeighbors)
+		for _, neighbor := range neighbors.Neighbors {
+			dn[int(neighbor)] = true
+		}
+		dagRemain[txIndex] = dn
+	}
+
+	var goRoutinePool *ants.Pool
+	goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
+	defer goRoutinePool.Release()
+	totalNum := (uint32)(reRunningTxLen)
+
+	_, txChain := findLongestChain(ReadSets, WriteSets)
+	for _, index := range txChain {
+		for neighbor, dep := range dagRemain[index] {
+			if dagRemain[neighbor] != nil {
+				dagRemain[neighbor][index] = dep
+			} else {
+				dn := make(dagNeighbors)
+				dn[index] = dep
+				dagRemain[neighbor] = dn
+			}
+		}
+	}
+	for _, index := range txChain {
+		delete(dagRemain, index)
+	}
+	sort.Ints(txChain)
+
+	txIndexBatch := popNextTxBatchFromDag(dagRemain)
+	sort.Ints(txIndexBatch)
+	for _, tx := range txIndexBatch {
+		runningTxC <- tx
+	}
+
+	executeStart := time.Now()
+	go func() {
+		//logger.Debugf("txChain: %v", txChain)
+		for _, txIndex := range txChain {
+			tx := newTxMapping[txIndex]
+			//start1 := time.Now()
+			lock.RLock()
+			copydb := statedb
+			lock.RUnlock()
+			//end1 := time.Since(start1)
+			copydb.Prepare(tx.Hash(), txIndex)
+			msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+			blockContext := NewEVMBlockContext(header, p.bc, nil)
+			vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+			applyTransaction2(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+			atomic.AddUint32(&applySize, 1)
+			//copyObjectsTimes[txIndex] = end1
+			doneTxC <- txIndex
+			if applySize >= totalNum {
+				//lastFinished = txIndex
+				finishC <- true
+			}
+		}
+	}()
+
+	go func() {
+		for {
+			select {
+			case txIndex := <-runningTxC:
+				tx := newTxMapping[txIndex]
+				err = goRoutinePool.Submit(func() {
+					//start1 := time.Now()
+					lock.RLock()
+					copydb := copyStateDB[txIndex%32]
+					lock.RUnlock()
+					//end1 := time.Since(start1)
+					copydb.Prepare(tx.Hash(), txIndex)
+					msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+					blockContext := NewEVMBlockContext(header, p.bc, nil)
+					vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+					applyTransactionP(msg, p.config, p.bc, nil, gp, copydb, blockNumber, blockHash, tx, usedGas, vmenv)
+					atomic.AddUint32(&applySize, 1)
+					//copyObjectsTimes[txIndex] = end1
+					doneTxC <- txIndex
+					if applySize >= totalNum {
+						//lastFinished = txIndex
+						finishC <- true
+					}
+				})
+			case doneTxIndex := <-doneTxC:
+				shrinkDag(doneTxIndex, dagRemain)
+				txIndexBatch := popNextTxBatchFromDag(dagRemain)
+				sort.Ints(txIndexBatch)
+				//logger.Debugf("len of dagDeps: %d", len(dagDeps))
+				//logger.Debugf("block [%d] schedule with dag, pop next tx index batch size:%d", block.Number(), len(txIndexBatch))
+				for _, tx := range txIndexBatch {
+					runningTxC <- tx
+				}
+				//logger.Debugf("shrinkDag and pop next tx batch size:%d, dagRemain size:%d", len(txIndexBatch), len(dagRemain))
+			case <-finishC:
+				//logger.Debugf("block [%d] schedule with dag finish", block.Number())
+				scheduleFinishC <- true
+				return
+			}
+		}
+	}()
+
+	<-scheduleFinishC
+
+	executeTime := time.Since(executeStart)
+
+	return err, executeTime
 }
 
 func replayAria(newTxMapping map[int]*types.Transaction, ReadSets map[int]map[common.Address]struct{}, WriteSets map[int]map[common.Address]struct{},
@@ -2506,36 +3636,6 @@ func findLongestChain(ReadSets map[int]map[common.Address]struct{}, WriteSets ma
 	return mostFrequentKey, keysAccessCount[mostFrequentKey]
 }
 
-func (p *StateProcessor) Serial(cc *ConsensusContent, statedb *state.StateDB, cfg vm.Config, sum *time.Duration) error {
-	block := new(types.Block)
-	block.DecodeBytes(cc.BytesOfBlock)
-	var (
-		usedGas     = new(uint64)
-		header      = block.Header()
-		blockNumber = block.Number()
-		blockHash   = block.Hash()
-		gp          = new(GasPool).AddGas(block.GasLimit())
-	)
-
-	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
-		misc.ApplyDAOHardFork(statedb)
-	}
-
-	blockContext := NewEVMBlockContext(header, p.bc, nil)
-	vmenv := vm.NewEVM(blockContext, vm.TxContext{}, statedb, p.config, cfg)
-	startSerial := time.Now()
-	for i, tx := range block.Transactions() {
-		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
-		statedb.Prepare(tx.Hash(), i)
-		applyTransaction2(msg, p.config, p.bc, nil, gp, statedb, blockNumber, blockHash, tx, usedGas, vmenv)
-	}
-	statedb.IntermediateRoot3(p.config.IsEIP158(blockNumber))
-	endSerial := time.Since(startSerial)
-	*sum += endSerial
-	p.engine.Finalize(p.bc, header, statedb, block.Transactions(), block.Uncles())
-	return nil
-}
-
 func (p *StateProcessor) DeOcc(cc *ConsensusContent, statedb *state.StateDB, cfg vm.Config, sum *time.Duration) error {
 	block := new(types.Block)
 	block.DecodeBytes(cc.BytesOfBlock)
@@ -2744,4 +3844,65 @@ func noWAW(deps map[int]int) bool {
 		}
 	}
 	return true
+}
+
+func (p *StateProcessor) ParallelTest(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config) {
+	//dagDeps, txChain, readBitmaps, writeBitmaps, keyDict, _, _, _ := p.PreExecute(block, statedb, cfg)
+	var (
+		// logger = ethLogger.NewZeroLogger()
+		header = block.Header()
+		gp     = new(GasPool).AddGas(block.GasLimit())
+		wg     sync.WaitGroup
+		//lock   sync.RWMutex
+	)
+
+	// Mutate the block and state according to any hard-fork specs
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+
+	var (
+		//copyStateDB  = make([]*state.StateDB, block.Transactions().Len())
+
+		txMapping    = make(map[int]*types.Transaction)
+		poolCapacity = runtime.NumCPU()
+		txBatchSize  = len(block.Transactions())
+	)
+	// for i := 0; i < block.Transactions().Len(); i++ {
+	// 	copyStateDB[i] = statedb.Copy()
+	// 	//copyStateDB[i].StateCopy(statedb)
+	// }
+	txIndex := 0
+	for _, tx := range block.Transactions() {
+		txMapping[txIndex] = tx
+		txIndex++
+	}
+
+	// var goRoutinePool *ants.Pool
+	// var poolCapacity = runtime.NumCPU()
+	// goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
+	wg.Add(poolCapacity)
+	//start := time.Now()
+	for i := 0; i < poolCapacity; i++ {
+		idx := i
+		go func() {
+			for txIndex := idx; txIndex < txBatchSize; txIndex += poolCapacity {
+				tx := txMapping[txIndex]
+				msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+				blockContext := NewEVMBlockContext(header, p.bc, nil)
+				//lock.RLock()
+				copydb := copyStateDB[idx%32]
+				//lock.RUnlock()
+				vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+				copydb.Prepare(tx.Hash(), idx)
+				applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+			}
+
+			wg.Done()
+		}()
+	}
+
+	wg.Wait()
+
 }

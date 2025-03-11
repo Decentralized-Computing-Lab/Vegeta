@@ -144,6 +144,7 @@ type StateDB struct {
 	stateObjects        map[common.Address]*stateObject
 	stateObjectsPending map[common.Address]struct{} // State objects finalized but not yet written to the trie
 	stateObjectsDirty   map[common.Address]struct{} // State objects modified in the current execution
+	sharedObjects       *sync.Map
 
 	// DB error.
 	// State objects are used by the consensus core and VM which are
@@ -227,6 +228,7 @@ func New(root common.Hash, db Database, snaps *snapshot.Tree) (*StateDB, error) 
 		Writekeys:           make(map[string]struct{}),
 		logger:              ethLogger.NewZeroLogger(),
 		Flag:                false,
+		sharedObjects:       &sync.Map{},
 	}
 	if sdb.Snaps != nil {
 		if sdb.snap = sdb.Snaps.Snapshot(root); sdb.snap != nil {
@@ -905,6 +907,7 @@ func (s *StateDB) Copy() *StateDB {
 		Readkeys:            make(map[string]struct{}),
 		Writekeys:           make(map[string]struct{}),
 		logger:              ethLogger.NewZeroLogger(),
+		sharedObjects:       s.sharedObjects,
 	}
 	for addr := range s.journal.dirties {
 		// As documented [here](https://github.com/ethereum/go-ethereum/pull/16485#issuecomment-380438527),
@@ -1349,6 +1352,58 @@ func (s *StateDB) IntermediateRoot_Re(deleteEmptyObjects bool) {
 	// Track the amount of time wasted on hashing the account trie
 	if metrics.EnabledExpensive {
 		defer func(start time.Time) { s.AccountHashes += time.Since(start) }(time.Now())
+	}
+}
+
+func (s *StateDB) Intermediate(deleteEmptyObjects bool) {
+	// Finalise all the dirty storage states and write them into the tries
+	s.Finalise(deleteEmptyObjects)
+	prefetcher := s.prefetcher
+	if s.prefetcher != nil {
+		defer func() {
+			s.prefetcher.close()
+			s.prefetcher = nil
+		}()
+	}
+	for addr := range s.stateObjectsPending {
+		if obj := s.stateObjects[addr]; !obj.deleted {
+			obj.updateRoot(s.db)
+		}
+	}
+
+	if prefetcher != nil {
+		if trie := prefetcher.trie(s.OriginalRoot); trie != nil {
+			s.Trie = &trie
+		}
+	}
+	usedAddrs := make([][]byte, 0, len(s.stateObjectsPending))
+	for addr := range s.stateObjectsPending {
+		if obj := s.stateObjects[addr]; obj.deleted {
+			s.deleteStateObject(obj)
+			s.AccountDeleted += 1
+		} else {
+			s.updateStateObject(obj)
+			s.AccountUpdated += 1
+		}
+		usedAddrs = append(usedAddrs, common.CopyBytes(addr[:])) // Copy needed for closure
+	}
+
+	if prefetcher != nil {
+		prefetcher.used(s.OriginalRoot, usedAddrs)
+	}
+	if len(s.stateObjectsPending) > 0 {
+		s.stateObjectsPending = make(map[common.Address]struct{})
+	}
+	// Track the amount of time wasted on hashing the account trie
+	if metrics.EnabledExpensive {
+		defer func(start time.Time) { s.AccountHashes += time.Since(start) }(time.Now())
+	}
+}
+
+func (s *StateDB) CommitShare() {
+	for addr, obj := range s.stateObjects {
+		s.sharedObjects.Store(addr, obj)
+		//s.StateObjectSyncMap.Store(addr, obj)
 	}
 }
 

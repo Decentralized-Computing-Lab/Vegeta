@@ -20,29 +20,31 @@ import (
 	"net/http"
 	"os"
 
+	"github.com/ethereum/go-ethereum/bitmap"
 	"github.com/ethereum/go-ethereum/consensus/ethash"
 	"github.com/ethereum/go-ethereum/core"
 	"github.com/ethereum/go-ethereum/core/rawdb"
 	"github.com/ethereum/go-ethereum/core/state"
+	"github.com/ethereum/go-ethereum/core/types"
 	"github.com/ethereum/go-ethereum/core/vm"
 
-	// "github.com/ethereum/go-ethereum/ethLogger"
+	"github.com/ethereum/go-ethereum/ethLogger"
 	"github.com/ethereum/go-ethereum/ethdb"
 )
 
 const CONFIG_FILE = "node.json"
 
 var (
-	upNum       = 16774645
-	endNum      = 16774745
-	dbPath      = "/home/ubuntu/ethdata/geth/chaindata"
-	ancientPath = dbPath + "/ancient/chain"
-	// upNum       = 17034770
-	// endNum      = 17034870
-	// dbPath      = "/home/user/eth/eth_data/geth/chaindata"
-	// ancientPath = dbPath + "/ancient/chain"
-	currState *state.StateDB
-	pendingN  int32
+	upNum        = 18997155
+	endNum       = upNum + 3000
+	dbPath       = "/home/ubuntu/eth_data/geth/chaindata"
+	ancientPath  = dbPath + "/ancient/chain"
+	currState    *state.StateDB
+	pendingN     int32
+	reRxecuteNum = 0
+	fbRxecuteNum = 0
+	reExecuteCh  = make(chan *types.Transaction, 100)
+	syncC        = make(chan bool, 1)
 )
 
 // type Configuration struct {
@@ -58,24 +60,8 @@ func main() {
 	id := flag.Int("id", 0, "id of the node")
 	flag.Parse()
 
-	// var path string
-	// if ex, err := os.Executable(); err == nil {
-	// 	path = filepath.Dir(ex)
-	// }
-	// jsonFile, err := os.Open(CONFIG_FILE)
-	// if err != nil {
-	// 	panic(fmt.Sprint("os.Open: ", err))
-	// }
-	// defer jsonFile.Close()
-
-	// data, err := ioutil.ReadAll(jsonFile)
-	// if err != nil {
-	// 	panic(fmt.Sprint("ioutil.ReadAll: ", err))
-	// }
-	// var config Configuration
-	// json.Unmarshal([]byte(data), &config)
-	// id := config.Id
 	url := "http://127.0.0.1:" + strconv.Itoa(*execPort) + "/execlayer"
+	logger := ethLogger.NewZeroLogger()
 
 	ancientDB, err := rawdb.NewLevelDBDatabaseWithFreezer(dbPath, 16, 1, ancientPath, "", true)
 	if err != nil {
@@ -85,37 +71,62 @@ func main() {
 	stateDB := buildStateDB(ancientDB, upNum-1)
 	currState = stateDB.Copy()
 
-	// //conn, err := net.Dial("tcp", "127.0.0.1:8001")
-	// tcpAddr, _ := net.ResolveTCPAddr("tcp", "localhost:8001")
-	// connTcp, err := net.DialTCP("tcp", nil, tcpAddr)
-	// connTcp.SetWriteBuffer(64 * 1024)
-	// connTcp.SetReadBuffer(64 * 1024)
-	// if err != nil {
-	// 	fmt.Println("conn dial err = ", err)
-	// }
-	// go handleSpeculation(ancientDB, bc, connTcp, id)
-
 	file, err := os.OpenFile("execlayer.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND|os.O_TRUNC, 0666)
 	if err != nil {
 		panic(err)
 	}
 	defer file.Close()
 
+	pre := 2
+
 	reqC := make(chan []byte, 100)
 	respC := make(chan []*core.ConsensusContent, 100)
 	waitC := make(chan bool, 1)
-	serialTime := new(time.Duration)
-	parallelTime := new(time.Duration)
-	startTime := time.Now()
-	endTime := time.Now()
-	execTime := new(time.Duration)
+	sTime := new(time.Duration)
+	pTime := new(time.Duration)
+	// startTime := time.Now()
+	// endTime := time.Now()
+	// execTime := new(time.Duration)
 	//oldTime := endTime
-	go processSpeculation(ancientDB, bc, *id, *numOfNodes, reqC, waitC)
+	//go processSpeculation(ancientDB, bc, copyStateDB, *id, *numOfNodes, reqC, waitC)
+	//go processBlock(ancientDB, bc, *id, *numOfNodes, reqC, waitC)
 	go sendRequest(url, reqC, respC)
 
 	// respC := make(chan []*core.ConsensusContent, 100)
 	// go handleResp(connTcp, respC)
 
+	// warm up
+	txSum := 0
+	//maxSum := 0
+	loadTime := new(time.Duration)
+	blockList := make([]*types.Block, endNum-upNum)
+	for i := upNum; i < endNum; i++ {
+		blkHash := rawdb.ReadCanonicalHash(ancientDB, uint64(i))
+		block := rawdb.ReadBlock(ancientDB, blkHash, uint64(i))
+		blockList[i-upNum] = block
+		//blkBody := rawdb.ReadBody(ancientDB, blkHash, uint64(i))
+		if len(block.Transactions()) > 0 {
+			logger.Infof("warm up block number: %v", i)
+			bc.Processor().ProcessSerial(block, stateDB, vm.Config{}, loadTime)
+			// if maxSum < len(block.Transactions()) {
+			// 	maxSum = len(block.Transactions())
+			// }
+			txSum += len(block.Transactions())
+		}
+	}
+	copyStateDB := make([]*state.StateDB, 32)
+	for i := 0; i < 32; i++ {
+		copyStateDB[i] = stateDB.Copy()
+	}
+	currState = stateDB.Copy()
+
+	go sync(reqC)
+	<-syncC
+
+	// Serial
+	logger.Infof("==========Serial execution==========")
+	go processBlock(ancientDB, bc, *id, *numOfNodes, reqC, waitC)
+	serialStart := time.Now()
 	for {
 		resp, ok := <-respC
 		if !ok {
@@ -123,40 +134,125 @@ func main() {
 		}
 		var processN int
 		// stateDB = buildStateDB(ancientDB, upNum-1)
-		execStart := time.Now()
 		for _, cc := range resp {
-			fmt.Println("Block number: ", cc.BlockNum)
-			processReplay(bc, stateDB, cc, serialTime, parallelTime)
-			currState.StateCopy(stateDB)
+			logger.Infof("Block number: %v", cc.BlockNum)
+			block := blockList[int(cc.BlockNum.Int64())-upNum]
+			processReplay(block, bc, stateDB, copyStateDB, cc, sTime, pTime, "Serial")
 			processN = int(cc.BlockNum.Int64())
 			if atomic.AddInt32(&pendingN, -1) == 2 {
 				waitC <- true
 			}
-			if (processN-upNum)%500 == 0 {
-				endTime = time.Now()
-				stateDB = buildStateDB(ancientDB, upNum-1)
-				file.Write([]byte(fmt.Sprintf("block number: %+v\n", processN)))
-				file.Write([]byte(fmt.Sprintf("serial execution time: %+v\n", serialTime)))
-				file.Write([]byte(fmt.Sprintf("parallel execution time: %+v\n", parallelTime)))
-				file.Write([]byte(fmt.Sprintf("other time: %+v\n\n", endTime.Sub(startTime)-*execTime)))
-			}
 		}
-		currState = stateDB.Copy()
-		*execTime += time.Since(execStart)
-		//endTime = time.Now()
-		//file.Write([]byte(fmt.Sprintf("time of executing one batch: %+v\n", endTime.Sub(oldTime))))
-		//oldTime = endTime
-		if processN == endNum+*numOfNodes-1 {
+		if processN == endNum-1 {
 			break
 		}
 	}
-	endTime = time.Now()
+	serialTime := time.Since(serialStart)
+
+	go sync(reqC)
+	<-syncC
+
+	// AriaFB
+	// logger.Infof("==========AriaFB execution==========")
+	// go processBlock(ancientDB, bc, *id, *numOfNodes, reqC, waitC)
+	// ariaStart := time.Now()
+	// for {
+	// 	resp, ok := <-respC
+	// 	if !ok {
+	// 		break
+	// 	}
+	// 	var processN int
+	// 	// stateDB = buildStateDB(ancientDB, upNum-1)
+	// 	for _, cc := range resp {
+	// 		logger.Infof("Block number: %v", cc.BlockNum)
+	// 		block := blockList[int(cc.BlockNum.Int64())-upNum]
+	// 		processReplay(block, bc, stateDB, copyStateDB, cc, sTime, pTime, "AriaFB")
+	// 		processN = int(cc.BlockNum.Int64())
+	// 		if atomic.AddInt32(&pendingN, -1) == 2 {
+	// 			waitC <- true
+	// 		}
+	// 	}
+	// 	if processN == endNum-1 {
+	// 		break
+	// 	}
+	// }
+	// ariaTime := time.Since(ariaStart)
+
+	// Vegeta
+	// logger.Infof("==========Vegeta execution==========")
+	// go processSpeculation(ancientDB, bc, copyStateDB, *id, *numOfNodes, reqC, waitC)
+	// vegetaStart := time.Now()
+	// for {
+	// 	resp, ok := <-respC
+	// 	if !ok {
+	// 		break
+	// 	}
+	// 	var processN int
+	// 	// stateDB = buildStateDB(ancientDB, upNum-1)
+	// 	//execStart := time.Now()
+	// 	for _, cc := range resp {
+	// 		logger.Infof("Block number: %v", cc.BlockNum)
+	// 		block := blockList[int(cc.BlockNum.Int64())-upNum]
+	// 		//fmt.Println("Block number: ", cc.BlockNum)
+	// 		processReplay(block, bc, stateDB, copyStateDB, cc, sTime, pTime, "Vegeta")
+	// 		//currState.StateCopy(stateDB)
+	// 		processN = int(cc.BlockNum.Int64())
+	// 		if atomic.AddInt32(&pendingN, -1) == int32(pre) {
+	// 			waitC <- true
+	// 		}
+	// 	}
+	// 	//currState = stateDB.Copy()
+	// 	//*execTime += time.Since(execStart)
+	// 	if processN == endNum-1 {
+	// 		break
+	// 	}
+	// }
+	// vegetaTime := time.Since(vegetaStart)
+
+	// byz
+	logger.Infof("==========byz execution==========")
+	go processSpeculation(ancientDB, bc, copyStateDB, *id, *numOfNodes, reqC, waitC)
+	byzStart := time.Now()
+	for {
+		resp, ok := <-respC
+		if !ok {
+			break
+		}
+		var processN int
+		// stateDB = buildStateDB(ancientDB, upNum-1)
+		//execStart := time.Now()
+		for _, cc := range resp {
+			logger.Infof("Block number: %v", cc.BlockNum)
+			bn := int(cc.BlockNum.Int64()) - upNum
+			block := blockList[bn]
+			//fmt.Println("Block number: ", cc.BlockNum)
+			if bn%10 < 3 {
+				processReplay(block, bc, stateDB, copyStateDB, cc, sTime, pTime, "byz1")
+			} else {
+				processReplay(block, bc, stateDB, copyStateDB, cc, sTime, pTime, "Vegeta")
+			}
+			//currState.StateCopy(stateDB)
+			processN = int(cc.BlockNum.Int64())
+			if atomic.AddInt32(&pendingN, -1) == int32(pre) {
+				waitC <- true
+			}
+		}
+		//currState = stateDB.Copy()
+		//*execTime += time.Since(execStart)
+		if processN == endNum-1 {
+			break
+		}
+	}
+	byzTime := time.Since(byzStart)
 
 	// file.Write([]byte("start time: " + startTime.String() + "\n"))
 	// file.Write([]byte("end time: " + endTime.String() + "\n"))
-	file.Write([]byte(fmt.Sprintf("serial execution time: %+v\n", serialTime)))
-	file.Write([]byte(fmt.Sprintf("parallel execution time: %+v\n", parallelTime)))
-	file.Write([]byte(fmt.Sprintf("other time: %+v\n", endTime.Sub(startTime)-*execTime)))
+	// file.Write([]byte(fmt.Sprintf("serial execution time: %+v\n", sTime)))
+	// file.Write([]byte(fmt.Sprintf("parallel execution time: %+v\n", pTime)))
+	file.Write([]byte(fmt.Sprintf("Serial execution time: %+v\n", serialTime)))
+	//file.Write([]byte(fmt.Sprintf("AriaFB execution time: %+v\n", ariaTime)))
+	//file.Write([]byte(fmt.Sprintf("Vegeta execution time: %+v\n", vegetaTime)))
+	file.Write([]byte(fmt.Sprintf("byz execution time: %+v\n", byzTime)))
 }
 
 func buildStateDB(ancientDB ethdb.Database, blockNum int) *state.StateDB {
@@ -218,12 +314,42 @@ func buildStateDB(ancientDB ethdb.Database, blockNum int) *state.StateDB {
 // 	}
 // }
 
-func processSpeculation(ancientDB ethdb.Database, bc *core.BlockChain, id int, n int, reqC chan []byte, waitC chan bool) {
-	for i := upNum; i <= endNum; i = i + n {
-		preStateDB := currState.Copy()
+func processBlock(ancientDB ethdb.Database, bc *core.BlockChain, id int, n int, reqC chan []byte, waitC chan bool) {
+	for i := upNum; i < endNum; i = i + n {
+		//preStateDB := currState.Copy()
 		blkHash := rawdb.ReadCanonicalHash(ancientDB, uint64(i+id))
 		block := rawdb.ReadBlock(ancientDB, blkHash, uint64(i+id))
-		cc := bc.Processor().Speculate(block, preStateDB, vm.Config{})
+		//cc := bc.Processor().Speculate(block, preStateDB, vm.Config{})
+		b, _ := block.EncodeToBytes()
+		cc := &core.ConsensusContent{
+			DagDeps:      make(map[int]map[int]int),
+			ReadBitmaps:  make([]*bitmap.Bitmap, 0),
+			WriteBitmaps: make([]*bitmap.Bitmap, 0),
+			KeyDict:      make(map[string]int),
+			TxChain:      make([]int, 0),
+			BlockNum:     block.Number(),
+			BytesOfBlock: b,
+		}
+		data, err := json.Marshal(cc)
+		//fmt.Printf("data: %v\n", string(data[0]))
+		if err != nil {
+			fmt.Println("json.Marshal error")
+			return
+		}
+		reqC <- data
+		atomic.AddInt32(&pendingN, int32(n))
+		<-waitC
+	}
+	// endFlag := "end"
+	// reqC <- []byte(endFlag)
+}
+
+func processSpeculation(ancientDB ethdb.Database, bc *core.BlockChain, copyStateDB []*state.StateDB, id int, n int, reqC chan []byte, waitC chan bool) {
+	for i := upNum; i < endNum; i = i + n {
+		preStateDB := currState //.Copy()
+		blkHash := rawdb.ReadCanonicalHash(ancientDB, uint64(i+id))
+		block := rawdb.ReadBlock(ancientDB, blkHash, uint64(i+id))
+		cc := bc.Processor().Speculate(block, preStateDB, copyStateDB, vm.Config{})
 		// b, _ := block.EncodeToBytes()
 		// cc := &core.ConsensusContent{
 		// 	BlockNum: block.Number(),
@@ -239,17 +365,36 @@ func processSpeculation(ancientDB ethdb.Database, bc *core.BlockChain, id int, n
 		atomic.AddInt32(&pendingN, int32(n))
 		<-waitC
 	}
-	endFlag := "end"
-	reqC <- []byte(endFlag)
+	// endFlag := "end"
+	// reqC <- []byte(endFlag)
 }
 
-func processReplay(bc *core.BlockChain, stateDB *state.StateDB, cc *core.ConsensusContent, serialTime *time.Duration, parallelTime *time.Duration) {
-	loadTime := new(time.Duration)
-	bc.Processor().Serial(cc, stateDB, vm.Config{}, loadTime)
+func sync(reqC chan []byte) {
+	syncFlag := "sync"
+	reqC <- []byte(syncFlag)
+}
 
-	bc.Processor().Serial(cc, stateDB, vm.Config{}, serialTime)
-	bc.Processor().Parallel(cc, stateDB, vm.Config{}, parallelTime)
+func processReplay(block *types.Block, bc *core.BlockChain, stateDB *state.StateDB, copyStateDB []*state.StateDB, cc *core.ConsensusContent, serialTime *time.Duration, parallelTime *time.Duration, alg string) {
+	// loadTime := new(time.Duration)
+	// bc.Processor().Serial(cc, stateDB, vm.Config{}, loadTime)
+
+	// bc.Processor().Serial(cc, stateDB, vm.Config{}, serialTime)
+	// bc.Processor().Parallel(cc, stateDB, vm.Config{}, parallelTime)
 	//bc.Processor().DeOcc(cc, stateDB, vm.Config{}, occTime)
+
+	if alg == "Vegeta" {
+		bc.Processor().Parallel(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
+	} else if alg == "Serial" {
+		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)
+	} else if alg == "AriaFB" {
+		bc.Processor().AriaFB(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime, reExecuteCh, &fbRxecuteNum, &reRxecuteNum)
+	} else if alg == "byz2" {
+		bc.Processor().Parallel(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
+		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)
+	} else if alg == "byz1" {
+		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)
+		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)
+	}
 }
 
 // func Pack(data []byte) ([]byte, error) {
@@ -306,6 +451,23 @@ func sendRequest(url string, reqC chan []byte, respC chan []*core.ConsensusConte
 		if string(data) == "end" {
 			break
 		}
+		if string(data) == "sync" {
+			body := strings.NewReader(string(data))
+			req, err := http.NewRequest("POST", url, body)
+			if err != nil {
+				panic(err)
+			}
+			req.Header.Set("Content-Type", "application/x-protobuf")
+			resp, err := client.Do(req)
+			if err != nil {
+				panic(err)
+			}
+			defer resp.Body.Close()
+
+			syncC <- true
+			continue
+		}
+
 		body := strings.NewReader(string(data))
 		req, err := http.NewRequest("POST", url, body)
 		if err != nil {
@@ -318,9 +480,116 @@ func sendRequest(url string, reqC chan []byte, respC chan []*core.ConsensusConte
 		}
 		defer resp.Body.Close()
 
-		respData, err := ioutil.ReadAll(resp.Body)
+		respData, _ := ioutil.ReadAll(resp.Body)
 		var ccList []*core.ConsensusContent
 		json.Unmarshal(respData, &ccList)
 		respC <- ccList
 	}
 }
+
+// func main() {
+// 	numOfNodes := flag.Int("num", 1, "the number of nodes")
+// 	execPort := flag.Int("execPort", 8000, "the port of execlayer")
+// 	id := flag.Int("id", 0, "id of the node")
+// 	flag.Parse()
+
+// 	// var path string
+// 	// if ex, err := os.Executable(); err == nil {
+// 	// 	path = filepath.Dir(ex)
+// 	// }
+// 	// jsonFile, err := os.Open(CONFIG_FILE)
+// 	// if err != nil {
+// 	// 	panic(fmt.Sprint("os.Open: ", err))
+// 	// }
+// 	// defer jsonFile.Close()
+
+// 	// data, err := ioutil.ReadAll(jsonFile)
+// 	// if err != nil {
+// 	// 	panic(fmt.Sprint("ioutil.ReadAll: ", err))
+// 	// }
+// 	// var config Configuration
+// 	// json.Unmarshal([]byte(data), &config)
+// 	// id := config.Id
+// 	url := "http://127.0.0.1:" + strconv.Itoa(*execPort) + "/execlayer"
+
+// 	ancientDB, err := rawdb.NewLevelDBDatabaseWithFreezer(dbPath, 16, 1, ancientPath, "", true)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	bc, _ := core.NewBlockChain(ancientDB, nil, core.DefaultGenesisBlock().Config, ethash.NewFaker(), vm.Config{}, nil, nil)
+// 	stateDB := buildStateDB(ancientDB, upNum-1)
+// 	currState = stateDB.Copy()
+
+// 	// //conn, err := net.Dial("tcp", "127.0.0.1:8001")
+// 	// tcpAddr, _ := net.ResolveTCPAddr("tcp", "localhost:8001")
+// 	// connTcp, err := net.DialTCP("tcp", nil, tcpAddr)
+// 	// connTcp.SetWriteBuffer(64 * 1024)
+// 	// connTcp.SetReadBuffer(64 * 1024)
+// 	// if err != nil {
+// 	// 	fmt.Println("conn dial err = ", err)
+// 	// }
+// 	// go handleSpeculation(ancientDB, bc, connTcp, id)
+
+// 	file, err := os.OpenFile("execlayer.log", os.O_CREATE|os.O_WRONLY|os.O_APPEND|os.O_TRUNC, 0666)
+// 	if err != nil {
+// 		panic(err)
+// 	}
+// 	defer file.Close()
+
+// 	reqC := make(chan []byte, 100)
+// 	respC := make(chan []*core.ConsensusContent, 100)
+// 	waitC := make(chan bool, 1)
+// 	serialTime := new(time.Duration)
+// 	parallelTime := new(time.Duration)
+// 	startTime := time.Now()
+// 	endTime := time.Now()
+// 	execTime := new(time.Duration)
+// 	//oldTime := endTime
+// 	go processSpeculation(ancientDB, bc, *id, *numOfNodes, reqC, waitC)
+// 	go sendRequest(url, reqC, respC)
+
+// 	// respC := make(chan []*core.ConsensusContent, 100)
+// 	// go handleResp(connTcp, respC)
+
+// 	for {
+// 		resp, ok := <-respC
+// 		if !ok {
+// 			break
+// 		}
+// 		var processN int
+// 		// stateDB = buildStateDB(ancientDB, upNum-1)
+// 		execStart := time.Now()
+// 		for _, cc := range resp {
+// 			fmt.Println("Block number: ", cc.BlockNum)
+// 			processReplay(bc, stateDB, cc, serialTime, parallelTime, "Vegeta")
+// 			currState.StateCopy(stateDB)
+// 			processN = int(cc.BlockNum.Int64())
+// 			if atomic.AddInt32(&pendingN, -1) == 2 {
+// 				waitC <- true
+// 			}
+// 			// if (processN-upNum)%500 == 0 {
+// 			// 	endTime = time.Now()
+// 			// 	stateDB = buildStateDB(ancientDB, upNum-1)
+// 			// 	file.Write([]byte(fmt.Sprintf("block number: %+v\n", processN)))
+// 			// 	file.Write([]byte(fmt.Sprintf("serial execution time: %+v\n", serialTime)))
+// 			// 	file.Write([]byte(fmt.Sprintf("parallel execution time: %+v\n", parallelTime)))
+// 			// 	file.Write([]byte(fmt.Sprintf("other time: %+v\n\n", endTime.Sub(startTime)-*execTime)))
+// 			// }
+// 		}
+// 		currState = stateDB.Copy()
+// 		*execTime += time.Since(execStart)
+// 		//endTime = time.Now()
+// 		//file.Write([]byte(fmt.Sprintf("time of executing one batch: %+v\n", endTime.Sub(oldTime))))
+// 		//oldTime = endTime
+// 		if processN == endNum+*numOfNodes-1 {
+// 			break
+// 		}
+// 	}
+// 	endTime = time.Now()
+
+// 	// file.Write([]byte("start time: " + startTime.String() + "\n"))
+// 	// file.Write([]byte("end time: " + endTime.String() + "\n"))
+// 	file.Write([]byte(fmt.Sprintf("serial execution time: %+v\n", serialTime)))
+// 	file.Write([]byte(fmt.Sprintf("parallel execution time: %+v\n", parallelTime)))
+// 	file.Write([]byte(fmt.Sprintf("other time: %+v\n", endTime.Sub(startTime)-*execTime)))
+// }

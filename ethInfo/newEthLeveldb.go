@@ -2,7 +2,9 @@ package main
 
 import (
 	//"fmt"
+	"fmt"
 	"os"
+	"runtime"
 	"time"
 
 	"github.com/ethereum/go-ethereum/consensus/ethash"
@@ -86,6 +88,11 @@ func main() {
 
 	reExecuteCh := make(chan *types.Transaction, 20000)
 
+	copyStateDB := make([]*state.StateDB, runtime.NumCPU())
+	for i := 0; i < runtime.NumCPU(); i++ {
+		copyStateDB[i] = statedb.Copy()
+	}
+
 	for i := upNum; i < endNum; i++ {
 		blkHash := rawdb.ReadCanonicalHash(ancientDb, uint64(i))
 		block := rawdb.ReadBlock(ancientDb, blkHash, uint64(i))
@@ -100,6 +107,8 @@ func main() {
 			//txChainLen, _, _ := bc.Processor().ProcessWithDeps(block, statedb, vm.Config{}, sum3, analyzeSum)
 			//bc.Processor().ProcessOcc(block, statedb, vm.Config{}, sum4)
 			//bc.Processor().ParallelBlind(block, statedb, vm.Config{}, sum5)
+			//bc.Processor().ReplayImproved(block, statedb, copyStateDB, vm.Config{}, analyzeSum, sum5)
+			bc.Processor().ProcessWithDeps(block, statedb, copyStateDB, vm.Config{}, sum3, analyzeSum)
 			bc.Processor().ProcessAriaReorderFB(block, statedb, vm.Config{}, sum5, executeTime, reExecuteCh, &fbRxecuteNum, &reRxecuteNum)
 			txSum += len(block.Transactions())
 			//chainSum += txChainLen
@@ -131,6 +140,9 @@ func main() {
 	logger.Infof("the txsum : %d, the chainsum : %d", txSum, chainSum)
 	//logger.Infof("the DAG execution time with reexecution is %+v", sum4)
 	//logger.Infof("the total re-execution rate is %v\n", rate)
+
+	file.Write([]byte(fmt.Sprintf("the serial time is %+v\n", sum1)))
+	file.Write([]byte(fmt.Sprintf("the analyze time is %+v, the DAG execution time is %+v\n", analyzeSum, sum3)))
 
 }
 
