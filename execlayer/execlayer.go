@@ -349,7 +349,8 @@ func processSpeculation(ancientDB ethdb.Database, bc *core.BlockChain, copyState
 		preStateDB := currState //.Copy()
 		blkHash := rawdb.ReadCanonicalHash(ancientDB, uint64(i+id))
 		block := rawdb.ReadBlock(ancientDB, blkHash, uint64(i+id))
-		cc := bc.Processor().Speculate(block, preStateDB, copyStateDB, vm.Config{})
+		//cc := bc.Processor().Speculate(block, preStateDB, copyStateDB, vm.Config{})
+		cc := bc.Processor().SpeculateMod(block, preStateDB, copyStateDB, vm.Config{})
 		// b, _ := block.EncodeToBytes()
 		// cc := &core.ConsensusContent{
 		// 	BlockNum: block.Number(),
@@ -383,13 +384,15 @@ func processReplay(block *types.Block, bc *core.BlockChain, stateDB *state.State
 	//bc.Processor().DeOcc(cc, stateDB, vm.Config{}, occTime)
 
 	if alg == "Vegeta" {
-		bc.Processor().Parallel(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
+		//bc.Processor().Parallel(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
+		bc.Processor().ParallelMod(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
 	} else if alg == "Serial" {
 		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)
 	} else if alg == "AriaFB" {
 		bc.Processor().AriaFB(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime, reExecuteCh, &fbRxecuteNum, &reRxecuteNum)
 	} else if alg == "byz2" {
-		bc.Processor().Parallel(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
+		//bc.Processor().Parallel(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
+		bc.Processor().ParallelMod(block, cc, stateDB, copyStateDB, vm.Config{}, parallelTime)
 		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)
 	} else if alg == "byz1" {
 		bc.Processor().Serial(block, cc, stateDB, vm.Config{}, serialTime)

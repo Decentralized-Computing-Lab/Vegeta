@@ -93,6 +93,9 @@ type Processor interface {
 	ReplayAndReexecute(block *types.Block, copyStatedb []*state.StateDB, spe_statedb *state.StateDB, cfg vm.Config, sum *time.Duration) (float64, error)
 	Speculate(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config) *ConsensusContent
 	Parallel(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration) error
+	SpeculateMod(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config) *ConsensusContent
+	ParallelMod(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration) (int, error)
+
 	PreExecute(block *types.Block, statedb *state.StateDB, cfg vm.Config) (map[int]map[int]int, []int, []*bitmap.Bitmap, []*bitmap.Bitmap, map[string]int, []*bitmap.Bitmap, time.Duration, error)
 	ProcessWithDeps(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration, analyzeSum *time.Duration) (int, time.Duration, error)
 	Serial(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, cfg vm.Config, sum *time.Duration) error

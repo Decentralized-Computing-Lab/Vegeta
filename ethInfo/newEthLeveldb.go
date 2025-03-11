@@ -96,18 +96,22 @@ func main() {
 	for i := upNum; i < endNum; i++ {
 		blkHash := rawdb.ReadCanonicalHash(ancientDb, uint64(i))
 		block := rawdb.ReadBlock(ancientDb, blkHash, uint64(i))
-		blkBody := rawdb.ReadBody(ancientDb, blkHash, uint64(i))
+		//blkBody := rawdb.ReadBody(ancientDb, blkHash, uint64(i))
 		logger.Infof("etherscan url: https://etherscan.io/block/%v", i)
-		logger.Infof("the block.transactions is %d", len(blkBody.Transactions))
+		logger.Infof("the block.transactions is %d", len(block.Transactions()))
 		if len(block.Transactions()) > 0 {
 			//bc.Processor().Process(block, statedb, vm.Config{})
 			bc.Processor().ProcessSerial(block, statedb, vm.Config{}, sum)
+			for i := 0; i < runtime.NumCPU(); i++ {
+				copyStateDB[i] = statedb.Copy()
+			}
+
 			bc.Processor().ProcessSerial(block, statedb, vm.Config{}, sum1)
 			//bc.Processor().ProcesswithDag(block, statedb, vm.Config{}, sum4)
 			//txChainLen, _, _ := bc.Processor().ProcessWithDeps(block, statedb, vm.Config{}, sum3, analyzeSum)
 			//bc.Processor().ProcessOcc(block, statedb, vm.Config{}, sum4)
 			//bc.Processor().ParallelBlind(block, statedb, vm.Config{}, sum5)
-			//bc.Processor().ReplayImproved(block, statedb, copyStateDB, vm.Config{}, analyzeSum, sum5)
+			bc.Processor().ReplayImproved(block, statedb, copyStateDB, vm.Config{}, analyzeSum, sum5)
 			bc.Processor().ProcessWithDeps(block, statedb, copyStateDB, vm.Config{}, sum3, analyzeSum)
 			bc.Processor().ProcessAriaReorderFB(block, statedb, vm.Config{}, sum5, executeTime, reExecuteCh, &fbRxecuteNum, &reRxecuteNum)
 			txSum += len(block.Transactions())
