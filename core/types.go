@@ -103,4 +103,5 @@ type Processor interface {
 	AriaFB(block *types.Block, cc *ConsensusContent, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration, reExecuteCh chan *types.Transaction, fbexecute *int, reexecute *int) error
 	Replay(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, sum *time.Duration) error
 	ReplayImproved(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, analyzeTime *time.Duration, sum *time.Duration) (int, int, error)
+	ReplayMod(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, analyzeTime *time.Duration, sum *time.Duration) (int, int, error)
 }

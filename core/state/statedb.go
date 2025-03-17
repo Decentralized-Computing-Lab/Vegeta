@@ -1401,10 +1401,15 @@ func (s *StateDB) Intermediate(deleteEmptyObjects bool) {
 }
 
 func (s *StateDB) CommitShare() {
-	for addr, obj := range s.stateObjects {
-		s.sharedObjects.Store(addr, obj)
-		//s.StateObjectSyncMap.Store(addr, obj)
+	for addr := range s.stateObjectsPending {
+		if obj := s.stateObjects[addr]; !obj.deleted {
+			obj.updateRoot(s.db)
+		}
 	}
+	// for addr, obj := range s.stateObjects {
+	// 	s.sharedObjects.Store(addr, obj)
+	// 	//s.StateObjectSyncMap.Store(addr, obj)
+	// }
 }
 
 // Prepare sets the current transaction hash and index which are
