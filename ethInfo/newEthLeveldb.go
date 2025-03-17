@@ -75,21 +75,22 @@ func main() {
 	}
 	var sum *time.Duration = new(time.Duration)
 	var sum1 *time.Duration = new(time.Duration)
+	var sum2 *time.Duration = new(time.Duration)
 	var sum3 *time.Duration = new(time.Duration)
-	//var sum4 *time.Duration = new(time.Duration)
+	var sum4 *time.Duration = new(time.Duration)
 	var analyzeSum *time.Duration = new(time.Duration)
 	var sum5 *time.Duration = new(time.Duration)
 	var executeTime *time.Duration = new(time.Duration)
 
 	var txSum int
-	var chainSum int
+	//var chainSum int
 	reRxecuteNum := 0
 	fbRxecuteNum := 0
 
 	reExecuteCh := make(chan *types.Transaction, 20000)
 
-	copyStateDB := make([]*state.StateDB, runtime.NumCPU())
-	for i := 0; i < runtime.NumCPU(); i++ {
+	copyStateDB := make([]*state.StateDB, runtime.NumCPU()+8)
+	for i := 0; i < runtime.NumCPU()+8; i++ {
 		copyStateDB[i] = statedb.Copy()
 	}
 
@@ -102,7 +103,7 @@ func main() {
 		if len(block.Transactions()) > 0 {
 			//bc.Processor().Process(block, statedb, vm.Config{})
 			bc.Processor().ProcessSerial(block, statedb, vm.Config{}, sum)
-			for i := 0; i < runtime.NumCPU(); i++ {
+			for i := 0; i < runtime.NumCPU()+8; i++ {
 				copyStateDB[i] = statedb.Copy()
 			}
 
@@ -111,8 +112,10 @@ func main() {
 			//txChainLen, _, _ := bc.Processor().ProcessWithDeps(block, statedb, vm.Config{}, sum3, analyzeSum)
 			//bc.Processor().ProcessOcc(block, statedb, vm.Config{}, sum4)
 			//bc.Processor().ParallelBlind(block, statedb, vm.Config{}, sum5)
-			bc.Processor().ReplayImproved(block, statedb, copyStateDB, vm.Config{}, analyzeSum, sum5)
-			bc.Processor().ProcessWithDeps(block, statedb, copyStateDB, vm.Config{}, sum3, analyzeSum)
+
+			bc.Processor().ProcessWithDeps(block, statedb, copyStateDB, vm.Config{}, sum2, analyzeSum)
+			bc.Processor().ReplayImproved(block, statedb, copyStateDB, vm.Config{}, analyzeSum, sum3)
+			bc.Processor().ReplayMod(block, statedb, copyStateDB, vm.Config{}, analyzeSum, sum4)
 			bc.Processor().ProcessAriaReorderFB(block, statedb, vm.Config{}, sum5, executeTime, reExecuteCh, &fbRxecuteNum, &reRxecuteNum)
 			txSum += len(block.Transactions())
 			//chainSum += txChainLen
@@ -141,7 +144,7 @@ func main() {
 	//logger.Infof("the blindly parallel execution time is %+v", sum5)
 	logger.Infof("the AriaFB all time is %+v, execution time is %+v, fbre: %d, re: %d", sum5, executeTime, fbRxecuteNum, reRxecuteNum)
 	logger.Infof("the txsum : %d", txSum)
-	logger.Infof("the txsum : %d, the chainsum : %d", txSum, chainSum)
+	//logger.Infof("the txsum : %d, the chainsum : %d", txSum, chainSum)
 	//logger.Infof("the DAG execution time with reexecution is %+v", sum4)
 	//logger.Infof("the total re-execution rate is %v\n", rate)
 

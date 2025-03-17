@@ -169,7 +169,7 @@ func (p *StateProcessor) ProcessSerial(block *types.Block, statedb *state.StateD
 
 	statedb.IntermediateRoot(p.config.IsEIP158(blockNumber))
 	endSerial := time.Since(startSerial)
-	*sum += endSerial * 3
+	*sum += endSerial
 	// logger.Infof("the sum txs of block_%d is %d, the ProcessSerial time is %+v", block.Number(), len(block.Transactions()), *sum)
 	p.engine.Finalize(p.bc, header, statedb, block.Transactions(), block.Uncles())
 	return *usedGas, nil
@@ -2252,14 +2252,15 @@ func (p *StateProcessor) ReplayImproved(block *types.Block, statedb *state.State
 	}
 	var (
 		//txMapping = make(map[int]*types.Transaction)
-		txBatchSize    = len(block.Transactions())
-		runningTxC     = make(chan int, txBatchSize+2)
-		txReadNewAddr  = make(map[int][]string)
-		txReadNewState = make(map[int]*state.StateDB)
-		txWriteNew     = make(map[int]int)
-		poolCapacity   = runtime.NumCPU()
-		needReexecute  = make(chan int, txBatchSize)
-		newSet         = make(map[string]map[int]bool)
+		txBatchSize   = len(block.Transactions())
+		runningTxC    = make(chan int, txBatchSize+2)
+		txReadNewAddr = make(map[int][]string)
+		//txReadNewState = make(map[int]*state.StateDB)
+		txWriteNew    = make(map[int]int)
+		txReadNew     = make(map[int]int)
+		poolCapacity  = runtime.NumCPU()
+		needReexecute = make(chan int, txBatchSize)
+		newSet        = make(map[string]map[int]bool)
 	)
 
 	// for index, tx := range block.Transactions() {
@@ -2321,7 +2322,8 @@ func (p *StateProcessor) ReplayImproved(block *types.Block, statedb *state.State
 						needReexecute <- txIndex
 					} else if readNew || writeNew {
 						if readNew {
-							txReadNewState[txIndex] = copydb.Copy()
+							//txReadNewState[txIndex] = copydb.Copy()
+							txReadNew[txIndex] = idx
 							txReadNewAddr[txIndex] = newReadAddr
 						}
 						if writeNew {
@@ -2362,8 +2364,217 @@ func (p *StateProcessor) ReplayImproved(block *types.Block, statedb *state.State
 				}
 			}
 			if flag {
-				txReadNewState[txIndex].Intermediate(p.config.IsEIP158(blockNumber))
-				txReadNewState[txIndex].CommitShare()
+				//txReadNewState[txIndex].Intermediate(p.config.IsEIP158(blockNumber))
+				//txReadNewState[txIndex].CommitShare()
+				copyStateDB[txReadNew[txIndex]].Intermediate(p.config.IsEIP158(blockNumber))
+				copyStateDB[txReadNew[txIndex]].CommitShare()
+				delete(txReadNewAddr, txIndex)
+			}
+		}
+
+		for i := 0; i < poolCapacity; i++ {
+			copyStateDB[i].CommitShare()
+		}
+
+		for _, txW := range newSet {
+			txs := make([]int, len(txW))
+			for id := range txW {
+				txs = append(txs, id)
+			}
+			txid := findLastWrite(dagCopy, txs)
+			copyStateDB[txWriteNew[txid]].CommitShare()
+		}
+
+		for txIndex, _ := range txReadNewAddr {
+			tx := txMapping[txIndex]
+			msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+			blockContext := NewEVMBlockContext(header, p.bc, nil)
+			copydb := copyStateDB[0]
+			vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+			copydb.Prepare(tx.Hash(), txIndex)
+			applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+			copydb.Intermediate(p.config.IsEIP158(blockNumber))
+			copydb.CommitShare()
+		}
+
+		// prepare for next batch
+		for _, txid := range txIndexBatch {
+			shrinkDAGDeps(txid, dagDeps)
+		}
+		txIndexBatch = popNextBatch(dagDeps)
+		sort.Ints(txIndexBatch)
+		runningTxC = make(chan int, txBatchSize+2)
+		for _, txid := range txIndexBatch {
+			runningTxC <- txid
+		}
+		close(runningTxC)
+	}
+	//exeTime := time.Since(exeStart)
+
+	// Re-execute
+	//logger.Debugf("reexecute")
+	copydb := copyStateDB[0]
+	r = len(needReexecute)
+	for i := 0; i < r; i++ {
+		reIndex := <-needReexecute
+		tx := txMapping[reIndex]
+		//logger.Infof("block: %v, transaction need to be re-executed: %+v\n", blockNumber, tx.Hash())
+		msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+		blockContext := NewEVMBlockContext(header, p.bc, nil)
+		vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+		copydb.Prepare(tx.Hash(), reIndex)
+		applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+		// copydb.Intermediate(p.config.IsEIP158(blockNumber))
+		// copydb.CommitShare()
+	}
+	copydb.Intermediate(p.config.IsEIP158(blockNumber))
+	copydb.CommitShare()
+	exeTime := time.Since(exeStart)
+	*sum += exeTime
+
+	return r, txChainLen, err
+}
+
+func (p *StateProcessor) ReplayMod(block *types.Block, statedb *state.StateDB, copyStateDB []*state.StateDB, cfg vm.Config, analyzeTime *time.Duration, sum *time.Duration) (int, int, error) {
+	var (
+		//usedGas     = new(uint64)
+		header = block.Header()
+		//blockHash   = block.Hash()
+		blockNumber = block.Number()
+		gp          = new(GasPool).AddGas(block.GasLimit())
+		//logger      = ethLogger.NewZeroLogger()
+	)
+	if p.config.DAOForkSupport && p.config.DAOForkBlock != nil && p.config.DAOForkBlock.Cmp(block.Number()) == 0 {
+		misc.ApplyDAOHardFork(statedb)
+	}
+	var (
+		//txMapping = make(map[int]*types.Transaction)
+		txBatchSize   = len(block.Transactions())
+		runningTxC    = make(chan int, txBatchSize+2)
+		txReadNewAddr = make(map[int][]string)
+		//txReadNewState = make(map[int]*state.StateDB)
+		txWriteNew    = make(map[int]int)
+		txReadNew     = make(map[int]int)
+		poolCapacity  = runtime.NumCPU()
+		needReexecute = make(chan int, txBatchSize)
+		newSet        = make(map[string]map[int]bool)
+		readyState    = make(chan int, runtime.NumCPU()+8)
+	)
+
+	// for index, tx := range block.Transactions() {
+	// 	txMapping[index] = tx
+	// }
+
+	var (
+		//applySize uint32
+		//lock sync.RWMutex
+		newSetlock sync.RWMutex
+		wg         sync.WaitGroup
+		r          int
+		err        error
+	)
+
+	//logger.Debugf("speculate")
+	dagDeps, txMapping, txChainLen, readBitmaps, writeBitmaps, keyDict, analTime, _ := p.Pre(block, statedb, copyStateDB, cfg)
+	*analyzeTime += analTime
+
+	dagCopy := make(map[int]map[int]int)
+	for key, val := range dagDeps {
+		dagCopy[key] = make(map[int]int)
+		for k, v := range val {
+			dagCopy[key][k] = v
+		}
+	}
+
+	for i := 0; i < poolCapacity+8; i++ {
+		readyState <- i
+	}
+
+	txIndexBatch := popNextBatch(dagDeps)
+	sort.Ints(txIndexBatch)
+	for _, txid := range txIndexBatch {
+		runningTxC <- txid
+	}
+	close(runningTxC)
+
+	//logger.Debugf("replay")
+	var goRoutinePool *ants.Pool
+	goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
+	exeStart := time.Now()
+	for len(txIndexBatch) > 0 {
+		//logger.Debugf("batch: %v", txIndexBatch)
+		wg.Add(len(txIndexBatch))
+		for i := 0; i < len(txIndexBatch); i++ {
+			// 	idx := i
+			goRoutinePool.Submit(func() {
+				txIndex, ok := <-runningTxC
+				if ok {
+					tx := txMapping[txIndex]
+					msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
+					blockContext := NewEVMBlockContext(header, p.bc, nil)
+					//lock.RLock()
+					idx := <-readyState
+					copydb := copyStateDB[idx]
+					copydb.Readkeys = make(map[string]struct{})
+					copydb.Writekeys = make(map[string]struct{})
+					//lock.RUnlock()
+					vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
+					copydb.Prepare(tx.Hash(), txIndex)
+					applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
+
+					readChanged, readNew, newReadAddr := checkR(readBitmaps, writeBitmaps, keyDict, copydb.Readkeys, txIndex)
+					writeChanged, writeNew, newWriteAddr := checkW(writeBitmaps, keyDict, copydb.Writekeys, txIndex)
+					if readChanged || writeChanged {
+						needReexecute <- txIndex
+					} else if readNew || writeNew {
+						if readNew {
+							//txReadNewState[txIndex] = copydb.Copy()
+							txReadNew[txIndex] = idx
+							txReadNewAddr[txIndex] = newReadAddr
+						}
+						if writeNew {
+							newSetlock.Lock()
+							for _, addr := range newWriteAddr {
+								if _, ok := newSet[addr]; !ok {
+									newSet[addr] = make(map[int]bool)
+								}
+								newSet[addr][txIndex] = true
+							}
+							newSetlock.Unlock()
+							copydb.Intermediate(p.config.IsEIP158(blockNumber))
+							txWriteNew[txIndex] = idx
+						}
+					} else {
+						copydb.Intermediate(p.config.IsEIP158(blockNumber))
+					}
+					// if idx == 0 {
+					// 	logger.Debugf("tx: %v", txIndex)
+					// }
+					readyState <- idx
+				}
+
+				wg.Done()
+			})
+		}
+		wg.Wait()
+
+		for txIndex, newRAddr := range txReadNewAddr {
+			flag := true
+			for _, addr := range newRAddr {
+				_, ok := newSet[addr]
+				_, selfWrite := newSet[addr][txIndex]
+				if !ok || (len(newSet[addr]) == 1 && selfWrite) {
+					flag = true
+				} else {
+					flag = false
+					break
+				}
+			}
+			if flag {
+				//txReadNewState[txIndex].Intermediate(p.config.IsEIP158(blockNumber))
+				//txReadNewState[txIndex].CommitShare()
+				copyStateDB[txReadNew[txIndex]].Intermediate(p.config.IsEIP158(blockNumber))
+				copyStateDB[txReadNew[txIndex]].CommitShare()
 				delete(txReadNewAddr, txIndex)
 			}
 		}
@@ -2646,15 +2857,15 @@ func (p *StateProcessor) Pre(block *types.Block, statedb *state.StateDB, copydb 
 	return dagDeps, alterMapping, len(txChain), readBitmaps, writeBitmaps, keyDict, time, nil
 }
 
-func (p *StateProcessor) PreExecute(block *types.Block, statedb *state.StateDB,
-	cfg vm.Config) (map[int]map[int]int, []int, []*bitmap.Bitmap, []*bitmap.Bitmap, map[string]int, []*bitmap.Bitmap, time.Duration, error) {
+func (p *StateProcessor) PreExecute(block *types.Block, statedb *state.StateDB, cfg vm.Config) (map[int]map[int]int, []int, []*bitmap.Bitmap, []*bitmap.Bitmap, map[string]int, []*bitmap.Bitmap, time.Duration, error) {
 
 	var (
-		// logger = ethLogger.NewZeroLogger()
-		header = block.Header()
-		gp     = new(GasPool).AddGas(block.GasLimit())
-		wg     sync.WaitGroup
-		lock   sync.RWMutex
+		//logger = ethLogger.NewZeroLogger()
+		header       = block.Header()
+		gp           = new(GasPool).AddGas(block.GasLimit())
+		wg           sync.WaitGroup
+		lock         sync.RWMutex
+		poolCapacity = runtime.NumCPU()
 	)
 
 	// Mutate the block and state according to any hard-fork specs
@@ -2666,45 +2877,55 @@ func (p *StateProcessor) PreExecute(block *types.Block, statedb *state.StateDB,
 		copyStateDB  = make([]*state.StateDB, block.Transactions().Len())
 		ReadkeysSet  = make(map[int]map[string]struct{})
 		WritekeysSet = make(map[int]map[string]struct{})
+		readyState   = make(chan int, poolCapacity+8)
 	)
-	for i := 0; i < block.Transactions().Len(); i++ {
+	for i := 0; i < poolCapacity+8; i++ {
 		copyStateDB[i] = statedb.Copy()
 		//copyStateDB[i].StateCopy(statedb)
 	}
+	for i := 0; i < poolCapacity+8; i++ {
+		readyState <- i
+	}
 
 	var goRoutinePool *ants.Pool
-	var poolCapacity = runtime.NumCPU()
 	goRoutinePool, _ = ants.NewPool(poolCapacity, ants.WithPreAlloc(true))
 	wg.Add(block.Transactions().Len())
 	start := time.Now()
+	count := 0
 	for i, tx := range block.Transactions() {
 		tx := tx
-		i := i
+		idx := i
+		count++
 		goRoutinePool.Submit(func() {
 			msg, _ := tx.AsMessage(types.MakeSigner(p.config, header.Number), header.BaseFee)
 			blockContext := NewEVMBlockContext(header, p.bc, nil)
-			lock.RLock()
-			copydb := copyStateDB[i]
-			lock.RUnlock()
+			//lock.RLock()
+			//logger.Debugf("idx: %v", idx)
+			stateid := <-readyState
+			copydb := copyStateDB[stateid]
+			//lock.RUnlock()
+			copydb.Readkeys = make(map[string]struct{})
+			copydb.Writekeys = make(map[string]struct{})
 			vmenv := vm.NewEVM(blockContext, vm.TxContext{}, copydb, p.config, cfg)
 			copydb.Prepare(tx.Hash(), i)
 			applyTransactionWithoutConflict(msg, gp, copydb, vmenv)
 
 			lock.Lock()
-			if ReadkeysSet[i] == nil {
-				ReadkeysSet[i] = make(map[string]struct{})
-				ReadkeysSet[i] = copydb.Readkeys
+			if ReadkeysSet[idx] == nil {
+				ReadkeysSet[idx] = make(map[string]struct{})
+				ReadkeysSet[idx] = copydb.Readkeys
 			}
-			if WritekeysSet[i] == nil {
-				WritekeysSet[i] = make(map[string]struct{})
-				WritekeysSet[i] = copydb.Writekeys
+			if WritekeysSet[idx] == nil {
+				WritekeysSet[idx] = make(map[string]struct{})
+				WritekeysSet[idx] = copydb.Writekeys
 			}
 			lock.Unlock()
+			readyState <- stateid
 			wg.Done()
 		})
 	}
 	wg.Wait()
-	time := time.Since(start)
+	//time := time.Since(start)
 	_, readBitmaps, writeBitmaps, keyDict, reachMap := BuildDAGWithKeys(ReadkeysSet, WritekeysSet, block.Number())
 	// Construct the adjacency list of dag, which describes the subsequent adjacency transactions of all transactions
 	// dagRemain := make(map[int]dagNeighbors)
@@ -2735,7 +2956,7 @@ func (p *StateProcessor) PreExecute(block *types.Block, statedb *state.StateDB,
 		delete(dagDeps, index)
 	}
 
-	// time := time.Since(start)
+	time := time.Since(start)
 	// logger.Infof("analysis time is: %+v", time)
 
 	// txBatchSize := len(block.Transactions())
@@ -2781,7 +3002,7 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 
 	// ProcessWithoutConflict
 	dagDeps, txChain, _, _, _, _, analyzeTime, _ := p.PreExecute(block, statedb, cfg)
-	*analyzeSum += analyzeTime * 3
+	*analyzeSum += analyzeTime
 	sort.Ints(txChain)
 
 	for index, tx := range block.Transactions() {
@@ -2879,7 +3100,7 @@ func (p *StateProcessor) ProcessWithDeps(block *types.Block, statedb *state.Stat
 	<-scheduleFinishC
 
 	// 计算时间的时候，根据最后 finished 的txindx 找出一条路径，将路径上的复制时间减去
-	executeTime := time.Since(executeStart) * 3
+	executeTime := time.Since(executeStart)
 	// logger.Infof("the execute time is %+v", executeTime)
 	var copytimes time.Duration
 	for _, v := range txChain {
