@@ -1,0 +1,109 @@
+{"level":"info","ts":1682393474.8659873,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682393474.8661427,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682393474.8839,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":0,"coin":0}
+{"level":"info","ts":1682393474.8936856,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":1,"coin":0}
+{"level":"info","ts":1682393474.9033766,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":2,"coin":1}
+{"level":"info","ts":1682393474.9033937,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":0,"round":2,"result":1}
+{"level":"info","ts":1682393474.9034061,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682393474.905959,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682393474.914393,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":3,"coin":0}
+{"level":"info","ts":1682393474.9251578,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":4,"coin":1}
+{"level":"info","ts":1682393507.3245058,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682393507.3246129,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682393507.3412042,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":1,"round":0,"coin":0}
+{"level":"info","ts":1682393507.3508868,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":1,"round":1,"coin":1}
+{"level":"info","ts":1682393507.3509057,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":1,"round":1,"result":1}
+{"level":"info","ts":1682393507.3509247,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682393507.3610392,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":1,"round":2,"coin":1}
+{"level":"info","ts":1682394359.014727,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682394359.014845,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682394359.0312858,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":0,"coin":0}
+{"level":"info","ts":1682394359.04121,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":1,"coin":0}
+{"level":"info","ts":1682394359.0509145,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":2,"coin":1}
+{"level":"info","ts":1682394359.050934,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":0,"round":2,"result":1}
+{"level":"info","ts":1682394359.050952,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682394359.0520852,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":0,"content":123}
+{"level":"info","ts":1682394359.0680625,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":3,"coin":0}
+{"level":"info","ts":1682394359.0794222,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":0,"round":4,"coin":1}
+{"level":"info","ts":1682394359.401233,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682394359.4013054,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682394359.418034,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":1,"round":0,"coin":0}
+{"level":"info","ts":1682394359.428392,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":1,"round":1,"coin":1}
+{"level":"info","ts":1682394359.428426,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":1,"round":1,"result":1}
+{"level":"info","ts":1682394359.428452,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682394359.42935,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":1,"content":123}
+{"level":"info","ts":1682394359.4411092,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":1,"round":2,"coin":1}
+{"level":"info","ts":1682394360.0570734,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":2,"content":123}
+{"level":"info","ts":1682394360.0571656,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":2,"content":123}
+{"level":"info","ts":1682394360.0745652,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":2,"round":0,"coin":0}
+{"level":"info","ts":1682394360.0853357,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":2,"round":1,"coin":0}
+{"level":"info","ts":1682394360.0961812,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":2,"round":2,"coin":0}
+{"level":"info","ts":1682394360.1076524,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":2,"round":3,"coin":1}
+{"level":"info","ts":1682394360.1076894,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":2,"round":3,"result":1}
+{"level":"info","ts":1682394360.1077065,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":2,"content":123}
+{"level":"info","ts":1682394360.1079898,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":2,"content":123}
+{"level":"info","ts":1682394360.1241252,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":2,"round":4,"coin":1}
+{"level":"info","ts":1682394360.3591337,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":3,"content":123}
+{"level":"info","ts":1682394360.3592014,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":3,"content":123}
+{"level":"info","ts":1682394360.3763428,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":0,"coin":0}
+{"level":"info","ts":1682394360.386519,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":1,"coin":0}
+{"level":"info","ts":1682394360.3964832,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":2,"coin":0}
+{"level":"info","ts":1682394360.407697,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":3,"coin":0}
+{"level":"info","ts":1682394360.4180257,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":4,"coin":1}
+{"level":"info","ts":1682394360.4180582,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":3,"round":4,"result":1}
+{"level":"info","ts":1682394360.4180803,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":3,"content":123}
+{"level":"info","ts":1682394360.4184327,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":3,"content":123}
+{"level":"info","ts":1682394360.4351985,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":5,"coin":0}
+{"level":"info","ts":1682394360.4451964,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":3,"round":6,"coin":1}
+{"level":"info","ts":1682394361.1125078,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":4,"content":123}
+{"level":"info","ts":1682394361.1125865,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":4,"content":123}
+{"level":"info","ts":1682394361.128303,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":4,"round":0,"coin":0}
+{"level":"info","ts":1682394361.1379738,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":4,"round":1,"coin":1}
+{"level":"info","ts":1682394361.1379907,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":4,"round":1,"result":1}
+{"level":"info","ts":1682394361.1380038,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":4,"content":123}
+{"level":"info","ts":1682394361.1392872,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":4,"content":123}
+{"level":"info","ts":1682394361.153502,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":4,"round":2,"coin":1}
+{"level":"info","ts":1682394361.3001392,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":5,"content":123}
+{"level":"info","ts":1682394361.300221,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":5,"content":123}
+{"level":"info","ts":1682394361.3190894,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":5,"round":0,"coin":1}
+{"level":"info","ts":1682394361.3191342,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":5,"round":0,"result":1}
+{"level":"info","ts":1682394361.3191597,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":5,"content":123}
+{"level":"info","ts":1682394361.3212867,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":5,"content":123}
+{"level":"info","ts":1682394361.3333514,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":5,"round":1,"coin":0}
+{"level":"info","ts":1682394361.343546,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":5,"round":2,"coin":1}
+{"level":"info","ts":1682394361.4733508,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":6,"content":123}
+{"level":"info","ts":1682394361.4734313,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":6,"content":123}
+{"level":"info","ts":1682394361.4913511,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":6,"round":0,"coin":1}
+{"level":"info","ts":1682394361.4913857,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":6,"round":0,"result":1}
+{"level":"info","ts":1682394361.4914,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":6,"content":123}
+{"level":"info","ts":1682394361.4920154,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":6,"content":123}
+{"level":"info","ts":1682394361.5085032,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":6,"round":1,"coin":0}
+{"level":"info","ts":1682394361.5183356,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":6,"round":2,"coin":0}
+{"level":"info","ts":1682394361.5278828,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":6,"round":3,"coin":1}
+{"level":"info","ts":1682394361.6143398,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":7,"content":123}
+{"level":"info","ts":1682394361.614423,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":7,"content":123}
+{"level":"info","ts":1682394361.628611,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":7,"round":0,"coin":0}
+{"level":"info","ts":1682394361.6405585,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":7,"round":1,"coin":0}
+{"level":"info","ts":1682394361.6510227,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":7,"round":2,"coin":1}
+{"level":"info","ts":1682394361.65105,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":7,"round":2,"result":1}
+{"level":"info","ts":1682394361.651065,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":7,"content":123}
+{"level":"info","ts":1682394361.6516204,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":7,"content":123}
+{"level":"info","ts":1682394361.6681895,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":7,"round":3,"coin":0}
+{"level":"info","ts":1682394361.6778507,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":7,"round":4,"coin":1}
+{"level":"info","ts":1682394361.793827,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":8,"content":123}
+{"level":"info","ts":1682394361.7939165,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":8,"content":123}
+{"level":"info","ts":1682394361.812833,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":8,"round":0,"coin":0}
+{"level":"info","ts":1682394361.823995,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":8,"round":1,"coin":0}
+{"level":"info","ts":1682394361.8351836,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":8,"round":2,"coin":1}
+{"level":"info","ts":1682394361.8352165,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":8,"round":2,"result":1}
+{"level":"info","ts":1682394361.8352368,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":8,"content":123}
+{"level":"info","ts":1682394361.8356676,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":8,"content":123}
+{"level":"info","ts":1682394361.8525999,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":8,"round":3,"coin":0}
+{"level":"info","ts":1682394361.8629744,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":8,"round":4,"coin":1}
+{"level":"info","ts":1682394362.004169,"caller":"http/stream.go:201","msg":"receive request","proposer":0,"seq":9,"content":123}
+{"level":"info","ts":1682394362.0042393,"caller":"server/propose.go:57","msg":"propose","proposer":0,"seq":9,"content":123}
+{"level":"info","ts":1682394362.0223007,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":9,"round":0,"coin":1}
+{"level":"info","ts":1682394362.022334,"caller":"server/instance.go:272","msg":"decided","proposer":0,"seq":9,"round":0,"result":1}
+{"level":"info","ts":1682394362.0223496,"caller":"server/acs.go:77","msg":"executed","proposer":0,"seq":9,"content":123}
+{"level":"info","ts":1682394362.0232618,"caller":"http/stream.go:208","msg":"reply request","proposer":0,"seq":9,"content":123}
+{"level":"info","ts":1682394362.039495,"caller":"server/instance.go:259","msg":"coin result","proposer":0,"seq":9,"round":1,"coin":1}

@@ -1,0 +1,6 @@
+{
+    "id":0,
+	"port":11300,
+	"key_path":"./crypto",
+	"cluster":"http://127.0.0.1:11300"
+}

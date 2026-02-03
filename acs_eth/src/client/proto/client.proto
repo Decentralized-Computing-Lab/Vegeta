@@ -1,0 +1,12 @@
+syntax = "proto3";
+package client;
+
+option go_package = "./clientpb";
+
+message ClientMessage {
+    string Payload = 2;
+}
+
+message ClientMessages {
+    repeated ClientMessage Payload = 1;
+}
